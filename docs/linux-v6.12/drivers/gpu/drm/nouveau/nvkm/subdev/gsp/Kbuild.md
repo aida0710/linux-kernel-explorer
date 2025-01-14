@@ -1,0 +1,26 @@
+---
+sidebar_position: 7
+---
+# Kbuild
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/nouveau/nvkm/subdev/gsp/Kbuild`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: MIT
+nvkm-y += nvkm/subdev/gsp/base.o
+nvkm-y += nvkm/subdev/gsp/fwsec.o
+
+nvkm-y += nvkm/subdev/gsp/gv100.o
+nvkm-y += nvkm/subdev/gsp/tu102.o
+nvkm-y += nvkm/subdev/gsp/tu116.o
+nvkm-y += nvkm/subdev/gsp/ga100.o
+nvkm-y += nvkm/subdev/gsp/ga102.o
+nvkm-y += nvkm/subdev/gsp/ad102.o
+
+nvkm-y += nvkm/subdev/gsp/r535.o
+
+```
