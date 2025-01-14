@@ -1,5 +1,5 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
+import {themes as prismThemes} from 'prism-react-renderer';
+import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
@@ -50,8 +50,8 @@ const config: Config = {
                 },
                 blog: {
                     showReadingTime: true,
-                    readingTime: ({ content, frontMatter, defaultReadingTime }) =>
-                        defaultReadingTime({ content, options: { wordsPerMinute: 300 } }),
+                    readingTime: ({content, frontMatter, defaultReadingTime}) =>
+                        defaultReadingTime({content, options: {wordsPerMinute: 300}}),
                     blogTitle: 'カーネル解説ブログ',
                     blogDescription: 'Linuxカーネルの実装についての詳細な解説',
                     postsPerPage: 10,
@@ -113,9 +113,9 @@ const config: Config = {
     themeConfig: {
         // metadata
         metadata: [
-            { name: 'keywords', content: 'linux, kernel, documentation, implementation' },
-            { name: 'og:type', content: 'website' },
-            { name: 'twitter:card', content: 'summary_large_image' },
+            {name: 'keywords', content: 'linux, kernel, documentation, implementation'},
+            {name: 'og:type', content: 'website'},
+            {name: 'twitter:card', content: 'summary_large_image'},
         ],
 
         // ナビゲーションバー
@@ -215,30 +215,28 @@ const config: Config = {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
             defaultLanguage: 'c',
+            // 実際にサポートされている言語のみを指定
             additionalLanguages: [
+                'bash',
                 'c',
                 'cpp',
-                'asm6502',
-                'x86asm',
-                'arm',
-                'bash',
                 'diff',
-                'makefile',
-                'toml',
-                'yaml',
                 'json',
-                'shell-session',
-                'systemd',
-                'ini',
-                'docker',
-                'rust',
+                'jsx',
+                'makefile',
+                'markdown',
                 'python',
+                'rust',
+                'shell-session',
+                'toml',
+                'typescript',
+                'yaml'
             ],
             magicComments: [
                 {
                     className: 'theme-code-block-highlighted-line',
                     line: 'highlight-next-line',
-                    block: { start: 'highlight-start', end: 'highlight-end' },
+                    block: {start: 'highlight-start', end: 'highlight-end'},
                 },
                 {
                     className: 'code-block-error-line',
@@ -251,26 +249,6 @@ const config: Config = {
             ],
         },
 
-        // テーマ設定
-        colorMode: {
-            defaultMode: 'light',
-            disableSwitch: false,
-            respectPrefersColorScheme: true,
-        },
-
-        // 目次設定
-        tableOfContents: {
-            minHeadingLevel: 2,
-            maxHeadingLevel: 4,
-        },
-
-        // その他の設定
-        docs: {
-            sidebar: {
-                hideable: true,
-                autoCollapseCategories: true,
-            },
-        },
     } satisfies Preset.ThemeConfig,
 };
 
