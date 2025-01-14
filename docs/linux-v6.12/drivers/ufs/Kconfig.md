@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/ufs/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# UFS subsystem configuration
+#
+
+menuconfig SCSI_UFSHCD
+	tristate "Universal Flash Storage Controller"
+	depends on SCSI && SCSI_DMA
+	select PM_DEVFREQ
+	select DEVFREQ_GOV_SIMPLE_ONDEMAND
+	select NLS
+	help
+	  Enables support for UFS (Universal Flash Storage) host controllers.
+	  A UFS host controller is an electronic component that is able to
+	  communicate with a UFS card. UFS host controllers occur in
+	  smartphones, laptops, digital cameras and also in cars.
+	  The kernel module will be called ufshcd.
+
+	  To compile this driver as a module, choose M here and read
+	  <file:Documentation/scsi/ufs.rst>.
+	  However, do not compile this as a module if your root file system
+	  (the one containing the directory /) is located on a UFS device.
+
+if SCSI_UFSHCD
+
+source "drivers/ufs/core/Kconfig"
+
+source "drivers/ufs/host/Kconfig"
+
+endif
+
+```

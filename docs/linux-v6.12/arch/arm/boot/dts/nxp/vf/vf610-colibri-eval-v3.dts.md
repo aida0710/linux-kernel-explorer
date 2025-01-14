@@ -1,0 +1,27 @@
+---
+sidebar_position: 8
+---
+# vf610-colibri-eval-v3.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/vf/vf610-colibri-eval-v3.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0+ OR MIT
+/*
+ * Copyright 2014-2020 Toradex
+ */
+
+/dts-v1/;
+#include "vf610-colibri.dtsi"
+#include "vf-colibri-eval-v3.dtsi"
+
+/ {
+	model = "Toradex Colibri VF61 on Colibri Evaluation Board";
+	compatible = "toradex,vf610-colibri_vf61-on-eval", "toradex,vf610-colibri_vf61", "fsl,vf610";
+};
+
+```

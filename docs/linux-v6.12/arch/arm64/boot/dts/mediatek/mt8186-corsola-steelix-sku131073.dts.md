@@ -1,0 +1,32 @@
+---
+sidebar_position: 103
+---
+# mt8186-corsola-steelix-sku131073.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/mediatek/mt8186-corsola-steelix-sku131073.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Copyright 2022 Google LLC
+ */
+
+/dts-v1/;
+#include "mt8186-corsola-steelix.dtsi"
+
+/ {
+	model = "Google Steelix board";
+	compatible = "google,steelix-sku131073", "google,steelix",
+		     "mediatek,mt8186";
+	chassis-type = "convertible";
+};
+
+&mt6366codec {
+	mediatek,dmic-mode = <1>; /* one-wire */
+};
+
+```

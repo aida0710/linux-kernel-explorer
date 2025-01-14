@@ -1,0 +1,52 @@
+---
+sidebar_position: 5
+---
+# Makefile.postlink
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/s390/Makefile.postlink`
+
+### コンテンツ
+
+```postlink
+# SPDX-License-Identifier: GPL-2.0
+# ===========================================================================
+# Post-link s390 pass
+# ===========================================================================
+#
+# 1. Separate relocations from vmlinux into relocs.S.
+# 2. Strip relocations from vmlinux.
+
+PHONY := __archpost
+__archpost:
+
+-include include/config/auto.conf
+include $(srctree)/scripts/Kbuild.include
+
+CMD_RELOCS=arch/s390/tools/relocs
+OUT_RELOCS = arch/s390/boot
+quiet_cmd_relocs = RELOCS  $(OUT_RELOCS)/relocs.S
+      cmd_relocs = \
+	mkdir -p $(OUT_RELOCS); \
+	$(CMD_RELOCS) $@ > $(OUT_RELOCS)/relocs.S
+
+quiet_cmd_strip_relocs = RSTRIP  $@
+      cmd_strip_relocs = \
+	$(OBJCOPY) --remove-section='.rel.*' --remove-section='.rel__*' \
+		   --remove-section='.rela.*' --remove-section='.rela__*' $@
+
+vmlinux: FORCE
+	$(call cmd,relocs)
+	$(call cmd,strip_relocs)
+
+clean:
+	@rm -f $(OUT_RELOCS)/relocs.S
+
+PHONY += FORCE clean
+
+FORCE:
+
+.PHONY: $(PHONY)
+
+```

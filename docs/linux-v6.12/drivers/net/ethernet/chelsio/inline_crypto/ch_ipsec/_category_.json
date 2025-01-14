@@ -1,0 +1,8 @@
+{
+    "label": "Ch Ipsec",
+    "position": 700,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Ch Ipsec"
+    }
+}

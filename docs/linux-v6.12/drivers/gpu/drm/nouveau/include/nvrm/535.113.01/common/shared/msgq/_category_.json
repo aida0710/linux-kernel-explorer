@@ -1,0 +1,8 @@
+{
+    "label": "Msgq",
+    "position": 1100,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Msgq"
+    }
+}

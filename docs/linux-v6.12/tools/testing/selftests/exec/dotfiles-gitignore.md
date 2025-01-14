@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+---
+# .gitignore
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/exec/.gitignore`
+
+### コンテンツ
+
+```gitignore
+# SPDX-License-Identifier: GPL-2.0-only
+subdir*
+script*
+execveat
+execveat.symlink
+execveat.moved
+execveat.path.ephemeral
+execveat.ephemeral
+execveat.denatured
+non-regular
+null-argv
+/load_address.*
+!load_address.c
+/recursion-depth
+xxxxxxxx*
+pipe
+S_I*.test
+
+```

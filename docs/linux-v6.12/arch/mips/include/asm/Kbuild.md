@@ -1,0 +1,29 @@
+---
+sidebar_position: 90
+---
+# Kbuild
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/include/asm/Kbuild`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+# MIPS headers
+generated-y += syscall_table_n32.h
+generated-y += syscall_table_n64.h
+generated-y += syscall_table_o32.h
+generated-y += unistd_nr_n32.h
+generated-y += unistd_nr_n64.h
+generated-y += unistd_nr_o32.h
+
+generic-y += kvm_para.h
+generic-y += mcs_spinlock.h
+generic-y += parport.h
+generic-y += qrwlock.h
+generic-y += qspinlock.h
+generic-y += user.h
+
+```

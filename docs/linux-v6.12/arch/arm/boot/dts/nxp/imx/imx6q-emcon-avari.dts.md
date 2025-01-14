@@ -1,0 +1,28 @@
+---
+sidebar_position: 144
+---
+# imx6q-emcon-avari.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6q-emcon-avari.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+//
+// Copyright (C) 2018 emtrion GmbH
+//
+
+/dts-v1/;
+#include "imx6q.dtsi"
+#include "imx6qdl-emcon.dtsi"
+#include "imx6qdl-emcon-avari.dtsi"
+
+/ {
+	model = "emtrion SoM emCON-MX6 Dual/Quad on Avari";
+	compatible = "emtrion,emcon-mx6-avari", "fsl,imx6q";
+};
+
+```

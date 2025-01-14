@@ -1,0 +1,18 @@
+---
+sidebar_position: 1
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/sof/mediatek/mt8186/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-3-Clause)
+snd-sof-mt8186-y := mt8186.o mt8186-clk.o mt8186-loader.o
+obj-$(CONFIG_SND_SOC_SOF_MT8186) += snd-sof-mt8186.o
+
+
+```

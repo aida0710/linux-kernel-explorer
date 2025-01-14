@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+---
+# index.rst
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/driver-api/mmc/index.rst`
+
+### コンテンツ
+
+```rst
+.. SPDX-License-Identifier: GPL-2.0
+
+========================
+MMC/SD/SDIO card support
+========================
+
+.. toctree::
+   :maxdepth: 1
+
+   mmc-dev-attrs
+   mmc-dev-parts
+   mmc-async-req
+   mmc-test
+   mmc-tools
+
+```

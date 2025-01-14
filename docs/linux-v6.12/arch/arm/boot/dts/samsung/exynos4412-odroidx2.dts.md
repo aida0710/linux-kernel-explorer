@@ -1,0 +1,36 @@
+---
+sidebar_position: 39
+---
+# exynos4412-odroidx2.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/samsung/exynos4412-odroidx2.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Hardkernel's Exynos4412 based ODROID-X2 board device tree source
+ *
+ * Copyright (c) 2012 Dongjin Kim <tobetter@gmail.com>
+ *
+ * Device tree source file for Hardkernel's ODROID-X2 board which is based
+ * on Samsung's Exynos4412 SoC.
+ */
+
+#include "exynos4412-odroidx.dts"
+#include "exynos4412-prime.dtsi"
+
+/ {
+	model = "Hardkernel ODROID-X2 board based on Exynos4412";
+	compatible = "hardkernel,odroid-x2", "samsung,exynos4412", "samsung,exynos4";
+
+	memory@40000000 {
+		device_type = "memory";
+		reg = <0x40000000 0x7ff00000>;
+	};
+};
+
+```

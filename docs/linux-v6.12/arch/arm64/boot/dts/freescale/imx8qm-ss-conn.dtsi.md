@@ -1,0 +1,44 @@
+---
+sidebar_position: 306
+---
+# imx8qm-ss-conn.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/freescale/imx8qm-ss-conn.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * Copyright 2019-2020 NXP
+ *	Dong Aisheng <aisheng.dong@nxp.com>
+ */
+
+&fec1 {
+	compatible = "fsl,imx8qm-fec", "fsl,imx6sx-fec";
+	iommus = <&smmu 0x12 0x7f80>;
+};
+
+&fec2 {
+	compatible = "fsl,imx8qm-fec", "fsl,imx6sx-fec";
+	iommus = <&smmu 0x12 0x7f80>;
+};
+
+&usdhc1 {
+	compatible = "fsl,imx8qm-usdhc", "fsl,imx8qxp-usdhc", "fsl,imx7d-usdhc";
+	iommus = <&smmu 0x11 0x7f80>;
+};
+
+&usdhc2 {
+	compatible = "fsl,imx8qm-usdhc", "fsl,imx8qxp-usdhc", "fsl,imx7d-usdhc";
+	iommus = <&smmu 0x11 0x7f80>;
+};
+
+&usdhc3 {
+	compatible = "fsl,imx8qm-usdhc", "fsl,imx8qxp-usdhc", "fsl,imx7d-usdhc";
+	iommus = <&smmu 0x11 0x7f80>;
+};
+
+```

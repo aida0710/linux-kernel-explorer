@@ -1,0 +1,24 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/dma/lgm/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config INTEL_LDMA
+	bool "Lightning Mountain centralized DMA controllers"
+	depends on X86 || COMPILE_TEST
+	select DMA_ENGINE
+	select DMA_VIRTUAL_CHANNELS
+	help
+	  Enable support for Intel Lightning Mountain SOC DMA controllers.
+	  These controllers provide DMA capabilities for a variety of on-chip
+	  devices such as HSNAND and GSWIP (Gigabit Switch IP).
+
+```

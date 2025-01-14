@@ -1,0 +1,43 @@
+---
+sidebar_position: 160
+---
+# salvator-x.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/renesas/salvator-x.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Device Tree Source for the Salvator-X board
+ *
+ * Copyright (C) 2015-2016 Renesas Electronics Corp.
+ */
+
+#include "salvator-common.dtsi"
+
+/ {
+	model = "Renesas Salvator-X board";
+	compatible = "renesas,salvator-x";
+};
+
+&extal_clk {
+	clock-frequency = <16666666>;
+};
+
+&i2c4 {
+	clock-frequency = <400000>;
+
+	versaclock5: clock-generator@6a {
+		compatible = "idt,5p49v5923";
+		reg = <0x6a>;
+		#clock-cells = <1>;
+		clocks = <&x23_clk>;
+		clock-names = "xin";
+	};
+};
+
+```

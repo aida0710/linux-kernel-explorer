@@ -1,0 +1,41 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/loongson/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+menu "SoC Audio for Loongson CPUs"
+	depends on LOONGARCH || COMPILE_TEST
+
+config SND_SOC_LOONGSON_I2S_PCI
+	tristate "Loongson I2S-PCI Device Driver"
+	select REGMAP_MMIO
+	depends on PCI
+	help
+	  Say Y or M if you want to add support for I2S driver for
+	  Loongson I2S controller.
+
+	  The controller is found in loongson bridge chips or SoCs,
+	  and work as a PCI device.
+
+config SND_SOC_LOONGSON_CARD
+	tristate "Loongson Sound Card Driver"
+	select SND_SOC_LOONGSON_I2S_PCI
+	depends on PCI
+	help
+	  Say Y or M if you want to add support for SoC audio using
+	  loongson I2S controller.
+
+	  The driver add support for ALSA SoC Audio support using
+	  loongson I2S controller.
+
+endmenu
+
+```

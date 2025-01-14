@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/lima/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0 OR MIT
+# Copyright 2017-2019 Qiang Yu <yuq825@gmail.com>
+
+config DRM_LIMA
+       tristate "LIMA (DRM support for ARM Mali 400/450 GPU)"
+       depends on DRM
+       depends on ARM || ARM64 || COMPILE_TEST
+       depends on MMU
+       depends on COMMON_CLK
+       depends on OF
+       select DRM_SCHED
+       select DRM_GEM_SHMEM_HELPER
+       select PM_DEVFREQ
+       select DEVFREQ_GOV_SIMPLE_ONDEMAND
+       help
+	 DRM driver for ARM Mali 400/450 GPUs.
+
+```

@@ -1,0 +1,8 @@
+{
+    "label": "Ipu3",
+    "position": 500,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Ipu3"
+    }
+}

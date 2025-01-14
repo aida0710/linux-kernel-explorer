@@ -1,0 +1,43 @@
+---
+sidebar_position: 4
+---
+# driver-uapi.rst
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/gpu/driver-uapi.rst`
+
+### コンテンツ
+
+```rst
+===============
+DRM Driver uAPI
+===============
+
+drm/i915 uAPI
+=============
+
+.. kernel-doc:: include/uapi/drm/i915_drm.h
+
+drm/nouveau uAPI
+================
+
+VM_BIND / EXEC uAPI
+-------------------
+
+.. kernel-doc:: drivers/gpu/drm/nouveau/nouveau_exec.c
+    :doc: Overview
+
+.. kernel-doc:: include/uapi/drm/nouveau_drm.h
+
+drm/panthor uAPI
+================
+
+.. kernel-doc:: include/uapi/drm/panthor_drm.h
+
+drm/xe uAPI
+===========
+
+.. kernel-doc:: include/uapi/drm/xe_drm.h
+
+```

@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+---
+# Kbuild
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/Kbuild`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+obj-$(CONFIG_FPE_NWFPE)		+= nwfpe/
+# Put arch/arm/fastfpe/ to use this.
+obj-$(CONFIG_FPE_FASTFPE)	+= $(patsubst $(src)/%,%,$(wildcard $(src)/fastfpe/))
+obj-$(CONFIG_VFP)		+= vfp/
+obj-$(CONFIG_XEN)		+= xen/
+obj-$(CONFIG_VDSO)		+= vdso/
+obj-y				+= kernel/ mm/ common/
+obj-y				+= probes/
+obj-y				+= net/
+obj-y				+= crypto/
+
+# for cleaning
+subdir- += boot
+
+```

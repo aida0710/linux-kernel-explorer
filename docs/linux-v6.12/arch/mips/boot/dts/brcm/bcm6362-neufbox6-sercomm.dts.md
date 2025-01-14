@@ -1,0 +1,37 @@
+---
+sidebar_position: 11
+---
+# bcm6362-neufbox6-sercomm.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/boot/dts/brcm/bcm6362-neufbox6-sercomm.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/dts-v1/;
+
+#include "bcm6362.dtsi"
+
+/ {
+	compatible = "sfr,nb6-ser", "brcm,bcm6362";
+	model = "SFR NeufBox 6 (Sercomm)";
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x00000000 0x08000000>;
+	};
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
+		stdout-path = &uart0;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+```

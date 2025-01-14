@@ -1,0 +1,43 @@
+---
+sidebar_position: 172
+---
+# sun8i-s3-elimo-initium.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/allwinner/sun8i-s3-elimo-initium.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (C) 2020 Matteo Scordino <matteo@elimo.io>
+ */
+
+/dts-v1/;
+#include "sun8i-s3-elimo-impetus.dtsi"
+
+/ {
+	model = "Elimo Initium";
+	compatible = "elimo,initium", "elimo,impetus", "sochip,s3",
+		     "allwinner,sun8i-v3";
+
+	aliases {
+		serial1 = &uart1;
+	};
+};
+
+&uart1 {
+	pinctrl-0 = <&uart1_pg_pins>;
+	pinctrl-names = "default";
+	status = "okay";
+};
+
+&emac {
+	phy-handle = <&int_mii_phy>;
+	phy-mode = "mii";
+	status = "okay";
+};
+
+```

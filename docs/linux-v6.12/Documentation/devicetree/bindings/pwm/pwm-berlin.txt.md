@@ -1,0 +1,31 @@
+---
+sidebar_position: 33
+---
+# pwm-berlin.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/pwm/pwm-berlin.txt`
+
+### コンテンツ
+
+```txt
+Berlin PWM controller
+
+Required properties:
+- compatible: should be "marvell,berlin-pwm"
+- reg: physical base address and length of the controller's registers
+- clocks: phandle to the input clock
+- #pwm-cells: should be 3. See pwm.yaml in this directory for a description of
+  the cells format.
+
+Example:
+
+pwm: pwm@f7f20000 {
+	compatible = "marvell,berlin-pwm";
+	reg = <0xf7f20000 0x40>;
+	clocks = <&chip_clk CLKID_CFG>;
+	#pwm-cells = <3>;
+}
+
+```

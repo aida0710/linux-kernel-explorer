@@ -1,0 +1,21 @@
+---
+sidebar_position: 3
+---
+# README
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/tests/config-fragments/README`
+
+### コンテンツ
+
+```txt
+This folder is for kernel config fragments that can be merged with
+defconfig to give full test coverage of a perf test run. This is only
+an optimistic set as some features require hardware support in order to
+pass and not skip.
+
+'config' is shared across all platforms, and for arch specific files,
+the file name should match that used in the ARCH=... make option.
+
+```

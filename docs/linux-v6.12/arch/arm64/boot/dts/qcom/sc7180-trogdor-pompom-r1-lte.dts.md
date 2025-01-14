@@ -1,0 +1,28 @@
+---
+sidebar_position: 273
+---
+# sc7180-trogdor-pompom-r1-lte.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/sc7180-trogdor-pompom-r1-lte.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Google Pompom board device tree source
+ *
+ * Copyright 2020 Google LLC.
+ */
+
+#include "sc7180-trogdor-pompom-r1.dts"
+#include "sc7180-trogdor-lte-sku.dtsi"
+
+/ {
+	model = "Google Pompom (rev1) with LTE";
+	compatible = "google,pompom-rev1-sku0", "qcom,sc7180";
+};
+
+```

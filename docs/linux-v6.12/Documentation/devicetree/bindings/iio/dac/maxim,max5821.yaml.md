@@ -1,0 +1,58 @@
+---
+sidebar_position: 34
+---
+# maxim,max5821.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/iio/dac/maxim,max5821.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/iio/dac/maxim,max5821.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Maxim max5821 dual 10-bit DAC
+
+maintainers:
+  - Philippe Reynes <tremyfr@yahoo.fr>
+
+description: |
+  Datasheet publicly available at:
+  https://datasheets.maximintegrated.com/en/ds/MAX5821.pdf
+
+properties:
+  compatible:
+    const: maxim,max5821
+
+  reg:
+    maxItems: 1
+
+  vref-supply: true
+
+required:
+  - compatible
+  - reg
+  - vref-supply
+
+additionalProperties: false
+
+examples:
+  - |
+    i2c {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        dac@38 {
+            compatible = "maxim,max5821";
+            reg = <0x38>;
+            vref-supply = <&reg_max5821>;
+        };
+    };
+...
+
+```

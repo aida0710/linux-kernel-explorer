@@ -1,0 +1,28 @@
+---
+sidebar_position: 137
+---
+# Kbuild
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/x86/include/asm/Kbuild`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+
+
+generated-y += orc_hash.h
+generated-y += syscalls_32.h
+generated-y += syscalls_64.h
+generated-y += syscalls_x32.h
+generated-y += unistd_32_ia32.h
+generated-y += unistd_64_x32.h
+generated-y += xen-hypercalls.h
+
+generic-y += early_ioremap.h
+generic-y += mcs_spinlock.h
+generic-y += mmzone.h
+
+```

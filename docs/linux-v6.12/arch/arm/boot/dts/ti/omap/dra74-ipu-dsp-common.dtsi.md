@@ -1,0 +1,32 @@
+---
+sidebar_position: 129
+---
+# dra74-ipu-dsp-common.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/ti/omap/dra74-ipu-dsp-common.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Common IPU and DSP data for TI DRA74x/DRA76x/AM572x/AM574x platforms
+ */
+
+#include "dra7-ipu-dsp-common.dtsi"
+
+&mailbox6 {
+	mbox_dsp2_ipc3x: mbox-dsp2-ipc3x {
+		status = "okay";
+	};
+};
+
+&dsp2 {
+	mboxes = <&mailbox6 &mbox_dsp2_ipc3x>;
+	ti,timers = <&timer6>;
+	ti,watchdog-timers = <&timer13>;
+};
+
+```

@@ -1,0 +1,38 @@
+---
+sidebar_position: 109
+---
+# dra7-dspeve-thermal.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/ti/omap/dra7-dspeve-thermal.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Device Tree Source for DRA7x SoC DSPEVE thermal
+ *
+ * Copyright (C) 2016 Texas Instruments Incorporated - https://www.ti.com/
+ */
+
+#include <dt-bindings/thermal/thermal.h>
+
+dspeve_thermal: dspeve_thermal {
+	polling-delay-passive = <250>; /* milliseconds */
+	polling-delay = <500>; /* milliseconds */
+
+			/* sensor       ID */
+	thermal-sensors = <&bandgap     3>;
+
+	trips {
+		dspeve_crit: dspeve_crit {
+			temperature = <125000>; /* milliCelsius */
+			hysteresis = <2000>; /* milliCelsius */
+			type = "critical";
+		};
+	};
+};
+
+```

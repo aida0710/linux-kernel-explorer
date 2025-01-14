@@ -1,0 +1,45 @@
+---
+sidebar_position: 17
+---
+# mt6797-evb.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/mediatek/mt6797-evb.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (c) 2017 MediaTek Inc.
+ * Author: Mars.C <mars.cheng@mediatek.com>
+ */
+
+/dts-v1/;
+#include "mt6797.dtsi"
+
+/ {
+	model = "MediaTek MT6797 Evaluation Board";
+	chassis-type = "embedded";
+	compatible = "mediatek,mt6797-evb", "mediatek,mt6797";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	memory@40000000 {
+		device_type = "memory";
+		reg = <0 0x40000000 0 0x1e800000>;
+	};
+
+	chosen {};
+};
+
+&uart0 {
+	status = "okay";
+	pinctrl-names = "default";
+	pinctrl-0 = <&uart0_pins_a>;
+};
+
+```

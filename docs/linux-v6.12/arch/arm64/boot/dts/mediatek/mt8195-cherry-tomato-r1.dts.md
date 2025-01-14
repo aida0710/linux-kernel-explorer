@@ -1,0 +1,43 @@
+---
+sidebar_position: 125
+---
+# mt8195-cherry-tomato-r1.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/mediatek/mt8195-cherry-tomato-r1.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Copyright (C) 2021 MediaTek Inc.
+ */
+/dts-v1/;
+#include "mt8195-cherry.dtsi"
+
+/ {
+	model = "Acer Tomato (rev1) board";
+	compatible = "google,tomato-rev1", "google,tomato", "mediatek,mt8195";
+};
+
+&audio_codec {
+	compatible = "realtek,rt5682i";
+	realtek,btndet-delay = <16>;
+};
+
+&sound {
+	compatible = "mediatek,mt8195_mt6359_rt1019_rt5682";
+	model = "mt8195_r1019_5682";
+};
+
+&ts_10 {
+	status = "okay";
+};
+
+&watchdog {
+	/delete-property/ mediatek,disable-extrst;
+};
+
+```

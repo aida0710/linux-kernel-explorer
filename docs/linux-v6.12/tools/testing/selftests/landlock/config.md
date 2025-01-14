@@ -1,0 +1,29 @@
+---
+sidebar_position: 4
+---
+# config
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/landlock/config`
+
+### コンテンツ
+
+```txt
+CONFIG_CGROUPS=y
+CONFIG_CGROUP_SCHED=y
+CONFIG_INET=y
+CONFIG_IPV6=y
+CONFIG_KEYS=y
+CONFIG_NET=y
+CONFIG_NET_NS=y
+CONFIG_OVERLAY_FS=y
+CONFIG_PROC_FS=y
+CONFIG_SECURITY=y
+CONFIG_SECURITY_LANDLOCK=y
+CONFIG_SHMEM=y
+CONFIG_SYSFS=y
+CONFIG_TMPFS=y
+CONFIG_TMPFS_XATTR=y
+
+```

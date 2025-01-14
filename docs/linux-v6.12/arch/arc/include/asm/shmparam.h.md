@@ -1,0 +1,29 @@
+---
+sidebar_position: 59
+---
+# shmparam.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arc/include/asm/shmparam.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0-only */
+/*
+ * Copyright (C) 2013 Synopsys, Inc. (www.synopsys.com)
+ */
+
+#ifndef __ARC_ASM_SHMPARAM_H
+#define __ARC_ASM_SHMPARAM_H
+
+/* Handle up to 2 cache bins */
+#define	SHMLBA	(2 * PAGE_SIZE)
+
+/* Enforce SHMLBA in shmat */
+#define __ARCH_FORCE_SHMLBA
+
+#endif
+
+```

@@ -1,0 +1,8 @@
+{
+    "label": "Lz4",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Lz4"
+    }
+}

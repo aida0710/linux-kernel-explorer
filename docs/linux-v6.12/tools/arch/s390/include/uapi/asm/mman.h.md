@@ -1,0 +1,21 @@
+---
+sidebar_position: 4
+---
+# mman.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/arch/s390/include/uapi/asm/mman.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
+#ifndef TOOLS_ARCH_S390_UAPI_ASM_MMAN_FIX_H
+#define TOOLS_ARCH_S390_UAPI_ASM_MMAN_FIX_H
+#include <uapi/asm-generic/mman.h>
+/* MAP_32BIT is undefined on s390, fix it for perf */
+#define MAP_32BIT	0
+#endif
+
+```

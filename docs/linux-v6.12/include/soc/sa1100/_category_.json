@@ -1,0 +1,8 @@
+{
+    "label": "Sa1100",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Sa1100"
+    }
+}

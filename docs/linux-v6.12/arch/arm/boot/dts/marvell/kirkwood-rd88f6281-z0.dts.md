@@ -1,0 +1,48 @@
+---
+sidebar_position: 173
+---
+# kirkwood-rd88f6281-z0.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/marvell/kirkwood-rd88f6281-z0.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Marvell RD88F6181 Z0 stepping descrition
+ *
+ * Andrew Lunn <andrew@lunn.ch>
+ *
+ * This file contains the definitions for the board using the Z0
+ * stepping of the SoC. The ethernet switch has a "wan" port.
+*/
+
+/dts-v1/;
+
+#include "kirkwood-rd88f6281.dtsi"
+
+/ {
+	model = "Marvell RD88f6281 Reference design, with Z0 SoC";
+	compatible = "marvell,rd88f6281-z0", "marvell,rd88f6281","marvell,kirkwood-88f6281", "marvell,kirkwood";
+
+};
+
+&eth1 {
+	status = "disabled";
+};
+
+&switch {
+	reg = <0>;
+
+	ports {
+		port@4 {
+			reg = <4>;
+			label = "wan";
+		};
+	};
+};
+
+```

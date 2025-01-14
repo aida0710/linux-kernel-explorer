@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/misc/mei/hdcp/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (c) 2019, Intel Corporation. All rights reserved.
+#
+config INTEL_MEI_HDCP
+	tristate "Intel HDCP2.2 services of ME Interface"
+	depends on INTEL_MEI_ME
+	depends on DRM_I915 || DRM_XE
+	help
+	  MEI Support for HDCP2.2 Services on Intel platforms.
+
+	  Enables the ME FW services required for HDCP2.2 support through
+	  I915 display driver of Intel.
+
+```

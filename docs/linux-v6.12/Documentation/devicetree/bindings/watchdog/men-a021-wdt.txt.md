@@ -1,0 +1,39 @@
+---
+sidebar_position: 36
+---
+# men-a021-wdt.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/watchdog/men-a021-wdt.txt`
+
+### コンテンツ
+
+```txt
+Bindings for MEN A21 Watchdog device connected to GPIO lines
+
+Required properties:
+- compatible: "men,a021-wdt"
+- gpios: Specifies the pins that control the Watchdog, order:
+  1: Watchdog enable
+  2: Watchdog fast-mode
+  3: Watchdog trigger
+  4: Watchdog reset cause bit 0
+  5: Watchdog reset cause bit 1
+  6: Watchdog reset cause bit 2
+
+Optional properties:
+- None
+
+Example:
+	watchdog {
+		compatible ="men,a021-wdt";
+		gpios = <&gpio3 9  1	/* WD_EN */
+			 &gpio3 10 1	/* WD_FAST */
+			 &gpio3 11 1	/* WD_TRIG */
+			 &gpio3 6  1	/* RST_CAUSE[0] */
+			 &gpio3 7  1	/* RST_CAUSE[1] */
+			 &gpio3 8  1>;	/* RST_CAUSE[2] */
+	};
+
+```

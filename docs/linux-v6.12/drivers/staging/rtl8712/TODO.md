@@ -1,0 +1,27 @@
+---
+sidebar_position: 91
+---
+# TODO
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/staging/rtl8712/TODO`
+
+### コンテンツ
+
+```txt
+TODO:
+- merge Realtek's bugfixes and new features into the driver
+- switch to use LIB80211
+- switch to use MAC80211
+- checkpatch.pl fixes - only a few remain
+
+A replacement for this driver with MAC80211 support is available
+at https://github.com/chunkeey/rtl8192su
+
+Please send any patches to Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+Larry Finger <Larry.Finger@lwfinger.net>,
+Florian Schilhabel <florian.c.schilhabel@googlemail.com> and
+Linux Driver Project Developer List <driverdev-devel@linuxdriverproject.org>.
+
+```

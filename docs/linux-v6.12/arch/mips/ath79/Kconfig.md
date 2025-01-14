@@ -1,0 +1,46 @@
+---
+sidebar_position: 5
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/ath79/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+if ATH79
+
+config SOC_AR71XX
+	select HAVE_PCI
+	def_bool n
+
+config SOC_AR724X
+	select HAVE_PCI
+	select PCI_AR724X if PCI
+	def_bool n
+
+config SOC_AR913X
+	def_bool n
+
+config SOC_AR933X
+	def_bool n
+
+config SOC_AR934X
+	select HAVE_PCI
+	select PCI_AR724X if PCI
+	def_bool n
+
+config SOC_QCA955X
+	select HAVE_PCI
+	select PCI_AR724X if PCI
+	def_bool n
+
+config PCI_AR724X
+	def_bool n
+
+endif
+
+```

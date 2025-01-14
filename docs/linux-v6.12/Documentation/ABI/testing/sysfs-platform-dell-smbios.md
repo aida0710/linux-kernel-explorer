@@ -1,0 +1,35 @@
+---
+sidebar_position: 499
+---
+# sysfs-platform-dell-smbios
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-platform-dell-smbios`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/platform/<platform>/tokens/*
+Date:		November 2017
+KernelVersion:	4.15
+Contact:	Dell.Client.Kernel@dell.com
+Description:
+		A read-only description of Dell platform tokens
+		available on the machine.
+
+		Each token attribute is available as a pair of
+		sysfs attributes readable by a process with
+		CAP_SYS_ADMIN.
+
+		For example the token ID "5" would be available
+		as the following attributes:
+
+		- 0005_location
+		- 0005_value
+
+		Tokens will vary from machine to machine, and
+		only tokens available on that machine will be
+		displayed.
+
+```

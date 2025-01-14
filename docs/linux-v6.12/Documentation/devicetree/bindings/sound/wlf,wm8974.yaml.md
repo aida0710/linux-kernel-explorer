@@ -1,0 +1,55 @@
+---
+sidebar_position: 427
+---
+# wlf,wm8974.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/sound/wlf,wm8974.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/sound/wlf,wm8974.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: WM8974 audio CODEC
+
+maintainers:
+  - patches@opensource.cirrus.com
+
+allOf:
+  - $ref: dai-common.yaml#
+
+properties:
+  compatible:
+    const: wlf,wm8974
+
+  reg:
+    maxItems: 1
+
+  "#sound-dai-cells":
+    const: 0
+
+required:
+  - compatible
+  - reg
+
+unevaluatedProperties: false
+
+examples:
+  - |
+    i2c {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        codec@1a {
+            compatible = "wlf,wm8974";
+            reg = <0x1a>;
+        };
+    };
+
+```

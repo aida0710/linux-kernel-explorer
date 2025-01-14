@@ -1,0 +1,45 @@
+---
+sidebar_position: 67
+---
+# brcm,bcm2835-aux-clock.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/clock/brcm,bcm2835-aux-clock.txt`
+
+### コンテンツ
+
+```txt
+Broadcom BCM2835 auxiliary peripheral support
+
+This binding uses the common clock binding:
+    Documentation/devicetree/bindings/clock/clock-bindings.txt
+
+The auxiliary peripherals (UART, SPI1, and SPI2) have a small register
+area controlling clock gating to the peripherals, and providing an IRQ
+status register.
+
+Required properties:
+- compatible:	Should be "brcm,bcm2835-aux"
+- #clock-cells:	Should be <1>. The permitted clock-specifier values can be
+		  found in include/dt-bindings/clock/bcm2835-aux.h
+- reg:		Specifies base physical address and size of the registers
+- clocks:	The parent clock phandle
+
+Example:
+
+	clocks: cprman@7e101000 {
+		compatible = "brcm,bcm2835-cprman";
+		#clock-cells = <1>;
+		reg = <0x7e101000 0x2000>;
+		clocks = <&clk_osc>;
+	};
+
+	aux: aux@7e215004 {
+		compatible = "brcm,bcm2835-aux";
+		#clock-cells = <1>;
+		reg = <0x7e215000 0x8>;
+		clocks = <&clocks BCM2835_CLOCK_VPU>;
+	};
+
+```

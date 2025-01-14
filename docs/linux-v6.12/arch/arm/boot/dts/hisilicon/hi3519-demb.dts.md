@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+---
+# hi3519-demb.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/hisilicon/hi3519-demb.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later
+/*
+ * Copyright (c) 2015 HiSilicon Technologies Co., Ltd.
+ */
+
+/dts-v1/;
+#include "hi3519.dtsi"
+
+/ {
+	model = "HiSilicon HI3519 DEMO Board";
+	compatible = "hisilicon,hi3519";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	memory@80000000 {
+		device_type = "memory";
+		reg = <0x80000000 0x40000000>;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+&dual_timer0 {
+	status = "okay";
+};
+
+```

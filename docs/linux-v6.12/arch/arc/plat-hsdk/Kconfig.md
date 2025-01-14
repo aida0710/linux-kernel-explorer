@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arc/plat-hsdk/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (C) 2017 Synopsys, Inc. (www.synopsys.com)
+#
+
+menuconfig ARC_SOC_HSDK
+	bool "ARC HS Development Kit SOC"
+	depends on ISA_ARCV2
+	select ARC_HAS_ACCL_REGS
+	select ARC_IRQ_NO_AUTOSAVE
+	select ARC_FPU_SAVE_RESTORE
+	select CLK_HSDK
+	select RESET_CONTROLLER
+	select RESET_HSDK
+	select HAVE_PCI
+
+```

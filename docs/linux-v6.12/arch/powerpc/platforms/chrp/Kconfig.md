@@ -1,0 +1,30 @@
+---
+sidebar_position: 3
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/powerpc/platforms/chrp/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+config PPC_CHRP
+	bool "Common Hardware Reference Platform (CHRP) based machines"
+	depends on PPC_BOOK3S_32
+	select HAVE_PCSPKR_PLATFORM
+	select MPIC
+	select PPC_I8259
+	select PPC_INDIRECT_PCI
+	select PPC_RTAS
+	select PPC_RTAS_DAEMON
+	select RTAS_ERROR_LOGGING
+	select PPC_MPC106
+	select PPC_UDBG_16550
+	select PPC_HASH_MMU_NATIVE
+	select FORCE_PCI
+	default y
+
+```

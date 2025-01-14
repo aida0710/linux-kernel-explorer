@@ -1,0 +1,51 @@
+---
+sidebar_position: 19
+---
+# r8a7742-iwg21d-q7-dbcm-ov5640-single.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/renesas/r8a7742-iwg21d-q7-dbcm-ov5640-single.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * This include file ties a VIN interface with a single ov5640 sensor on
+ * the iWave-RZ/G1H Qseven board development platform connected with the
+ * camera daughter board.
+ *
+ * Copyright (C) 2020 Renesas Electronics Corp.
+ */
+
+#include <dt-bindings/media/video-interfaces.h>
+
+#define CAM_ENABLED	1
+
+&CAM_PARENT_I2C {
+	status = "okay";
+
+	ov5640@3c {
+		compatible = "ovti,ov5640";
+		reg = <0x3c>;
+		clocks = <&MCLK_CAM>;
+		clock-names = "xclk";
+		AVDD-supply = <&reg_2p8v>;
+		DOVDD-supply = <&reg_2p8v>;
+		DVDD-supply = <&reg_1p8v>;
+		status = "okay";
+
+		port {
+			CAM_EP: endpoint {
+				bus-width = <8>;
+				data-shift = <2>;
+				bus-type = <MEDIA_BUS_TYPE_BT656>;
+				pclk-sample = <1>;
+				remote-endpoint = <&VIN_EP>;
+			};
+		};
+	};
+};
+
+```

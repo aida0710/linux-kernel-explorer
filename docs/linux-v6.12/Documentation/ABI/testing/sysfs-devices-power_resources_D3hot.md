@@ -1,0 +1,28 @@
+---
+sidebar_position: 358
+---
+# sysfs-devices-power_resources_D3hot
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-devices-power_resources_D3hot`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/.../power_resources_D3hot/
+Date:		January 2013
+Contact:	Rafael J. Wysocki <rafael.j.wysocki@intel.com>
+Description:
+		The /sys/devices/.../power_resources_D3hot/ directory is only
+		present for device objects representing ACPI device nodes that
+		use ACPI power resources for power management and support ACPI
+		power state D3hot.
+
+		If present, it contains symbolic links to device directories
+		representing ACPI power resources that need to be turned on for
+		the given device node to be in ACPI power state D3hot.  The
+		names of the links are the same as the names of the directories
+		they point to.
+
+```

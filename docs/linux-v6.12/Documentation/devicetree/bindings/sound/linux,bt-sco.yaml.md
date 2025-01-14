@@ -1,0 +1,55 @@
+---
+sidebar_position: 153
+---
+# linux,bt-sco.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/sound/linux,bt-sco.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/sound/linux,bt-sco.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Bluetooth SCO Audio Codec
+
+maintainers:
+  - Mark Brown <broonie@kernel.org>
+
+allOf:
+  - $ref: dai-common.yaml#
+
+properties:
+  '#sound-dai-cells':
+    enum:
+      - 0
+
+      # For Wideband PCM
+      - 1
+
+  compatible:
+    enum:
+      - delta,dfbmcs320
+      - linux,bt-sco
+
+required:
+  - '#sound-dai-cells'
+  - compatible
+
+unevaluatedProperties: false
+
+examples:
+  - |
+    codec {
+        #sound-dai-cells = <0>;
+        compatible = "linux,bt-sco";
+    };
+
+...
+
+```

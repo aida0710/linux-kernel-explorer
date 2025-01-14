@@ -1,0 +1,18 @@
+---
+sidebar_position: 2
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/pinctrl/pxa/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+# Marvell PXA pin control drivers
+obj-$(CONFIG_PINCTRL_PXA25X)	+= pinctrl-pxa2xx.o pinctrl-pxa25x.o
+obj-$(CONFIG_PINCTRL_PXA27X)	+= pinctrl-pxa2xx.o pinctrl-pxa27x.o
+
+```

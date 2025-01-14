@@ -1,0 +1,35 @@
+---
+sidebar_position: 25
+---
+# mtools.conf.in
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/x86/boot/mtools.conf.in`
+
+### コンテンツ
+
+```in
+#
+# mtools configuration file for "make (b)zdisk"
+#
+
+# Actual floppy drive
+drive a:
+  file="/dev/fd0"
+
+# 1.44 MB floppy disk image
+drive v:
+  file="@OBJ@/fdimage" cylinders=80 heads=2 sectors=18 filter
+
+# 2.88 MB floppy disk image (mostly for virtual uses)
+drive w:
+  file="@OBJ@/fdimage" cylinders=80 heads=2 sectors=36 filter
+
+# Hard disk (h: for the filesystem, p: for format - old mtools bug?)
+drive h:
+  file="@OBJ@/hdimage" offset=32768 mformat_only
+drive p:
+  file="@OBJ@/hdimage" partition=1 mformat_only
+
+```

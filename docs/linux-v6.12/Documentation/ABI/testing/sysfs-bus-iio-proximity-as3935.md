@@ -1,0 +1,29 @@
+---
+sidebar_position: 182
+---
+# sysfs-bus-iio-proximity-as3935
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-bus-iio-proximity-as3935`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/iio/devices/iio:deviceX/in_proximity_input
+Date:		March 2014
+KernelVersion:	3.15
+Contact:	Matt Ranostay <matt.ranostay@konsulko.com>
+Description:
+		Get the current distance in meters of storm (1km steps)
+		1000-40000 = distance in meters
+
+What		/sys/bus/iio/devices/iio:deviceX/noise_level_tripped
+Date:		May 2017
+KernelVersion:	4.13
+Contact:	Matt Ranostay <matt.ranostay@konsulko.com>
+Description:
+		When 1 the noise level is over the trip level and not reporting
+		valid data
+
+```

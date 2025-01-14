@@ -1,0 +1,42 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/net/wireless/marvell/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config WLAN_VENDOR_MARVELL
+	bool "Marvell devices"
+	default y
+	help
+	  If you have a wireless card belonging to this class, say Y.
+
+	  Note that the answer to this question doesn't directly affect the
+	  kernel: saying N will just cause the configurator to skip all the
+	  questions about these cards. If you say Y, you will be asked for
+	  your specific card in the following questions.
+
+if WLAN_VENDOR_MARVELL
+
+source "drivers/net/wireless/marvell/libertas/Kconfig"
+source "drivers/net/wireless/marvell/libertas_tf/Kconfig"
+source "drivers/net/wireless/marvell/mwifiex/Kconfig"
+
+config MWL8K
+	tristate "Marvell 88W8xxx PCI/PCIe Wireless support"
+	depends on MAC80211 && PCI
+	help
+	  This driver supports Marvell TOPDOG 802.11 wireless cards.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called mwl8k.  If unsure, say N.
+
+endif # WLAN_VENDOR_MARVELL
+
+```

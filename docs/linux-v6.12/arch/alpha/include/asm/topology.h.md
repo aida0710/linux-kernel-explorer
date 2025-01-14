@@ -1,0 +1,26 @@
+---
+sidebar_position: 83
+---
+# topology.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/alpha/include/asm/topology.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+#ifndef _ASM_ALPHA_TOPOLOGY_H
+#define _ASM_ALPHA_TOPOLOGY_H
+
+#include <linux/smp.h>
+#include <linux/threads.h>
+#include <linux/numa.h>
+#include <asm/machvec.h>
+
+# include <asm-generic/topology.h>
+
+#endif /* _ASM_ALPHA_TOPOLOGY_H */
+
+```

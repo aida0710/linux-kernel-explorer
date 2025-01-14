@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+---
+# .kunitconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/firewire/.kunitconfig`
+
+### コンテンツ
+
+```kunitconfig
+CONFIG_KUNIT=y
+CONFIG_PCI=y
+CONFIG_FIREWIRE=y
+CONFIG_FIREWIRE_KUNIT_UAPI_TEST=y
+CONFIG_FIREWIRE_KUNIT_DEVICE_ATTRIBUTE_TEST=y
+CONFIG_FIREWIRE_KUNIT_PACKET_SERDES_TEST=y
+CONFIG_FIREWIRE_KUNIT_SELF_ID_SEQUENCE_HELPER_TEST=y
+CONFIG_FIREWIRE_KUNIT_OHCI_SERDES_TEST=y
+
+```

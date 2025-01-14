@@ -1,0 +1,31 @@
+---
+sidebar_position: 64
+---
+# rtc-opal.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/rtc/rtc-opal.txt`
+
+### コンテンツ
+
+```txt
+IBM OPAL real-time clock
+------------------------
+
+Required properties:
+- compatible: Should be "ibm,opal-rtc"
+
+Optional properties:
+- wakeup-source: Decides if the wakeup is supported or not
+		 (Legacy property supported: "has-tpo")
+
+Example:
+	rtc {
+		compatible = "ibm,opal-rtc";
+		wakeup-source;
+		phandle = <0x10000029>;
+		linux,phandle = <0x10000029>;
+	};
+
+```

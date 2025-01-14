@@ -1,0 +1,44 @@
+---
+sidebar_position: 14
+---
+# meson-a1-ad401.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/amlogic/meson-a1-ad401.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2019 Amlogic, Inc. All rights reserved.
+ */
+
+/dts-v1/;
+
+#include "meson-a1.dtsi"
+
+/ {
+	compatible = "amlogic,ad401", "amlogic,a1";
+	model = "Amlogic Meson A1 AD401 Development Board";
+
+	aliases {
+		serial0 = &uart_AO_B;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x0 0x0 0x8000000>;
+	};
+};
+
+&uart_AO_B {
+	status = "okay";
+};
+
+```

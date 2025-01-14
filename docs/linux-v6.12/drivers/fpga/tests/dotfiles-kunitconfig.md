@@ -1,0 +1,19 @@
+---
+sidebar_position: 1
+---
+# .kunitconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/fpga/tests/.kunitconfig`
+
+### コンテンツ
+
+```kunitconfig
+CONFIG_KUNIT=y
+CONFIG_FPGA=y
+CONFIG_FPGA_REGION=y
+CONFIG_FPGA_BRIDGE=y
+CONFIG_FPGA_KUNIT_TESTS=y
+
+```

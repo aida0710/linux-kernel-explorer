@@ -1,0 +1,36 @@
+---
+sidebar_position: 1
+---
+# .gitignore
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/timers/.gitignore`
+
+### コンテンツ
+
+```gitignore
+# SPDX-License-Identifier: GPL-2.0-only
+alarmtimer-suspend
+change_skew
+clocksource-switch
+inconsistency-check
+leap-a-day
+leapcrash
+mqueue-lat
+nanosleep
+nsleep-lat
+posix_timers
+raw_skew
+rtcpie
+set-2038
+set-tai
+set-timer-lat
+skew_consistency
+threadtest
+valid-adjtimex
+adjtick
+set-tz
+freq-step
+
+```

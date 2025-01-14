@@ -1,0 +1,28 @@
+---
+sidebar_position: 3
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/soc/fsl/qe/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+#
+# Makefile for the linux ppc-specific parts of QE
+#
+obj-$(CONFIG_QUICC_ENGINE)+= qe.o qe_common.o qe_ic.o qe_io.o
+obj-$(CONFIG_CPM)	+= qe_common.o
+obj-$(CONFIG_CPM_TSA)	+= tsa.o
+obj-$(CONFIG_CPM_QMC)	+= qmc.o
+obj-$(CONFIG_UCC)	+= ucc.o
+obj-$(CONFIG_UCC_SLOW)	+= ucc_slow.o
+obj-$(CONFIG_UCC_FAST)	+= ucc_fast.o
+obj-$(CONFIG_QE_TDM)	+= qe_tdm.o
+obj-$(CONFIG_QE_USB)	+= usb.o
+obj-$(CONFIG_QE_GPIO)	+= gpio.o
+
+```

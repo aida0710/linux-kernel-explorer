@@ -1,0 +1,26 @@
+---
+sidebar_position: 14
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/imx/dcss/Kconfig`
+
+### コンテンツ
+
+```txt
+config DRM_IMX_DCSS
+	tristate "i.MX8MQ DCSS"
+	select IMX_IRQSTEER
+	select DRM_KMS_HELPER
+	select DRM_DISPLAY_HELPER
+	select DRM_BRIDGE_CONNECTOR
+	select DRM_GEM_DMA_HELPER
+	select VIDEOMODE_HELPERS
+	depends on DRM && ARCH_MXC && ARM64
+	help
+	  Choose this if you have a NXP i.MX8MQ based system and want to use the
+	  Display Controller Subsystem. This option enables DCSS support.
+
+```

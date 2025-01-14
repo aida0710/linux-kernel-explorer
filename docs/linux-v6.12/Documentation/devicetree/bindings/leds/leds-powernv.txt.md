@@ -1,0 +1,40 @@
+---
+sidebar_position: 36
+---
+# leds-powernv.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/leds/leds-powernv.txt`
+
+### コンテンツ
+
+```txt
+Device Tree binding for LEDs on IBM Power Systems
+-------------------------------------------------
+
+Required properties:
+- compatible : Should be "ibm,opal-v3-led".
+- led-mode   : Should be "lightpath" or "guidinglight".
+
+Each location code of FRU/Enclosure must be expressed in the
+form of a sub-node.
+
+Required properties for the sub nodes:
+- led-types : Supported LED types (attention/identify/fault) provided
+              in the form of string array.
+
+Example:
+
+leds {
+	compatible = "ibm,opal-v3-led";
+	led-mode = "lightpath";
+
+	U78C9.001.RST0027-P1-C1 {
+		led-types = "identify", "fault";
+	};
+	...
+	...
+};
+
+```

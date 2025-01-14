@@ -1,0 +1,21 @@
+---
+sidebar_position: 30
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/clk/ti/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config COMMON_CLK_TI_ADPLL
+	tristate "Clock driver for dm814x ADPLL"
+	depends on ARCH_OMAP2PLUS || COMPILE_TEST
+	default y if SOC_TI81XX
+	help
+	  ADPLL clock driver for the dm814x SoC using common clock framework.
+
+```

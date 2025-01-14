@@ -1,0 +1,8 @@
+{
+    "label": "Ath11k",
+    "position": 600,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Ath11k"
+    }
+}

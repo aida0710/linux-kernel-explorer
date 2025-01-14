@@ -1,0 +1,8 @@
+{
+    "label": "Test Soc",
+    "position": 700,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Test Soc"
+    }
+}

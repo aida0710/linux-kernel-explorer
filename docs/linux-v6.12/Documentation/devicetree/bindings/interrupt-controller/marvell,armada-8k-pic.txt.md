@@ -1,0 +1,39 @@
+---
+sidebar_position: 59
+---
+# marvell,armada-8k-pic.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/interrupt-controller/marvell,armada-8k-pic.txt`
+
+### コンテンツ
+
+```txt
+Marvell Armada 7K/8K PIC Interrupt controller
+---------------------------------------------
+
+This is the Device Tree binding for the PIC, a secondary interrupt
+controller available on the Marvell Armada 7K/8K ARM64 SoCs, and
+typically connected to the GIC as the primary interrupt controller.
+
+Required properties:
+- compatible: should be "marvell,armada-8k-pic"
+- interrupt-controller: identifies the node as an interrupt controller
+- #interrupt-cells: the number of cells to define interrupts on this
+  controller. Should be 1
+- reg: the register area for the PIC interrupt controller
+- interrupts: the interrupt to the primary interrupt controller,
+  typically the GIC
+
+Example:
+
+	pic: interrupt-controller@3f0100 {
+		compatible = "marvell,armada-8k-pic";
+		reg = <0x3f0100 0x10>;
+		#interrupt-cells = <1>;
+		interrupt-controller;
+		interrupts = <GIC_PPI 15 IRQ_TYPE_LEVEL_HIGH>;
+	};
+
+```

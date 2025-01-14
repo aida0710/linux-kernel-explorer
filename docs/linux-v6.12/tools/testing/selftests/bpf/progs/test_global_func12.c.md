@@ -1,0 +1,39 @@
+---
+sidebar_position: 504
+---
+# test_global_func12.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/bpf/progs/test_global_func12.c`
+
+### コンテンツ
+
+```c
+// SPDX-License-Identifier: GPL-2.0-only
+#include <stddef.h>
+#include <linux/bpf.h>
+#include <bpf/bpf_helpers.h>
+#include "bpf_misc.h"
+
+struct S {
+	int x;
+};
+
+__noinline int foo(const struct S *s)
+{
+	return bpf_get_prandom_u32() < s->x;
+}
+
+SEC("cgroup_skb/ingress")
+__failure __msg("invalid mem access 'mem_or_null'")
+int global_func12(struct __sk_buff *skb)
+{
+	const struct S s = {.x = skb->len };
+
+	foo(&s);
+
+	return 1;
+}
+
+```

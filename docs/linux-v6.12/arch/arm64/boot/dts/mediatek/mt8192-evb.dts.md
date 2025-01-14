@@ -1,0 +1,44 @@
+---
+sidebar_position: 122
+---
+# mt8192-evb.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/mediatek/mt8192-evb.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Copyright (C) 2020 MediaTek Inc.
+ * Author: Seiya Wang <seiya.wang@mediatek.com>
+ */
+/dts-v1/;
+#include "mt8192.dtsi"
+#include "mt6359.dtsi"
+
+/ {
+	model = "MediaTek MT8192 evaluation board";
+	compatible = "mediatek,mt8192-evb", "mediatek,mt8192";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	chosen {
+		stdout-path = "serial0:921600n8";
+	};
+
+	memory@40000000 {
+		device_type = "memory";
+		reg = <0 0x40000000 0 0x80000000>;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+```

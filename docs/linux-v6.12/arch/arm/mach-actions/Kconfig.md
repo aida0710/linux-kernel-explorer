@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/mach-actions/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+menuconfig ARCH_ACTIONS
+	bool "Actions Semi SoCs"
+	depends on ARCH_MULTI_V7
+	select ARM_AMBA
+	select ARM_GIC
+	select ARM_GLOBAL_TIMER
+	select CACHE_L2X0
+	select CLKSRC_ARM_GLOBAL_TIMER_SCHED_CLOCK
+	select GENERIC_IRQ_CHIP
+	select HAVE_ARM_SCU if SMP
+	select HAVE_ARM_TWD if SMP
+	select OWL_PM_DOMAINS_HELPER
+	select OWL_TIMER
+	help
+	  This enables support for the Actions Semiconductor S500 SoC family.
+
+```

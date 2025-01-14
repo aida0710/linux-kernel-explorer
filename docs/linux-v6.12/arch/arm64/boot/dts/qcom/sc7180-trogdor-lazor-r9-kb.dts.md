@@ -1,0 +1,37 @@
+---
+sidebar_position: 256
+---
+# sc7180-trogdor-lazor-r9-kb.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/sc7180-trogdor-lazor-r9-kb.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Google Lazor board device tree source
+ *
+ * Copyright 2020 Google LLC.
+ */
+
+/dts-v1/;
+
+#include "sc7180-trogdor.dtsi"
+#include "sc7180-trogdor-parade-ps8640.dtsi"
+#include "sc7180-trogdor-lazor.dtsi"
+#include "sc7180-trogdor-rt5682i-sku.dtsi"
+#include "sc7180-lite.dtsi"
+
+/ {
+	model = "Google Lazor (rev9) with KB Backlight";
+	compatible = "google,lazor-rev9-sku2", "qcom,sc7180";
+};
+
+&pwmleds {
+	status = "okay";
+};
+
+```

@@ -1,0 +1,26 @@
+---
+sidebar_position: 14
+---
+# TODO
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/thermal/ti-soc-thermal/TODO`
+
+### コンテンツ
+
+```txt
+List of TODOs (by Eduardo Valentin)
+
+on ti-bandgap.c:
+- Revisit PM support
+
+on ti-thermal-common.c/ti-thermal.h:
+- Revisit need for locking
+
+generally:
+- make sure this code works on OMAP4430, OMAP4460 and OMAP5430
+
+Copy patches to Eduardo Valentin <eduardo.valentin@ti.com>
+
+```

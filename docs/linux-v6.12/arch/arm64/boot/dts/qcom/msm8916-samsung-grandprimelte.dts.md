@@ -1,0 +1,44 @@
+---
+sidebar_position: 59
+---
+# msm8916-samsung-grandprimelte.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/msm8916-samsung-grandprimelte.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-only
+
+/dts-v1/;
+
+#include "msm8916-samsung-fortuna-common.dtsi"
+
+/ {
+	model = "Samsung Galaxy Grand Prime (SM-G530FZ)";
+	compatible = "samsung,grandprimelte", "qcom,msm8916";
+	chassis-type = "handset";
+};
+
+&battery {
+	charge-term-current-microamp = <200000>;
+	constant-charge-current-max-microamp = <1000000>;
+	constant-charge-voltage-max-microvolt = <4350000>;
+};
+
+&bosch_accel {
+	status = "okay";
+};
+
+&bosch_magn {
+	status = "okay";
+};
+
+&mpss_mem {
+	/* Firmware for grandprimelte needs more space */
+	reg = <0x0 0x86800000 0x0 0x5400000>;
+};
+
+```

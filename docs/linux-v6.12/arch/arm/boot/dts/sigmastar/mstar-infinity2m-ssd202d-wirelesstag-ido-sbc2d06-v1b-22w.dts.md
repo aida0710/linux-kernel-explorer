@@ -1,0 +1,37 @@
+---
+sidebar_position: 12
+---
+# mstar-infinity2m-ssd202d-wirelesstag-ido-sbc2d06-v1b-22w.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/sigmastar/mstar-infinity2m-ssd202d-wirelesstag-ido-sbc2d06-v1b-22w.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Copyright (c) 2021 thingy.jp.
+ * Author: Daniel Palmer <daniel@thingy.jp>
+ * Author: Romain Perier <romain.perier@gmail.com>
+ */
+
+/dts-v1/;
+#include "mstar-infinity2m-ssd202d-wirelesstag-ido-som2d01.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "Wireless Tag IDO-SBC2D06-1VB-22W";
+	compatible = "wirelesstag,ido-sbc2d06-v1b-22w", "mstar,infinity2m";
+
+	leds {
+		compatible = "gpio-leds";
+		sys_led {
+			gpios = <&gpio SSD20XD_GPIO_GPIO85 GPIO_ACTIVE_LOW>;
+			linux,default-trigger = "heartbeat";
+		};
+	};
+};
+
+```

@@ -1,0 +1,8 @@
+{
+    "label": "Power8",
+    "position": 700,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Power8"
+    }
+}

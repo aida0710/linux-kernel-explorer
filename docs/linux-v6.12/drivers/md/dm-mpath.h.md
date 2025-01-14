@@ -1,0 +1,37 @@
+---
+sidebar_position: 48
+---
+# dm-mpath.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/md/dm-mpath.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0-only */
+/*
+ * Copyright (C) 2004 Red Hat, Inc. All rights reserved.
+ *
+ * This file is released under the GPL.
+ *
+ * Multipath.
+ */
+
+#ifndef	DM_MPATH_H
+#define	DM_MPATH_H
+
+struct dm_dev;
+
+struct dm_path {
+	struct dm_dev *dev;	/* Read-only */
+	void *pscontext;	/* For path-selector use */
+};
+
+/* Callback for hwh_pg_init_fn to use when complete */
+void dm_pg_init_complete(struct dm_path *path, unsigned int err_flags);
+
+#endif
+
+```

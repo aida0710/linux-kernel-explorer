@@ -1,0 +1,25 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/powerpc/platforms/microwatt/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+config PPC_MICROWATT
+	depends on PPC_BOOK3S_64 && !SMP
+	bool "Microwatt SoC platform"
+	select PPC_XICS
+	select PPC_ICS_NATIVE
+	select PPC_ICP_NATIVE
+	select PPC_UDBG_16550
+	help
+          This option enables support for FPGA-based Microwatt implementations.
+
+
+```

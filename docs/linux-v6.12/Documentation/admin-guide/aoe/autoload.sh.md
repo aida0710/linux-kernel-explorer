@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+---
+# autoload.sh
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/admin-guide/aoe/autoload.sh`
+
+### コンテンツ
+
+```sh
+#!/bin/sh
+# set aoe to autoload by installing the
+# aliases in /etc/modprobe.d/
+
+f=/etc/modprobe.d/aoe.conf
+
+if test ! -r $f || test ! -w $f; then
+	echo "cannot configure $f for module autoloading" 1>&2
+	exit 1
+fi
+
+grep major-152 $f >/dev/null
+if [ $? = 1 ]; then
+	echo alias block-major-152 aoe >> $f
+	echo alias char-major-152 aoe >> $f
+fi
+
+
+```

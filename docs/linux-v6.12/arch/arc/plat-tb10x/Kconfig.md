@@ -1,0 +1,34 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arc/plat-tb10x/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+# Abilis Systems TB10x platform kernel configuration file
+#
+# Author: Christian Ruppert <christian.ruppert@abilis.com>
+#
+
+
+menuconfig ARC_PLAT_TB10X
+	bool "Abilis TB10x"
+	select PINCTRL
+	select PINCTRL_TB10X
+	select PINMUX
+	select GPIOLIB
+	select GPIO_TB10X
+	select TB10X_IRQC
+	help
+	  Support for platforms based on the TB10x home media gateway SOC by
+	  Abilis Systems. TB10x is based on the ARC700 CPU architecture.
+	  Say Y if you are building a kernel for one of the SOCs in this
+	  series (e.g. TB100 or TB101). If in doubt say N.
+
+```

@@ -1,0 +1,55 @@
+---
+sidebar_position: 353
+---
+# sirf-audio.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/sound/sirf-audio.txt`
+
+### コンテンツ
+
+```txt
+* SiRF atlas6 and prima2 internal audio codec and port based audio setups
+
+Required properties:
+- compatible: "sirf,sirf-audio-card"
+- sirf,audio-platform: phandle for the platform node
+- sirf,audio-codec: phandle for the SiRF internal codec node
+
+Optional properties:
+- hp-pa-gpios: Need to be present if the board need control external
+  headphone amplifier.
+- spk-pa-gpios: Need to be present if the board need control external
+  speaker amplifier.
+- hp-switch-gpios: Need to be present if the board capable to detect jack
+  insertion, removal.
+
+Available audio endpoints for the audio-routing table:
+
+Board connectors:
+ * Headset Stereophone
+ * Ext Spk
+ * Line In
+ * Mic
+
+SiRF internal audio codec pins:
+ * HPOUTL
+ * HPOUTR
+ * SPKOUT
+ * Ext Mic
+ * Mic Bias
+
+Example:
+
+sound {
+		compatible = "sirf,sirf-audio-card";
+		sirf,audio-codec = <&audiocodec>;
+		sirf,audio-platform = <&audioport>;
+		hp-pa-gpios = <&gpio 44 0>;
+		spk-pa-gpios = <&gpio 46 0>;
+		hp-switch-gpios = <&gpio 45 0>;
+};
+
+
+```

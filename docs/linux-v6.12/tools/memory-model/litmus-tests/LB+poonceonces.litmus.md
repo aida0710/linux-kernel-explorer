@@ -1,0 +1,42 @@
+---
+sidebar_position: 14
+---
+# LB+poonceonces.litmus
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/memory-model/litmus-tests/LB+poonceonces.litmus`
+
+### コンテンツ
+
+```litmus
+C LB+poonceonces
+
+(*
+ * Result: Sometimes
+ *
+ * Can the counter-intuitive outcome for the load-buffering pattern
+ * be prevented even with no explicit ordering?
+ *)
+
+{}
+
+P0(int *x, int *y)
+{
+	int r0;
+
+	r0 = READ_ONCE(*x);
+	WRITE_ONCE(*y, 1);
+}
+
+P1(int *x, int *y)
+{
+	int r0;
+
+	r0 = READ_ONCE(*y);
+	WRITE_ONCE(*x, 1);
+}
+
+exists (0:r0=1 /\ 1:r0=1)
+
+```

@@ -1,0 +1,76 @@
+---
+sidebar_position: 72
+---
+# qcom-msm8916-smp.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/qcom/qcom-msm8916-smp.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0-only
+
+/ {
+	cpus {
+		cpu@0 {
+			enable-method = "qcom,msm8916-smp";
+		};
+		cpu@1 {
+			enable-method = "qcom,msm8916-smp";
+		};
+		cpu@2 {
+			enable-method = "qcom,msm8916-smp";
+		};
+		cpu@3 {
+			enable-method = "qcom,msm8916-smp";
+		};
+
+		idle-states {
+			/delete-property/ entry-method;
+		};
+	};
+
+	psci {
+		status = "disabled";
+	};
+};
+
+&CPU_SLEEP_0 {
+	compatible = "qcom,idle-state-spc", "arm,idle-state";
+};
+
+&cpu0_acc {
+	status = "okay";
+};
+
+&cpu0_saw {
+	status = "okay";
+};
+
+&cpu1_acc {
+	status = "okay";
+};
+
+&cpu1_saw {
+	status = "okay";
+};
+
+&cpu2_acc {
+	status = "okay";
+};
+
+&cpu2_saw {
+	status = "okay";
+};
+
+&cpu3_acc {
+	status = "okay";
+};
+
+&cpu3_saw {
+	status = "okay";
+};
+
+```

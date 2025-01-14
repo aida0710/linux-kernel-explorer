@@ -1,0 +1,33 @@
+---
+sidebar_position: 54
+---
+# parport.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/parisc/include/asm/parport.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+/* 
+ *
+ * parport.h: ia32-compatible parport initialisation
+ *
+ * This file should only be included by drivers/parport/parport_pc.c.
+ */
+#ifndef _ASM_PARPORT_H
+#define _ASM_PARPORT_H 1
+
+
+static int parport_pc_find_nonpci_ports (int autoirq, int autodma)
+{
+	/* nothing ! */
+	return 0;
+}
+
+
+#endif /* !(_ASM_PARPORT_H) */
+
+```

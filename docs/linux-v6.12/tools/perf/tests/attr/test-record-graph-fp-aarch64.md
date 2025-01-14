@@ -1,0 +1,23 @@
+---
+sidebar_position: 24
+---
+# test-record-graph-fp-aarch64
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/tests/attr/test-record-graph-fp-aarch64`
+
+### コンテンツ
+
+```txt
+[config]
+command = record
+args    = --no-bpf-event --call-graph fp kill >/dev/null 2>&1
+ret     = 1
+arch    = aarch64
+
+[event:base-record]
+sample_type=4391
+sample_regs_user=1073741824
+
+```

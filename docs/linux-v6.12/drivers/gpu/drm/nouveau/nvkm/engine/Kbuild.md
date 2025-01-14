@@ -1,0 +1,40 @@
+---
+sidebar_position: 2
+---
+# Kbuild
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/nouveau/nvkm/engine/Kbuild`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: MIT
+nvkm-y += nvkm/engine/falcon.o
+nvkm-y += nvkm/engine/xtensa.o
+
+include $(src)/nvkm/engine/bsp/Kbuild
+include $(src)/nvkm/engine/ce/Kbuild
+include $(src)/nvkm/engine/cipher/Kbuild
+include $(src)/nvkm/engine/device/Kbuild
+include $(src)/nvkm/engine/disp/Kbuild
+include $(src)/nvkm/engine/dma/Kbuild
+include $(src)/nvkm/engine/fifo/Kbuild
+include $(src)/nvkm/engine/gr/Kbuild
+include $(src)/nvkm/engine/mpeg/Kbuild
+include $(src)/nvkm/engine/msenc/Kbuild
+include $(src)/nvkm/engine/mspdec/Kbuild
+include $(src)/nvkm/engine/msppp/Kbuild
+include $(src)/nvkm/engine/msvld/Kbuild
+include $(src)/nvkm/engine/nvenc/Kbuild
+include $(src)/nvkm/engine/nvdec/Kbuild
+include $(src)/nvkm/engine/nvjpg/Kbuild
+include $(src)/nvkm/engine/ofa/Kbuild
+include $(src)/nvkm/engine/sec/Kbuild
+include $(src)/nvkm/engine/sec2/Kbuild
+include $(src)/nvkm/engine/sw/Kbuild
+include $(src)/nvkm/engine/vic/Kbuild
+include $(src)/nvkm/engine/vp/Kbuild
+
+```

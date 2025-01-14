@@ -1,0 +1,44 @@
+---
+sidebar_position: 11
+---
+# brcm,hr2.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/arm/bcm/brcm,hr2.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/arm/bcm/brcm,hr2.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Broadcom Hurricane 2
+
+description:
+  Broadcom Hurricane 2 family of SoCs are used for switching control. These SoCs
+  are based on Broadcom's iProc SoC architecture and feature a single core Cortex
+  A9 ARM CPUs, DDR2/DDR3 memory, PCIe GEN-2, USB 2.0 and USB 3.0, serial and NAND
+  flash and a PCIe attached integrated switching engine.
+
+maintainers:
+  - Florian Fainelli <f.fainelli@gmail.com>
+
+properties:
+  $nodename:
+    const: '/'
+  compatible:
+    items:
+      - enum:
+          - ubnt,unifi-switch8
+      - const: brcm,bcm53342
+      - const: brcm,hr2
+
+additionalProperties: true
+
+...
+
+```

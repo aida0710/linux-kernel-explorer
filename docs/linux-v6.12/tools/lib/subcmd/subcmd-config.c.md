@@ -1,0 +1,26 @@
+---
+sidebar_position: 15
+---
+# subcmd-config.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/lib/subcmd/subcmd-config.c`
+
+### コンテンツ
+
+```c
+// SPDX-License-Identifier: GPL-2.0
+#include "subcmd-config.h"
+
+#define UNDEFINED "SUBCMD_HAS_NOT_BEEN_INITIALIZED"
+
+struct subcmd_config subcmd_config = {
+	.exec_name	= UNDEFINED,
+	.prefix		= UNDEFINED,
+	.exec_path	= UNDEFINED,
+	.exec_path_env	= UNDEFINED,
+	.pager_env	= UNDEFINED,
+};
+
+```

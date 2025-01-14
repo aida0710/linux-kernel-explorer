@@ -1,0 +1,34 @@
+---
+sidebar_position: 4
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/rapidio/switches/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# RapidIO switches configuration
+#
+config RAPIDIO_CPS_XX
+	tristate "IDT CPS-xx SRIO switches support"
+	help
+	  Includes support for IDT CPS-16/12/10/8 serial RapidIO switches.
+
+config RAPIDIO_CPS_GEN2
+	tristate "IDT CPS Gen.2 SRIO switch support"
+	default n
+	help
+	  Includes support for ITD CPS Gen.2 serial RapidIO switches.
+
+config RAPIDIO_RXS_GEN3
+	tristate "IDT RXS Gen.3 SRIO switch support"
+	default n
+	help
+	  Includes support for ITD RXS Gen.3 serial RapidIO switches.
+
+```

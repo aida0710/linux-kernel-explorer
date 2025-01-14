@@ -1,0 +1,44 @@
+---
+sidebar_position: 42
+---
+# cpsw-phy-sel.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/net/cpsw-phy-sel.txt`
+
+### コンテンツ
+
+```txt
+TI CPSW Phy mode Selection Device Tree Bindings (DEPRECATED)
+-----------------------------------------------
+
+Required properties:
+- compatible		: Should be "ti,am3352-cpsw-phy-sel" for am335x platform and
+			  "ti,dra7xx-cpsw-phy-sel" for dra7xx platform
+			  "ti,am43xx-cpsw-phy-sel" for am43xx platform
+- reg			: physical base address and size of the cpsw
+			  registers map
+- reg-names		: names of the register map given in "reg" node
+
+Optional properties:
+-rmii-clock-ext		: If present, the driver will configure the RMII
+			  interface to external clock usage
+
+Examples:
+
+	phy_sel: cpsw-phy-sel@44e10650 {
+		compatible = "ti,am3352-cpsw-phy-sel";
+		reg= <0x44e10650 0x4>;
+		reg-names = "gmii-sel";
+	};
+
+(or)
+	phy_sel: cpsw-phy-sel@44e10650 {
+		compatible = "ti,am3352-cpsw-phy-sel";
+		reg= <0x44e10650 0x4>;
+		reg-names = "gmii-sel";
+		rmii-clock-ext;
+	};
+
+```

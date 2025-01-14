@@ -1,0 +1,18 @@
+---
+sidebar_position: 46
+---
+# thermal-notification
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/stable/thermal-notification`
+
+### コンテンツ
+
+```txt
+What:		A notification mechanism for thermal related events
+Description:
+	This interface enables notification for thermal related events.
+	The notification is in the form of a netlink event.
+
+```

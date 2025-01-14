@@ -1,0 +1,28 @@
+---
+sidebar_position: 7
+---
+# xfs_aops.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/fs/xfs/xfs_aops.h`
+
+### コンテンツ
+
+```h
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (c) 2005-2006 Silicon Graphics, Inc.
+ * All Rights Reserved.
+ */
+#ifndef __XFS_AOPS_H__
+#define __XFS_AOPS_H__
+
+extern const struct address_space_operations xfs_address_space_operations;
+extern const struct address_space_operations xfs_dax_aops;
+
+int	xfs_setfilesize(struct xfs_inode *ip, xfs_off_t offset, size_t size);
+
+#endif /* __XFS_AOPS_H__ */
+
+```

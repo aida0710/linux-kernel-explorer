@@ -1,0 +1,23 @@
+---
+sidebar_position: 3
+---
+# ip_queue
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/removed/ip_queue`
+
+### コンテンツ
+
+```txt
+What:		ip_queue
+Date:		finally removed in kernel v3.5.0
+Contact:	Pablo Neira Ayuso <pablo@netfilter.org>
+Description:
+	ip_queue has been replaced by nfnetlink_queue which provides
+	more advanced queueing mechanism to user-space. The ip_queue
+	module was already announced to become obsolete years ago.
+
+Users:
+
+```

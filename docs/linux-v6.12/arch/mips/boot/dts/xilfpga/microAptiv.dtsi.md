@@ -1,0 +1,36 @@
+---
+sidebar_position: 2
+---
+# microAptiv.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/boot/dts/xilfpga/microAptiv.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0
+/ {
+	#address-cells = <1>;
+	#size-cells = <1>;
+	compatible = "img,xilfpga";
+
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		cpu@0 {
+			device_type = "cpu";
+			compatible = "mips,m14Kc";
+			clocks	= <&ext>;
+			reg = <0>;
+		};
+	};
+
+	ext: ext {
+		compatible = "fixed-clock";
+		#clock-cells = <0>;
+	};
+};
+
+```

@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# thermocouple.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/include/dt-bindings/iio/temperature/thermocouple.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+
+#ifndef _DT_BINDINGS_TEMPERATURE_THERMOCOUPLE_H
+#define _DT_BINDINGS_TEMPERATURE_THERMOCOUPLE_H
+
+
+#define THERMOCOUPLE_TYPE_B	0x00
+#define THERMOCOUPLE_TYPE_E	0x01
+#define THERMOCOUPLE_TYPE_J	0x02
+#define THERMOCOUPLE_TYPE_K	0x03
+#define THERMOCOUPLE_TYPE_N	0x04
+#define THERMOCOUPLE_TYPE_R	0x05
+#define THERMOCOUPLE_TYPE_S	0x06
+#define THERMOCOUPLE_TYPE_T	0x07
+
+#endif /* _DT_BINDINGS_TEMPERATURE_THERMOCOUPLE_H */
+
+```

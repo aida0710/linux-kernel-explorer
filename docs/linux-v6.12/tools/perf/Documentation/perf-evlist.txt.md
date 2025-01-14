@@ -1,0 +1,59 @@
+---
+sidebar_position: 40
+---
+# perf-evlist.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/Documentation/perf-evlist.txt`
+
+### コンテンツ
+
+```txt
+perf-evlist(1)
+==============
+
+NAME
+----
+perf-evlist - List the event names in a perf.data file
+
+SYNOPSIS
+--------
+[verse]
+'perf evlist <options>'
+
+DESCRIPTION
+-----------
+This command displays the names of events sampled in a perf.data file.
+
+OPTIONS
+-------
+-i::
+--input=::
+        Input file name. (default: perf.data unless stdin is a fifo)
+
+-f::
+--force::
+	Don't complain, do it.
+
+-F::
+--freq=::
+	Show just the sample frequency used for each event.
+
+-v::
+--verbose::
+	Show all fields.
+
+-g::
+--group::
+	Show event group information.
+
+--trace-fields::
+	Show tracepoint field names.
+
+SEE ALSO
+--------
+linkperf:perf-record[1], linkperf:perf-list[1],
+linkperf:perf-report[1]
+
+```

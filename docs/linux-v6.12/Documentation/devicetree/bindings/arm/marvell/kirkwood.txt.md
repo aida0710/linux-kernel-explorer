@@ -1,0 +1,41 @@
+---
+sidebar_position: 16
+---
+# kirkwood.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/arm/marvell/kirkwood.txt`
+
+### コンテンツ
+
+```txt
+Marvell Kirkwood Platforms Device Tree Bindings
+-----------------------------------------------
+
+Boards with a SoC of the Marvell Kirkwood
+shall have the following property:
+
+Required root node property:
+
+compatible: must contain "marvell,kirkwood";
+
+In order to support the kirkwood cpufreq driver, there must be a node
+cpus/cpu@0 with three clocks, "cpu_clk", "ddrclk" and "powersave",
+where the "powersave" clock is a gating clock used to switch the CPU
+between the "cpu_clk" and the "ddrclk".
+
+Example:
+
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		cpu@0 {
+		      device_type = "cpu";
+		      compatible = "marvell,sheeva-88SV131";
+		      clocks = <&core_clk 1>, <&core_clk 3>, <&gate_clk 11>;
+		      clock-names = "cpu_clk", "ddrclk", "powersave";
+		};
+
+```

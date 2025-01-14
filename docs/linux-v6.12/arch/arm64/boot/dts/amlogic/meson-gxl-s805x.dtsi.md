@@ -1,0 +1,37 @@
+---
+sidebar_position: 83
+---
+# meson-gxl-s805x.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/amlogic/meson-gxl-s805x.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2020 BayLibre SAS
+ * Author: Neil Armstrong <narmstrong@baylibre.com>
+ */
+
+#include "meson-gxl-s905x.dtsi"
+
+/ {
+	compatible = "amlogic,s805x", "amlogic,meson-gxl";
+};
+
+/* The S805X Package doesn't seem to handle the 744MHz OPP correctly */
+&gpu_opp_table {
+	opp-744000000 {
+		status = "disabled";
+	};
+};
+
+&mali {
+	/delete-property/ assigned-clocks;
+	/delete-property/ assigned-clock-rates;
+};
+
+```

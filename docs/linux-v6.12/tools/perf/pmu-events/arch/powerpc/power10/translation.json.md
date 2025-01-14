@@ -1,0 +1,31 @@
+---
+sidebar_position: 13
+---
+# translation.json
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/pmu-events/arch/powerpc/power10/translation.json`
+
+### コンテンツ
+
+```json
+[
+  {
+    "EventCode": "0x20018",
+    "EventName": "PM_ST_FWD",
+    "BriefDescription": "Store forwards that finished."
+  },
+  {
+    "EventCode": "0x200F0",
+    "EventName": "PM_ST_CMPL",
+    "BriefDescription": "Stores completed from S2Q (2nd-level store queue). This event includes regular stores, stcx and cache inhibited stores. The following operations are excluded (pteupdate, snoop tlbie complete, store atomics, miso, load atomic payloads, tlbie, tlbsync, slbieg, isync, msgsnd, slbiag, cpabort, copy, tcheck, tend, stsync, dcbst, icbi, dcbf, hwsync, lwsync, ptesync, eieio, msgsync)."
+  },
+  {
+    "EventCode": "0x300F0",
+    "EventName": "PM_ST_MISS_L1",
+    "BriefDescription": "Store Missed L1."
+  }
+]
+
+```

@@ -1,0 +1,24 @@
+---
+sidebar_position: 4
+---
+# syscalls
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/stable/syscalls`
+
+### コンテンツ
+
+```txt
+What:		The kernel syscall interface
+Description:
+	This interface matches much of the POSIX interface and is based
+	on it and other Unix based interfaces.  It will only be added to
+	over time, and not have things removed from it.
+
+	Note that this interface is different for every architecture
+	that Linux supports.  Please see the architecture-specific
+	documentation for details on the syscall numbers that are to be
+	mapped to each syscall.
+
+```

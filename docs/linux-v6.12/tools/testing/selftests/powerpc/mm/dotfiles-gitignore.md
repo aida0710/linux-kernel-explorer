@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# .gitignore
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/powerpc/mm/.gitignore`
+
+### コンテンツ
+
+```gitignore
+# SPDX-License-Identifier: GPL-2.0-only
+bad_accesses
+exec_prot
+hugetlb_vs_thp_test
+large_vm_fork_separation
+large_vm_gpr_corruption
+pkey_exec_prot
+pkey_siginfo
+prot_sao
+segv_errors
+stack_expansion_ldst
+stack_expansion_signal
+subpage_prot
+tempfile
+tlbie_test
+wild_bctr
+
+```

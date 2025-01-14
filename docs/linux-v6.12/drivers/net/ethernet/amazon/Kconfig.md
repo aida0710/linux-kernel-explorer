@@ -1,0 +1,43 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/net/ethernet/amazon/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Amazon network device configuration
+#
+
+config NET_VENDOR_AMAZON
+	bool "Amazon Devices"
+	default y
+	help
+	  If you have a network (Ethernet) device belonging to this class, say Y.
+
+	  Note that the answer to this question doesn't directly affect the
+	  kernel: saying N will just cause the configurator to skip all
+	  the questions about Amazon devices. If you say Y, you will be asked
+	  for your specific device in the following questions.
+
+if NET_VENDOR_AMAZON
+
+config ENA_ETHERNET
+	tristate "Elastic Network Adapter (ENA) support"
+	depends on PCI_MSI && !CPU_BIG_ENDIAN
+	select DIMLIB
+	help
+	  This driver supports Elastic Network Adapter (ENA)"
+
+	  To compile this driver as a module, choose M here.
+	  The module will be called ena.
+
+endif #NET_VENDOR_AMAZON
+
+```

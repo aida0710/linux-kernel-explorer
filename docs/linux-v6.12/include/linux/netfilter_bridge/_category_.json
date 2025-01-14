@@ -1,0 +1,8 @@
+{
+    "label": "Netfilter Bridge",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Netfilter Bridge"
+    }
+}

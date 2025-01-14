@@ -1,0 +1,29 @@
+---
+sidebar_position: 494
+---
+# sysfs-platform-brcmstb-memc
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-platform-brcmstb-memc`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/platform/devices/*/srpd
+Date:		July 2022
+KernelVersion:	5.21
+Contact:	Florian Fainelli <f.fainelli@gmail.com>
+Description:
+		Self Refresh Power Down (SRPD) inactivity timeout counted in
+		internal DDR controller clock cycles. Possible values range
+		from 0 (disable inactivity timeout) to 65535 (0xffff).
+
+What:		/sys/bus/platform/devices/*/frequency
+Date:		July 2022
+KernelVersion:	5.21
+Contact:	Florian Fainelli <f.fainelli@gmail.com>
+Description:
+		DDR PHY frequency in Hz.
+
+```

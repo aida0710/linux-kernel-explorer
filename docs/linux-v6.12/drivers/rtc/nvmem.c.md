@@ -1,0 +1,45 @@
+---
+sidebar_position: 8
+---
+# nvmem.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/rtc/nvmem.c`
+
+### コンテンツ
+
+```c
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * RTC subsystem, nvmem interface
+ *
+ * Copyright (C) 2017 Alexandre Belloni
+ */
+
+#include <linux/err.h>
+#include <linux/types.h>
+#include <linux/nvmem-consumer.h>
+#include <linux/rtc.h>
+
+int devm_rtc_nvmem_register(struct rtc_device *rtc,
+		       struct nvmem_config *nvmem_config)
+{
+	struct device *dev = rtc->dev.parent;
+	struct nvmem_device *nvmem;
+
+	if (!nvmem_config)
+		return -ENODEV;
+
+	nvmem_config->dev = dev;
+	nvmem_config->owner = rtc->owner;
+	nvmem_config->add_legacy_fixed_of_cells = true;
+	nvmem = devm_nvmem_register(dev, nvmem_config);
+	if (IS_ERR(nvmem))
+		dev_err(dev, "failed to register nvmem device for RTC\n");
+
+	return PTR_ERR_OR_ZERO(nvmem);
+}
+EXPORT_SYMBOL_GPL(devm_rtc_nvmem_register);
+
+```

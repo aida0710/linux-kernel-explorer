@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/sti/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# STM SoC audio configuration
+#
+menuconfig SND_SOC_STI
+	tristate "SoC Audio support for STI System-On-Chip"
+	depends on SND_SOC
+	depends on ARCH_STI || COMPILE_TEST
+	select SND_SOC_GENERIC_DMAENGINE_PCM
+	help
+		Say Y if you want to enable ASoC-support for
+		any of the STI platforms (e.g. STIH416).
+
+```

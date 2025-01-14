@@ -1,0 +1,37 @@
+---
+sidebar_position: 353
+---
+# sysfs-devices-platform-_UDC_-gadget
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-devices-platform-_UDC_-gadget`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/platform/_UDC_/gadget/suspended
+Date:		April 2010
+Contact:	Fabien Chouteau <fabien.chouteau@barco.com>
+Description:
+		Show the suspend state of an USB composite gadget.
+
+		- 1 -> suspended
+		- 0 -> resumed
+
+		(_UDC_ is the name of the USB Device Controller driver)
+
+What:           /sys/devices/platform/_UDC_/gadget/gadget-lunX/nofua
+Date:           July 2010
+Contact:        Andy Shevchenko <andy.shevchenko@gmail.com>
+Description:
+		Show or set the reaction on the FUA (Force Unit Access) bit in
+		the SCSI WRITE(10,12) commands when a gadget in USB Mass
+		Storage mode.
+
+		Possible values are:
+
+			- 1 -> ignore the FUA flag
+			- 0 -> obey the FUA flag
+
+```

@@ -1,0 +1,22 @@
+---
+sidebar_position: 5
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/infiniband/sw/rdmavt/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config INFINIBAND_RDMAVT
+	tristate "RDMA verbs transport library"
+	depends on INFINIBAND_VIRT_DMA
+	depends on X86_64
+	depends on PCI
+	help
+	This is a common software verbs provider for RDMA networks.
+
+```

@@ -1,0 +1,39 @@
+---
+sidebar_position: 4
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/firmware/arm_scmi/vendors/imx/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+menu "ARM SCMI NXP i.MX Vendor Protocols"
+
+config IMX_SCMI_BBM_EXT
+	tristate "i.MX SCMI BBM EXTENSION"
+	depends on ARM_SCMI_PROTOCOL || (COMPILE_TEST && OF)
+	default y if ARCH_MXC
+	help
+	  This enables i.MX System BBM control logic which supports RTC
+	  and BUTTON.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called imx-sm-bbm.
+
+config IMX_SCMI_MISC_EXT
+	tristate "i.MX SCMI MISC EXTENSION"
+	depends on ARM_SCMI_PROTOCOL || (COMPILE_TEST && OF)
+	default y if ARCH_MXC
+	help
+	  This enables i.MX System MISC control logic such as gpio expander
+	  wakeup
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called imx-sm-misc.
+endmenu
+
+```

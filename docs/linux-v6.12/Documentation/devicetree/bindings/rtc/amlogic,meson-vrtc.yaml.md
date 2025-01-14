@@ -1,0 +1,58 @@
+---
+sidebar_position: 6
+---
+# amlogic,meson-vrtc.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/rtc/amlogic,meson-vrtc.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/rtc/amlogic,meson-vrtc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Amlogic Virtual RTC (VRTC)
+
+maintainers:
+  - Neil Armstrong <neil.armstrong@linaro.org>
+
+description: |
+  This is a Linux interface to an RTC managed by firmware, hence it's
+  virtual from a Linux perspective.  The interface is 1 register where
+  an alarm time (in seconds) is to be written.
+  The alarm register is a simple scratch register shared between the
+  application processors (AP) and the secure co-processor (SCP.)  When
+  the AP suspends, the SCP will use the value of this register to
+  program an always-on timer before going sleep. When the timer expires,
+  the SCP will wake up and will then wake the AP.
+
+allOf:
+  - $ref: rtc.yaml#
+
+properties:
+  compatible:
+    enum:
+      - amlogic,meson-vrtc
+
+  reg:
+    maxItems: 1
+
+required:
+  - compatible
+  - reg
+
+additionalProperties: false
+
+examples:
+  - |
+    rtc@a8 {
+      compatible = "amlogic,meson-vrtc";
+      reg = <0x000a8 0x4>;
+    };
+
+```

@@ -1,0 +1,28 @@
+---
+sidebar_position: 2
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/media/platform/aspeed/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+
+comment "Aspeed media platform drivers"
+
+config VIDEO_ASPEED
+	tristate "Aspeed AST2400 and AST2500 Video Engine driver"
+	depends on ARCH_ASPEED || COMPILE_TEST
+	depends on V4L_PLATFORM_DRIVERS
+	depends on VIDEO_DEV
+	select VIDEOBUF2_DMA_CONTIG
+	help
+	  Support for the Aspeed Video Engine (VE) embedded in the Aspeed
+	  AST2400 and AST2500 SOCs. The VE can capture and compress video data
+	  from digital or analog sources.
+
+```

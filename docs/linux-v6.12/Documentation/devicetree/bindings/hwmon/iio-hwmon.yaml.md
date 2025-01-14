@@ -1,0 +1,51 @@
+---
+sidebar_position: 29
+---
+# iio-hwmon.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/hwmon/iio-hwmon.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/hwmon/iio-hwmon.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: ADC-attached Hardware Sensor
+
+maintainers:
+  - Jonathan Cameron <jic23@kernel.org>
+
+description: >
+  Bindings for hardware monitoring devices connected to ADC controllers
+  supporting the Industrial I/O bindings.
+
+properties:
+  compatible:
+    const: iio-hwmon
+
+  io-channels:
+    minItems: 1
+    maxItems: 51 # Should be enough
+    description: >
+      List of phandles to ADC channels to read the monitoring values
+
+required:
+  - compatible
+  - io-channels
+
+additionalProperties: false
+
+examples:
+  - |
+    iio-hwmon {
+        compatible = "iio-hwmon";
+        io-channels = <&adc 1>, <&adc 2>;
+    };
+
+```

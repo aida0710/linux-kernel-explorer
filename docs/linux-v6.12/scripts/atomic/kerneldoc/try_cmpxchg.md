@@ -1,0 +1,30 @@
+---
+sidebar_position: 20
+---
+# try_cmpxchg
+
+### ファイル情報
+
+- パス: `linux-v6.12/scripts/atomic/kerneldoc/try_cmpxchg`
+
+### コンテンツ
+
+```txt
+cat <<EOF
+/**
+ * ${class}${atomicname}() - atomic compare and exchange with ${desc_order} ordering
+ * @v: pointer to ${atomic}_t
+ * @old: pointer to ${int} value to compare with
+ * @new: ${int} value to assign
+ *
+ * If (@v == @old), atomically updates @v to @new with ${desc_order} ordering.
+ * Otherwise, @v is not modified, @old is updated to the current value of @v,
+ * and relaxed ordering is provided.
+ *
+ * ${desc_noinstr}
+ *
+ * Return: @true if the exchange occured, @false otherwise.
+ */
+EOF
+
+```

@@ -1,0 +1,8 @@
+{
+    "label": "Coda",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Coda"
+    }
+}

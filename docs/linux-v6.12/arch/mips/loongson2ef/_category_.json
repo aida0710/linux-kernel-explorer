@@ -1,0 +1,8 @@
+{
+    "label": "Loongson2ef",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Loongson2ef"
+    }
+}

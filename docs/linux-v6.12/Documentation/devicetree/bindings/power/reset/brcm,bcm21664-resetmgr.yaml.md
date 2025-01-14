@@ -1,0 +1,45 @@
+---
+sidebar_position: 4
+---
+# brcm,bcm21664-resetmgr.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/power/reset/brcm,bcm21664-resetmgr.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/power/reset/brcm,bcm21664-resetmgr.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Broadcom Kona family reset manager
+
+maintainers:
+  - Florian Fainelli <f.fainelli@gmail.com>
+
+properties:
+  compatible:
+    const: brcm,bcm21664-resetmgr
+
+  reg:
+    maxItems: 1
+
+required:
+  - compatible
+  - reg
+
+additionalProperties: false
+
+examples:
+  - |
+    reset-controller@35001f00 {
+        compatible = "brcm,bcm21664-resetmgr";
+        reg = <0x35001f00 0x24>;
+    };
+...
+
+```

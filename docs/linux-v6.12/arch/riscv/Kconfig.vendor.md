@@ -1,0 +1,33 @@
+---
+sidebar_position: 6
+---
+# Kconfig.vendor
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/riscv/Kconfig.vendor`
+
+### コンテンツ
+
+```vendor
+menu "Vendor extensions"
+
+config RISCV_ISA_VENDOR_EXT
+	bool
+
+menu "Andes"
+config RISCV_ISA_VENDOR_EXT_ANDES
+	bool "Andes vendor extension support"
+	select RISCV_ISA_VENDOR_EXT
+	default y
+	help
+	  Say N here if you want to disable all Andes vendor extension
+	  support. This will cause any Andes vendor extensions that are
+	  requested by hardware probing to be ignored.
+
+	  If you don't know what to do here, say Y.
+endmenu
+
+endmenu
+
+```

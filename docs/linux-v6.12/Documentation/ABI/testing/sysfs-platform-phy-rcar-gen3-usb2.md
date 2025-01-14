@@ -1,0 +1,31 @@
+---
+sidebar_position: 517
+---
+# sysfs-platform-phy-rcar-gen3-usb2
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-platform-phy-rcar-gen3-usb2`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/platform/<phy-name>/role
+Date:		October 2016
+KernelVersion:	4.10
+Contact:	Yoshihiro Shimoda <yoshihiro.shimoda.uh@renesas.com>
+Description:
+		This file can be read and write.
+		The file can show/change the phy mode for role swap of usb.
+
+		Write the following strings to change the mode:
+
+		 - "host" - switching mode from peripheral to host.
+		 - "peripheral" - switching mode from host to peripheral.
+
+		Read the file, then it shows the following strings:
+
+		 - "host" - The mode is host now.
+		 - "peripheral" - The mode is peripheral now.
+
+```

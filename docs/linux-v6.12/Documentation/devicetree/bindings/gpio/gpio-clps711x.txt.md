@@ -1,0 +1,42 @@
+---
+sidebar_position: 28
+---
+# gpio-clps711x.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/gpio/gpio-clps711x.txt`
+
+### コンテンツ
+
+```txt
+Cirrus Logic CLPS711X GPIO controller
+
+Required properties:
+- compatible: Should be "cirrus,ep7209-gpio"
+- reg: Physical base GPIO controller registers location and length.
+  There should be two registers, first is DATA register, the second
+  is DIRECTION.
+- gpio-controller: Marks the device node as a gpio controller.
+- #gpio-cells: Should be two. The first cell is the pin number and
+  the second cell is used to specify the gpio polarity:
+    0 = active high
+    1 = active low
+
+Note: Each GPIO port should have an alias correctly numbered in "aliases"
+node.
+
+Example:
+
+aliases {
+	gpio0 = &porta;
+};
+
+porta: gpio@80000000 {
+	compatible = "cirrus,ep7312-gpio","cirrus,ep7209-gpio";
+	reg = <0x80000000 0x1>, <0x80000040 0x1>;
+	gpio-controller;
+	#gpio-cells = <2>;
+};
+
+```

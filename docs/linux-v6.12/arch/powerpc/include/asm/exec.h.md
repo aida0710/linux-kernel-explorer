@@ -1,0 +1,24 @@
+---
+sidebar_position: 69
+---
+# exec.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/powerpc/include/asm/exec.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Copyright (C) 1999 Cort Dougan <cort@cs.nmt.edu>
+ */
+#ifndef _ASM_POWERPC_EXEC_H
+#define _ASM_POWERPC_EXEC_H
+
+extern unsigned long arch_align_stack(unsigned long sp);
+
+#endif /* _ASM_POWERPC_EXEC_H */
+
+```

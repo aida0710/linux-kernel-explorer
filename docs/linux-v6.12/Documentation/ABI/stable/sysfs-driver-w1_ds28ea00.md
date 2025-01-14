@@ -1,0 +1,20 @@
+---
+sidebar_position: 36
+---
+# sysfs-driver-w1_ds28ea00
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/stable/sysfs-driver-w1_ds28ea00`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/w1/devices/.../w1_seq
+Date:		Apr 2015
+Contact:	Matt Campbell <mattrcampbell@gmail.com>
+Description:	Support for the DS28EA00 chain sequence function
+		see Documentation/w1/slaves/w1_therm.rst for detailed information
+Users:		any user space application which wants to communicate with DS28EA00
+
+```

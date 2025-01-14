@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/virt/coco/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Confidential computing related collateral
+#
+
+config TSM_REPORTS
+	select CONFIGFS_FS
+	tristate
+
+source "drivers/virt/coco/efi_secret/Kconfig"
+
+source "drivers/virt/coco/pkvm-guest/Kconfig"
+
+source "drivers/virt/coco/sev-guest/Kconfig"
+
+source "drivers/virt/coco/tdx-guest/Kconfig"
+
+```

@@ -1,0 +1,44 @@
+---
+sidebar_position: 13
+---
+# pkcs8.asn1
+
+### ファイル情報
+
+- パス: `linux-v6.12/crypto/asymmetric_keys/pkcs8.asn1`
+
+### コンテンツ
+
+```asn1
+-- SPDX-License-Identifier: BSD-3-Clause
+--
+-- Copyright (C) 2010 IETF Trust and the persons identified as authors
+-- of the code
+--
+-- https://www.rfc-editor.org/rfc/rfc5958#section-2
+--
+-- This is the unencrypted variant
+--
+PrivateKeyInfo ::= SEQUENCE {
+	version			Version,
+	privateKeyAlgorithm	PrivateKeyAlgorithmIdentifier,
+	privateKey		PrivateKey,
+	attributes		[0] IMPLICIT Attributes OPTIONAL
+}
+
+Version ::= INTEGER  ({ pkcs8_note_version })
+
+PrivateKeyAlgorithmIdentifier ::= AlgorithmIdentifier ({ pkcs8_note_algo })
+
+PrivateKey ::= OCTET STRING ({ pkcs8_note_key })
+
+Attributes ::= SET OF Attribute
+
+Attribute ::= ANY
+
+AlgorithmIdentifier ::= SEQUENCE {
+	algorithm   OBJECT IDENTIFIER ({ pkcs8_note_OID }),
+	parameters  ANY OPTIONAL
+}
+
+```

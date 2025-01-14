@@ -1,0 +1,68 @@
+---
+sidebar_position: 112
+---
+# imx6dl-yapp4-hydra.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6dl-yapp4-hydra.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+//
+// Copyright (C) 2015-2018 Y Soft Corporation, a.s.
+
+/dts-v1/;
+
+#include "imx6dl.dtsi"
+#include "imx6dl-yapp4-common.dtsi"
+
+/ {
+	model = "Y Soft IOTA Hydra i.MX6DualLite board";
+	compatible = "ysoft,imx6dl-yapp4-hydra", "fsl,imx6dl";
+
+	memory@10000000 {
+		device_type = "memory";
+		reg = <0x10000000 0x80000000>;
+	};
+};
+
+&gpio_oled {
+	status = "okay";
+};
+
+&hdmi {
+	status = "okay";
+};
+
+&leds {
+	status = "okay";
+};
+
+&oled_1305 {
+	status = "okay";
+};
+
+&oled_1309 {
+	status = "okay";
+};
+
+&pcie {
+	status = "okay";
+};
+
+&reg_pcie {
+	status = "okay";
+};
+
+&touchkeys {
+	status = "okay";
+};
+
+&usdhc3 {
+	status = "okay";
+};
+
+```

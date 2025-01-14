@@ -1,0 +1,29 @@
+---
+sidebar_position: 128
+---
+# sysfs-bus-i2c-devices-lm3533
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-bus-i2c-devices-lm3533`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/i2c/devices/.../output_hvled[n]
+Date:		April 2012
+KernelVersion:	3.5
+Contact:	Johan Hovold <jhovold@gmail.com>
+Description:
+		Set the controlling backlight device for high-voltage current
+		sink HVLED[n] (n = 1, 2) (0, 1).
+
+What:		/sys/bus/i2c/devices/.../output_lvled[n]
+Date:		April 2012
+KernelVersion:	3.5
+Contact:	Johan Hovold <jhovold@gmail.com>
+Description:
+		Set the controlling led device for low-voltage current sink
+		LVLED[n] (n = 1..5) (0..3).
+
+```

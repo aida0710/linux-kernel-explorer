@@ -1,0 +1,31 @@
+---
+sidebar_position: 40
+---
+# x86-stub.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/firmware/efi/libstub/x86-stub.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0-only */
+
+#include <linux/efi.h>
+
+extern void trampoline_32bit_src(void *, bool);
+extern const u16 trampoline_ljmp_imm_offset;
+
+efi_status_t efi_adjust_memory_range_protection(unsigned long start,
+						unsigned long size);
+
+#ifdef CONFIG_X86_64
+efi_status_t efi_setup_5level_paging(void);
+void efi_5level_switch(void);
+#else
+static inline efi_status_t efi_setup_5level_paging(void) { return EFI_SUCCESS; }
+static inline void efi_5level_switch(void) {}
+#endif
+
+```

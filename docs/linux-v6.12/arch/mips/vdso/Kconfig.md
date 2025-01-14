@@ -1,0 +1,20 @@
+---
+sidebar_position: 6
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/vdso/Kconfig`
+
+### コンテンツ
+
+```txt
+# GCC (at least up to version 9.2) appears to emit function calls that make use
+# of the GOT when targeting microMIPS, which we can't use in the VDSO due to
+# the lack of relocations. As such, we disable the VDSO for microMIPS builds.
+
+config MIPS_DISABLE_VDSO
+	def_bool CPU_MICROMIPS
+
+```

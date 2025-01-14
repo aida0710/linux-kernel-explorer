@@ -1,0 +1,8 @@
+{
+    "label": "Pmic",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Pmic"
+    }
+}

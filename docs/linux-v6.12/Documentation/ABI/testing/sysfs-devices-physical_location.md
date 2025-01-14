@@ -1,0 +1,56 @@
+---
+sidebar_position: 343
+---
+# sysfs-devices-physical_location
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-devices-physical_location`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/.../physical_location
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		This directory contains information on physical location of
+		the device connection point with respect to the system's
+		housing.
+
+What:		/sys/devices/.../physical_location/panel
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		Describes which panel surface of the system’s housing the
+		device connection point resides on.
+
+What:		/sys/devices/.../physical_location/vertical_position
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		Describes vertical position of the device connection point on
+		the panel surface.
+
+What:		/sys/devices/.../physical_location/horizontal_position
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		Describes horizontal position of the device connection point on
+		the panel surface.
+
+What:		/sys/devices/.../physical_location/dock
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		"Yes" if the device connection point resides in a docking
+		station or a port replicator. "No" otherwise.
+
+What:		/sys/devices/.../physical_location/lid
+Date:		March 2022
+Contact:	Won Chung <wonchung@google.com>
+Description:
+		"Yes" if the device connection point resides on the lid of
+		laptop system. "No" otherwise.
+
+```

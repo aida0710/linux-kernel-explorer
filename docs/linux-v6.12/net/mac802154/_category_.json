@@ -1,0 +1,8 @@
+{
+    "label": "Mac802154",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Mac802154"
+    }
+}

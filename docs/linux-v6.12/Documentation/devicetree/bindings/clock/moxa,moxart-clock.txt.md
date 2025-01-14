@@ -1,0 +1,62 @@
+---
+sidebar_position: 183
+---
+# moxa,moxart-clock.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/clock/moxa,moxart-clock.txt`
+
+### コンテンツ
+
+```txt
+Device Tree Clock bindings for arch-moxart
+
+This binding uses the common clock binding[1].
+
+[1] Documentation/devicetree/bindings/clock/clock-bindings.txt
+
+MOXA ART SoCs allow to determine PLL output and APB frequencies
+by reading registers holding multiplier and divisor information.
+
+
+PLL:
+
+Required properties:
+- compatible : Must be "moxa,moxart-pll-clock"
+- #clock-cells : Should be 0
+- reg : Should contain registers location and length
+- clocks : Should contain phandle + clock-specifier for the parent clock
+
+Optional properties:
+- clock-output-names : Should contain clock name
+
+
+APB:
+
+Required properties:
+- compatible : Must be "moxa,moxart-apb-clock"
+- #clock-cells : Should be 0
+- reg : Should contain registers location and length
+- clocks : Should contain phandle + clock-specifier for the parent clock
+
+Optional properties:
+- clock-output-names : Should contain clock name
+
+
+For example:
+
+	clk_pll: clk_pll@98100000 {
+		compatible = "moxa,moxart-pll-clock";
+		#clock-cells = <0>;
+		reg = <0x98100000 0x34>;
+	};
+
+	clk_apb: clk_apb@98100000 {
+		compatible = "moxa,moxart-apb-clock";
+		#clock-cells = <0>;
+		reg = <0x98100000 0x34>;
+		clocks = <&clk_pll>;
+	};
+
+```

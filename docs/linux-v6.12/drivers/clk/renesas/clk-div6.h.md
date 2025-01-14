@@ -1,0 +1,23 @@
+---
+sidebar_position: 2
+---
+# clk-div6.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/clk/renesas/clk-div6.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+#ifndef __RENESAS_CLK_DIV6_H__
+#define __RENESAS_CLK_DIV6_H__
+
+struct clk *cpg_div6_register(const char *name, unsigned int num_parents,
+			      const char **parent_names, void __iomem *reg,
+			      struct raw_notifier_head *notifiers);
+
+#endif
+
+```

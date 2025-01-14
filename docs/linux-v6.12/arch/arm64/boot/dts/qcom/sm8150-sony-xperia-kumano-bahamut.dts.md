@@ -1,0 +1,34 @@
+---
+sidebar_position: 407
+---
+# sm8150-sony-xperia-kumano-bahamut.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/sm8150-sony-xperia-kumano-bahamut.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2021, Konrad Dybcio <konrad.dybcio@somainline.org>
+ */
+
+/dts-v1/;
+
+#include "sm8150-sony-xperia-kumano.dtsi"
+
+/ {
+	model = "Sony Xperia 5";
+	compatible = "sony,bahamut-generic", "qcom,sm8150";
+	chassis-type = "handset";
+};
+
+&framebuffer {
+	width = <1080>;
+	height = <2520>;
+	stride = <(1080 * 4)>;
+};
+
+```

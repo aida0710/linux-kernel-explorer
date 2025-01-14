@@ -1,0 +1,24 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/perf/amlogic/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config MESON_DDR_PMU
+	tristate "Amlogic DDR Bandwidth Performance Monitor"
+	depends on ARCH_MESON || COMPILE_TEST
+	help
+          Provides support for the DDR performance monitor
+          in Amlogic SoCs, which can give information about
+          memory throughput and other related events. It
+          supports multiple channels to monitor the memory
+          bandwidth simultaneously.
+
+```

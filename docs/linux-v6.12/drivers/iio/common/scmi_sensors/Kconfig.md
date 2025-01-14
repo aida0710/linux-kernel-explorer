@@ -1,0 +1,32 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/iio/common/scmi_sensors/Kconfig`
+
+### コンテンツ
+
+```txt
+#
+# IIO over SCMI
+#
+# When adding new entries keep the list in alphabetical order
+
+menu "IIO SCMI Sensors"
+
+config IIO_SCMI
+	tristate "IIO SCMI"
+        depends on ARM_SCMI_PROTOCOL
+        select IIO_BUFFER
+        select IIO_KFIFO_BUF
+	help
+          Say yes here to build support for IIO SCMI Driver.
+          This provides ARM SCMI Protocol based IIO device.
+          This driver provides support for accelerometer and gyroscope
+          sensors available on SCMI based platforms.
+endmenu
+
+```

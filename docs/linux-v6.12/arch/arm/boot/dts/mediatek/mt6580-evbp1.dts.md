@@ -1,0 +1,46 @@
+---
+sidebar_position: 6
+---
+# mt6580-evbp1.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/mediatek/mt6580-evbp1.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (c) 2015 MediaTek Inc.
+ * Author: Mars.C <mars.cheng@mediatek.com>
+ *
+ */
+
+/dts-v1/;
+#include "mt6580.dtsi"
+
+/ {
+	model = "MediaTek MT6580 evaluation board";
+	compatible = "mediatek,mt6580-evbp1", "mediatek,mt6580";
+
+	aliases {
+		serial0 = &uart0;
+		serial1 = &uart1;
+	};
+
+	chosen {
+		stdout-path = "serial0:921600n8";
+	};
+
+	memory {
+		device_type = "memory";
+		reg = <0x80000000 0x20000000>;
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+```

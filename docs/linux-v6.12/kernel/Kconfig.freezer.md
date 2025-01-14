@@ -1,0 +1,17 @@
+---
+sidebar_position: 44
+---
+# Kconfig.freezer
+
+### ファイル情報
+
+- パス: `linux-v6.12/kernel/Kconfig.freezer`
+
+### コンテンツ
+
+```freezer
+# SPDX-License-Identifier: GPL-2.0-only
+config FREEZER
+	def_bool PM_SLEEP || CGROUP_FREEZER
+
+```

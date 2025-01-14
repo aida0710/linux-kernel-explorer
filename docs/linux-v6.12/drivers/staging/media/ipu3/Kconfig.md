@@ -1,0 +1,30 @@
+---
+sidebar_position: 19
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/staging/media/ipu3/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+config VIDEO_IPU3_IMGU
+	tristate "Intel ipu3-imgu driver"
+	depends on PCI && VIDEO_DEV
+	depends on X86
+	select MEDIA_CONTROLLER
+	select VIDEO_V4L2_SUBDEV_API
+	select IOMMU_IOVA
+	select VIDEOBUF2_DMA_SG
+	help
+	  This is the Video4Linux2 driver for Intel IPU3 image processing unit,
+	  found in Intel Skylake and Kaby Lake SoCs and used for processing
+	  images and video.
+
+	  Say Y or M here if you have a Skylake/Kaby Lake SoC with a MIPI
+	  camera. The module will be called ipu3-imgu.
+
+```

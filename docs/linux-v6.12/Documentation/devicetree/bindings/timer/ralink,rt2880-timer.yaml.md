@@ -1,0 +1,58 @@
+---
+sidebar_position: 48
+---
+# ralink,rt2880-timer.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/timer/ralink,rt2880-timer.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/timer/ralink,rt2880-timer.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Timer present in Ralink family SoCs
+
+maintainers:
+  - Sergio Paracuellos <sergio.paracuellos@gmail.com>
+
+properties:
+  compatible:
+    const: ralink,rt2880-timer
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+  interrupts:
+    maxItems: 1
+
+required:
+  - compatible
+  - reg
+  - clocks
+  - interrupts
+
+additionalProperties: false
+
+examples:
+  - |
+    timer@100 {
+        compatible = "ralink,rt2880-timer";
+        reg = <0x100 0x20>;
+
+        clocks = <&sysc 3>;
+
+        interrupt-parent = <&intc>;
+        interrupts = <1>;
+    };
+...
+
+```

@@ -1,0 +1,40 @@
+---
+sidebar_position: 3
+---
+# xlnx,vcu.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/soc/xilinx/xlnx,vcu.txt`
+
+### コンテンツ
+
+```txt
+LogicoreIP designed compatible with Xilinx ZYNQ family.
+-------------------------------------------------------
+
+General concept
+---------------
+
+LogicoreIP design to provide the isolation between processing system
+and programmable logic. Also provides the list of register set to configure
+the frequency.
+
+Required properties:
+- compatible: shall be one of:
+	"xlnx,vcu"
+	"xlnx,vcu-logicoreip-1.0"
+- reg : The base offset and size of the VCU_PL_SLCR register space.
+- clocks: phandle for aclk and pll_ref clocksource
+- clock-names: The identification string, "aclk", is always required for
+   the axi clock. "pll_ref" is required for pll.
+Example:
+
+	xlnx_vcu: vcu@a0040000 {
+		compatible = "xlnx,vcu-logicoreip-1.0";
+		reg = <0x0 0xa0040000 0x0 0x1000>;
+		clocks = <&si570_1>, <&clkc 71>;
+		clock-names = "pll_ref", "aclk";
+	};
+
+```

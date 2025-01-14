@@ -1,0 +1,58 @@
+---
+sidebar_position: 98
+---
+# Makefile.vdsoinst
+
+### ファイル情報
+
+- パス: `linux-v6.12/scripts/Makefile.vdsoinst`
+
+### コンテンツ
+
+```vdsoinst
+# SPDX-License-Identifier: GPL-2.0-only
+# ==========================================================================
+# Install unstripped copies of vDSO
+# ==========================================================================
+
+PHONY := __default
+__default:
+	@:
+
+include $(srctree)/scripts/Kbuild.include
+
+install-dir := $(MODLIB)/vdso
+
+define gen_install_rules
+
+dest := $(install-dir)/$$(patsubst %.dbg,%,$$(notdir $(1)))
+
+__default: $$(dest)
+$$(dest): $(1) FORCE
+	$$(call cmd,install)
+
+# Some architectures create .build-id symlinks
+ifneq ($(filter arm s390 sparc x86, $(SRCARCH)),)
+link := $(install-dir)/.build-id/$$(shell $(READELF) -n $(1) | sed -n 's@^.*Build ID: \(..\)\(.*\)@\1/\2@p').debug
+
+__default: $$(link)
+$$(link): $$(dest) FORCE
+	$$(call cmd,symlink)
+endif
+
+endef
+
+$(foreach x, $(sort $(INSTALL_FILES)), $(eval $(call gen_install_rules,$(x))))
+
+quiet_cmd_install = INSTALL $@
+      cmd_install = mkdir -p $(dir $@); cp $< $@
+
+quiet_cmd_symlink = SYMLINK $@
+      cmd_symlink = mkdir -p $(dir $@); ln -sf --relative $< $@
+
+PHONY += FORCE
+FORCE:
+
+.PHONY: $(PHONY)
+
+```

@@ -1,0 +1,29 @@
+---
+sidebar_position: 1
+---
+# gxp.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/mach-hpe/gxp.c`
+
+### コンテンツ
+
+```c
+// SPDX-License-Identifier: GPL-2.0
+/* Copyright (C) 2022 Hewlett-Packard Enterprise Development Company, L.P. */
+
+#include <asm/mach/arch.h>
+
+static const char * const gxp_board_dt_compat[] = {
+	"hpe,gxp",
+	NULL,
+};
+
+DT_MACHINE_START(GXP_DT, "HPE GXP")
+	.dt_compat	= gxp_board_dt_compat,
+	.l2c_aux_val = 0,
+	.l2c_aux_mask = ~0,
+MACHINE_END
+
+```

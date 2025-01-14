@@ -1,0 +1,79 @@
+---
+sidebar_position: 43
+---
+# armada-ap810-ap0-octa-core.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/marvell/armada-ap810-ap0-octa-core.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (C) 2017 Marvell Technology Group Ltd.
+ *
+ * Device Tree file for Marvell Armada AP810 OCTA cores.
+ */
+
+#include "armada-ap810-ap0.dtsi"
+
+/ {
+	cpus {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		compatible = "marvell,armada-ap810-octa";
+
+		cpu0: cpu@0 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x000>;
+			enable-method = "psci";
+		};
+		cpu1: cpu@1 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x001>;
+			enable-method = "psci";
+		};
+		cpu2: cpu@100 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x100>;
+			enable-method = "psci";
+		};
+		cpu3: cpu@101 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x101>;
+			enable-method = "psci";
+		};
+		cpu4: cpu@200 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x200>;
+			enable-method = "psci";
+		};
+		cpu5: cpu@201 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x201>;
+			enable-method = "psci";
+		};
+		cpu6: cpu@300 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x300>;
+			enable-method = "psci";
+		};
+		cpu7: cpu@301 {
+			device_type = "cpu";
+			compatible = "arm,cortex-a72";
+			reg = <0x301>;
+			enable-method = "psci";
+		};
+	};
+};
+
+```

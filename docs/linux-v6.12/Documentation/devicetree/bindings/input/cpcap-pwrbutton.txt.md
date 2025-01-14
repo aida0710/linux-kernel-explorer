@@ -1,0 +1,34 @@
+---
+sidebar_position: 14
+---
+# cpcap-pwrbutton.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/input/cpcap-pwrbutton.txt`
+
+### コンテンツ
+
+```txt
+Motorola CPCAP on key
+
+This module is part of the CPCAP. For more details about the whole
+chip see Documentation/devicetree/bindings/mfd/motorola-cpcap.txt.
+
+This module provides a simple power button event via an Interrupt.
+
+Required properties:
+- compatible: should be one of the following
+   - "motorola,cpcap-pwrbutton"
+- interrupts: irq specifier for CPCAP's ON IRQ
+
+Example:
+
+&cpcap {
+	cpcap_pwrbutton: pwrbutton {
+		compatible = "motorola,cpcap-pwrbutton";
+		interrupts = <23 IRQ_TYPE_NONE>;
+	};
+};
+
+```

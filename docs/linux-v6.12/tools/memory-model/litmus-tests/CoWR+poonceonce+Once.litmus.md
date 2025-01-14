@@ -1,0 +1,39 @@
+---
+sidebar_position: 4
+---
+# CoWR+poonceonce+Once.litmus
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/memory-model/litmus-tests/CoWR+poonceonce+Once.litmus`
+
+### コンテンツ
+
+```litmus
+C CoWR+poonceonce+Once
+
+(*
+ * Result: Never
+ *
+ * Test of write-read coherence, that is, whether or not a write to a
+ * given variable and a later read from that same variable are ordered.
+ *)
+
+{}
+
+P0(int *x)
+{
+	int r0;
+
+	WRITE_ONCE(*x, 1);
+	r0 = READ_ONCE(*x);
+}
+
+P1(int *x)
+{
+	WRITE_ONCE(*x, 2);
+}
+
+exists (x=1 /\ 0:r0=2)
+
+```

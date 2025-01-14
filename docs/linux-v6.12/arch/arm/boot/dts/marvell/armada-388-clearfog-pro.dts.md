@@ -1,0 +1,28 @@
+---
+sidebar_position: 40
+---
+# armada-388-clearfog-pro.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/marvell/armada-388-clearfog-pro.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Device Tree file for SolidRun Clearfog Pro revision A1 rev 2.0 (88F6828)
+ *
+ *  Copyright (C) 2015 Russell King
+ */
+#include "armada-388-clearfog.dts"
+
+/ {
+	model = "SolidRun Clearfog Pro A1";
+	compatible = "solidrun,clearfog-pro-a1",
+		"solidrun,clearfog-a1", "marvell,armada388",
+		"marvell,armada385", "marvell,armada380";
+};
+
+```

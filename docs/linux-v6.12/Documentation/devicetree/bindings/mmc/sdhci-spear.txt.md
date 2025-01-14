@@ -1,0 +1,32 @@
+---
+sidebar_position: 57
+---
+# sdhci-spear.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/mmc/sdhci-spear.txt`
+
+### コンテンツ
+
+```txt
+* SPEAr SDHCI Controller
+
+This file documents differences between the core properties in mmc.txt
+and the properties used by the sdhci-spear driver.
+
+Required properties:
+- compatible: "st,spear300-sdhci"
+
+Optional properties:
+- cd-gpios: card detect gpio, with zero flags.
+
+Example:
+
+	sdhci@fc000000 {
+		compatible = "st,spear300-sdhci";
+		reg = <0xfc000000 0x1000>;
+		cd-gpios = <&gpio0 6 0>;
+	};
+
+```

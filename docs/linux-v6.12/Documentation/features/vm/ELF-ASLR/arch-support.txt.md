@@ -1,0 +1,45 @@
+---
+sidebar_position: 1
+---
+# arch-support.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/features/vm/ELF-ASLR/arch-support.txt`
+
+### コンテンツ
+
+```txt
+#
+# Feature name:          ELF-ASLR
+#         Kconfig:       ARCH_HAS_ELF_RANDOMIZE
+#         Kconfig:       ARCH_WANT_DEFAULT_TOPDOWN_MMAP_LAYOUT
+#         description:   arch randomizes the stack, heap and binary images of ELF binaries
+#
+    -----------------------
+    |         arch |status|
+    -----------------------
+    |       alpha: | TODO |
+    |         arc: | TODO |
+    |         arm: |  ok  |
+    |       arm64: |  ok  |
+    |        csky: |  ok  |
+    |     hexagon: | TODO |
+    |   loongarch: |  ok  |
+    |        m68k: | TODO |
+    |  microblaze: | TODO |
+    |        mips: |  ok  |
+    |       nios2: | TODO |
+    |    openrisc: | TODO |
+    |      parisc: |  ok  |
+    |     powerpc: |  ok  |
+    |       riscv: |  ok  |
+    |        s390: |  ok  |
+    |          sh: | TODO |
+    |       sparc: | TODO |
+    |          um: | TODO |
+    |         x86: |  ok  |
+    |      xtensa: | TODO |
+    -----------------------
+
+```

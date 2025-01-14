@@ -1,0 +1,32 @@
+---
+sidebar_position: 264
+---
+# imx8mp-verdin-wifi-dev.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dev.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Copyright 2022 Toradex
+ */
+
+/dts-v1/;
+
+#include "imx8mp-verdin.dtsi"
+#include "imx8mp-verdin-wifi.dtsi"
+#include "imx8mp-verdin-dev.dtsi"
+
+/ {
+	model = "Toradex Verdin iMX8M Plus WB on Verdin Development Board";
+	compatible = "toradex,verdin-imx8mp-wifi-dev",
+		     "toradex,verdin-imx8mp-wifi",
+		     "toradex,verdin-imx8mp",
+		     "fsl,imx8mp";
+};
+
+```

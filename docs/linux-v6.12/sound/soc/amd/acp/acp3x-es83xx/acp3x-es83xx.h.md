@@ -1,0 +1,26 @@
+---
+sidebar_position: 2
+---
+# acp3x-es83xx.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/amd/acp/acp3x-es83xx/acp3x-es83xx.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0+ */
+/*
+ * Copyright 2023 Marian Postevca <posteuca@mutex.one>
+ */
+
+#ifndef __ACP3X_ES83XX_H
+#define __ACP3X_ES83XX_H
+
+void acp3x_es83xx_init_ops(struct acp_mach_ops *ops);
+
+#endif
+
+
+```

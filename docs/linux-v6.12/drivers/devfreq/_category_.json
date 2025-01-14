@@ -1,0 +1,8 @@
+{
+    "label": "Devfreq",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Devfreq"
+    }
+}

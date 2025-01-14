@@ -1,0 +1,33 @@
+---
+sidebar_position: 428
+---
+# sysfs-driver-xen-blkfront
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-driver-xen-blkfront`
+
+### コンテンツ
+
+```txt
+What:           /sys/module/xen_blkfront/parameters/max_indirect_segments
+Date:           June 2013
+KernelVersion:  3.11
+Contact:        Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>
+Description:
+                Maximum number of segments that the frontend will negotiate
+                with the backend for indirect descriptors. The default value
+                is 32 - higher value means more potential throughput but more
+                memory usage. The backend picks the minimum of the frontend
+                and its default backend value.
+
+What:           /sys/module/xen_blkfront/parameters/feature_persistent
+Date:           September 2020
+KernelVersion:  5.10
+Contact:        Maximilian Heyne <mheyne@amazon.de>
+Description:
+                Whether to enable the persistent grants feature or not.  Note
+                that this option only takes effect on newly connected frontends.
+                The default is Y (enable).
+
+```

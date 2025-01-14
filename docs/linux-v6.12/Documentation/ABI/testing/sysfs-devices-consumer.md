@@ -1,0 +1,23 @@
+---
+sidebar_position: 334
+---
+# sysfs-devices-consumer
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-devices-consumer`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/.../consumer:<consumer>
+Date:		May 2020
+Contact:	Saravana Kannan <saravanak@google.com>
+Description:
+		The /sys/devices/.../consumer:<consumer> are symlinks to device
+		links where this device is the supplier. <consumer> denotes the
+		name of the consumer in that device link and is of the form
+		bus:device name. There can be zero or more of these symlinks
+		for a given device.
+
+```

@@ -1,0 +1,32 @@
+---
+sidebar_position: 4
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/x86/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+menuconfig SND_X86
+	bool "X86 sound devices"
+	depends on X86
+	default y
+	help
+	  X86 sound devices that don't fall under SoC or PCI categories
+
+if SND_X86
+
+config HDMI_LPE_AUDIO
+	tristate "HDMI audio without HDAudio on Intel Atom platforms"
+	depends on DRM_I915
+	select SND_PCM
+	help
+	 Choose this option to support HDMI LPE Audio mode
+
+endif	# SND_X86
+
+```

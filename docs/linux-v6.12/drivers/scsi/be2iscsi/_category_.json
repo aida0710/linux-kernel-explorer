@@ -1,0 +1,8 @@
+{
+    "label": "Be2iscsi",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Be2iscsi"
+    }
+}

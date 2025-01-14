@@ -1,0 +1,49 @@
+---
+sidebar_position: 31
+---
+# brcm,bcm2835-vc4.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/display/brcm,bcm2835-vc4.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/display/brcm,bcm2835-vc4.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Broadcom VC4 (VideoCore4) GPU
+
+maintainers:
+  - Eric Anholt <eric@anholt.net>
+
+description: >
+  The VC4 device present on the Raspberry Pi includes a display system
+  with HDMI output and the HVS (Hardware Video Scaler) for compositing
+  display planes.
+
+properties:
+  compatible:
+    enum:
+      - brcm,bcm2711-vc5
+      - brcm,bcm2835-vc4
+      - brcm,cygnus-vc4
+
+required:
+  - compatible
+
+additionalProperties: false
+
+examples:
+  - |
+    vc4: gpu {
+        compatible = "brcm,bcm2835-vc4";
+    };
+
+...
+
+```

@@ -1,0 +1,58 @@
+---
+sidebar_position: 1
+---
+# brcm,bcm2711-avs-monitor.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/soc/bcm/brcm,bcm2711-avs-monitor.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/soc/bcm/brcm,bcm2711-avs-monitor.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Broadcom AVS Monitor
+
+maintainers:
+  - Stefan Wahren <wahrenst@gmx.net>
+
+properties:
+  compatible:
+    items:
+      - const: brcm,bcm2711-avs-monitor
+      - const: syscon
+      - const: simple-mfd
+
+  reg:
+    maxItems: 1
+
+  thermal:
+    $ref: /schemas/thermal/brcm,avs-ro-thermal.yaml
+    description: Broadcom AVS ring oscillator thermal
+
+required:
+  - compatible
+  - reg
+  - thermal
+
+additionalProperties: false
+
+examples:
+  - |
+    avs-monitor@7d5d2000 {
+        compatible = "brcm,bcm2711-avs-monitor", "syscon", "simple-mfd";
+        reg = <0x7d5d2000 0xf00>;
+
+        thermal: thermal {
+            compatible = "brcm,bcm2711-thermal";
+            #thermal-sensor-cells = <0>;
+        };
+    };
+...
+
+```

@@ -1,0 +1,33 @@
+---
+sidebar_position: 4
+---
+# elf_user.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/um/include/shared/elf_user.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Copyright (C) 2004 Fujitsu Siemens Computers GmbH
+ * Author: Bodo Stroesser <bstroesser@fujitsu-siemens.com>
+ */
+
+#ifndef __ELF_USER_H__
+#define __ELF_USER_H__
+
+/* For compilation on a host that doesn't support AT_SYSINFO (Linux 2.4)  */
+
+#ifndef AT_SYSINFO
+#define AT_SYSINFO 32
+#endif
+#ifndef AT_SYSINFO_EHDR
+#define AT_SYSINFO_EHDR 33
+#endif
+
+#endif
+
+```

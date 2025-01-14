@@ -1,0 +1,8 @@
+{
+    "label": "Cortex A710",
+    "position": 800,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Cortex A710"
+    }
+}

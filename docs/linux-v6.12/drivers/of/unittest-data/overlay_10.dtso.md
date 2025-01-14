@@ -1,0 +1,41 @@
+---
+sidebar_position: 13
+---
+# overlay_10.dtso
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/of/unittest-data/overlay_10.dtso`
+
+### コンテンツ
+
+```dtso
+// SPDX-License-Identifier: GPL-2.0
+/dts-v1/;
+/plugin/;
+
+/* overlay_10 */
+/* overlays 8, 9, 10, 11 application and removal in bad sequence */
+
+&unittest_test_bus {
+	/* suppress DTC warning */
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	test-unittest10 {
+		compatible = "unittest";
+		status = "okay";
+		reg = <10>;
+
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		test-unittest101 {
+			compatible = "unittest";
+			status = "okay";
+			reg = <1>;
+		};
+	};
+};
+
+```

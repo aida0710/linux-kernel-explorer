@@ -1,0 +1,8 @@
+{
+    "label": "Aic94xx",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Aic94xx"
+    }
+}

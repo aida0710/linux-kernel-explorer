@@ -1,0 +1,8 @@
+{
+    "label": "Nitro Enclaves",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Nitro Enclaves"
+    }
+}

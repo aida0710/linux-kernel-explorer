@@ -1,0 +1,25 @@
+---
+sidebar_position: 45
+---
+# armada-common.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/marvell/armada-common.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (C) 2016 Marvell Technology Group Ltd.
+ */
+
+/* Common definitions used by Armada 7K/8K DTs */
+#define PASTER(x, y) x ## y
+#define EVALUATOR(x, y) PASTER(x, y)
+#define CP11X_LABEL(name) EVALUATOR(CP11X_NAME, EVALUATOR(_, name))
+#define CP11X_NODE_NAME(name) EVALUATOR(CP11X_NAME, EVALUATOR(-, name))
+#define ADDRESSIFY(addr) EVALUATOR(0x, addr)
+
+```

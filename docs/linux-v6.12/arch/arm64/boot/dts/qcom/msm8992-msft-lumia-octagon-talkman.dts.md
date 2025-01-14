@@ -1,0 +1,30 @@
+---
+sidebar_position: 107
+---
+# msm8992-msft-lumia-octagon-talkman.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/msm8992-msft-lumia-octagon-talkman.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: BSD-3-Clause
+/*
+ * Copyright (c) 2020, Konrad Dybcio <konrad.dybcio@somainline.org>
+ * Copyright (c) 2020, Gustave Monce <gustave.monce@outlook.com>
+ */
+
+/dts-v1/;
+
+#include "msm8992.dtsi"
+#include "msm8994-msft-lumia-octagon.dtsi"
+
+/ {
+	model = "Microsoft Lumia 950";
+	compatible = "microsoft,talkman", "qcom,msm8992";
+	chassis-type = "handset";
+};
+
+```

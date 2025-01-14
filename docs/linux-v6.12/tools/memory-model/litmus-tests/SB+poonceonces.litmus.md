@@ -1,0 +1,43 @@
+---
+sidebar_position: 31
+---
+# SB+poonceonces.litmus
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/memory-model/litmus-tests/SB+poonceonces.litmus`
+
+### コンテンツ
+
+```litmus
+C SB+poonceonces
+
+(*
+ * Result: Sometimes
+ *
+ * This litmus test demonstrates that at least some ordering is required
+ * to order the store-buffering pattern, where each process writes to the
+ * variable that the preceding process reads.
+ *)
+
+{}
+
+P0(int *x, int *y)
+{
+	int r0;
+
+	WRITE_ONCE(*x, 1);
+	r0 = READ_ONCE(*y);
+}
+
+P1(int *x, int *y)
+{
+	int r0;
+
+	WRITE_ONCE(*y, 1);
+	r0 = READ_ONCE(*x);
+}
+
+exists (0:r0=0 /\ 1:r0=0)
+
+```

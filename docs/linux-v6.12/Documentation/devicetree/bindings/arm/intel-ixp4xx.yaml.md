@@ -1,0 +1,57 @@
+---
+sidebar_position: 50
+---
+# intel-ixp4xx.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/arm/intel-ixp4xx.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/arm/intel-ixp4xx.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Intel IXP4xx
+
+maintainers:
+  - Linus Walleij <linus.walleij@linaro.org>
+
+properties:
+  $nodename:
+    const: "/"
+  compatible:
+    oneOf:
+      - items:
+          - enum:
+              - adieng,coyote
+              - arcom,vulcan
+              - dlink,dsm-g600-a
+              - freecom,fsg-3
+              - gateway,7001
+              - gateworks,gw2348
+              - goramo,multilink-router
+              - intel,ixdp425
+              - intel,ixdpg425
+              - iom,nas-100d
+              - linksys,nslu2
+              - netgear,wg302v1
+              - netgear,wg302v2
+              - usr,8200
+              - welltech,epbx100
+              - linksys,wrv54g
+              - gemtek,gtwx5715
+          - const: intel,ixp42x
+      - items:
+          - enum:
+              - gateworks,gw2358
+              - intel,kixrp435
+          - const: intel,ixp43x
+
+additionalProperties: true
+
+```

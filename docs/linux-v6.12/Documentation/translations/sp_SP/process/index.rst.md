@@ -1,0 +1,46 @@
+---
+sidebar_position: 19
+---
+# index.rst
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/translations/sp_SP/process/index.rst`
+
+### コンテンツ
+
+```rst
+.. raw:: latex
+
+	\renewcommand\thesection*
+	\renewcommand\thesubsection*
+
+.. include:: ../disclaimer-sp.rst
+
+.. _sp_process_index:
+
+.. toctree::
+   :maxdepth: 1
+
+   submitting-patches
+   kernel-docs
+   coding-style
+   code-of-conduct
+   kernel-enforcement-statement
+   email-clients
+   magic-number
+   programming-language
+   deprecated
+   adding-syscalls
+   researcher-guidelines
+   contribution-maturity-model
+   security-bugs
+   embargoed-hardware-issues
+   handling-regressions
+   management-style
+   submit-checklist
+   howto
+   development-process
+   maintainer-kvm-x86
+
+```

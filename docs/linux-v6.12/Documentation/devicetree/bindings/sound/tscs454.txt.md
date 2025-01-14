@@ -1,0 +1,37 @@
+---
+sidebar_position: 402
+---
+# tscs454.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/sound/tscs454.txt`
+
+### コンテンツ
+
+```txt
+TSCS454 Audio CODEC
+
+Required Properties:
+
+	- compatible :	"tempo,tscs454"
+
+	- reg : 	<0x69>
+
+	- clock-names:	Must one of  the following "xtal", "mclk1", "mclk2"
+
+	- clocks:	phandle of the clock that provides the codec sysclk
+
+	Note: If clock is not provided then bit clock is assumed
+
+Example:
+
+redwood: codec@69 {
+	#sound-dai-cells = <1>;
+	compatible = "tempo,tscs454";
+	reg = <0x69>;
+	clock-names = "mclk1";
+	clocks = <&audio_mclk>;
+};
+
+```

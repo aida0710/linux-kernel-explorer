@@ -1,0 +1,8 @@
+{
+    "label": "Axis Fifo",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Axis Fifo"
+    }
+}

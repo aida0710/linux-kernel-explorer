@@ -1,0 +1,28 @@
+---
+sidebar_position: 2
+---
+# kexec-purgatory.S
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/powerpc/purgatory/kexec-purgatory.S`
+
+### コンテンツ
+
+```S
+/* SPDX-License-Identifier: GPL-2.0 */
+
+	.section .rodata, "a"
+
+	.align	8
+kexec_purgatory:
+	.globl	kexec_purgatory
+	.incbin	"arch/powerpc/purgatory/purgatory.ro"
+.Lkexec_purgatory_end:
+
+	.align	8
+kexec_purgatory_size:
+	.globl	kexec_purgatory_size
+	.quad	.Lkexec_purgatory_end - kexec_purgatory
+
+```

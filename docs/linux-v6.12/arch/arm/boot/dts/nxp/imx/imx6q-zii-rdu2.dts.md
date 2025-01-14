@@ -1,0 +1,34 @@
+---
+sidebar_position: 234
+---
+# imx6q-zii-rdu2.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6q-zii-rdu2.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+/*
+ * Copyright (C) 2016-2017 Zodiac Inflight Innovations
+ */
+
+/dts-v1/;
+
+#include "imx6q.dtsi"
+#include "imx6qdl-zii-rdu2.dtsi"
+
+/ {
+	model = "ZII RDU2 Board";
+	compatible = "zii,imx6q-zii-rdu2", "fsl,imx6q";
+
+	/* Will be filled by the bootloader */
+	memory@10000000 {
+		device_type = "memory";
+		reg = <0x10000000 0>;
+	};
+};
+
+```

@@ -1,0 +1,25 @@
+---
+sidebar_position: 321
+---
+# sysfs-class-stm_source
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-class-stm_source`
+
+### コンテンツ
+
+```txt
+What:		/sys/class/stm_source/<stm_source>/stm_source_link
+Date:		June 2015
+KernelVersion:	4.3
+Contact:	Alexander Shishkin <alexander.shishkin@linux.intel.com>
+Description:
+		stm_source device linkage to stm device, where its tracing data
+		is directed. Reads return an existing connection or "<none>" if
+		this stm_source is not connected to any stm device yet.
+		Write an existing (registered) stm device's name here to
+		connect that device. If a device is already connected to this
+		stm_source, it will first be disconnected.
+
+```

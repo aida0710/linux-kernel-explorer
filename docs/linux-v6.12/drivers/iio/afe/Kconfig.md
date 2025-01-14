@@ -1,0 +1,33 @@
+---
+sidebar_position: 2
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/iio/afe/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Analog Front End drivers
+#
+# When adding new entries keep the list in alphabetical order
+
+menu "Analog Front Ends"
+
+config IIO_RESCALE
+	tristate "IIO rescale"
+	help
+	  Say yes here to build support for the IIO rescaling
+	  that handles voltage dividers, current sense shunts and
+	  current sense amplifiers.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called iio-rescale.
+
+endmenu
+
+```

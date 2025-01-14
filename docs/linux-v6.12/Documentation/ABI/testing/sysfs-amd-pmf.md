@@ -1,0 +1,27 @@
+---
+sidebar_position: 77
+---
+# sysfs-amd-pmf
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-amd-pmf`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/platform/*/cnqf_enable
+Date:		September 2022
+Contact:	Shyam Sundar S K <Shyam-sundar.S-k@amd.com>
+Description:	Reading this file tells if the AMD Platform Management(PMF)
+		Cool n Quiet Framework(CnQF) feature is enabled or not.
+
+		This feature is not enabled by default and gets only turned on
+		if OEM BIOS passes a "flag" to PMF ACPI function (index 11 or 12)
+		or in case the user writes "on".
+
+		To turn off CnQF user can write "off" to the sysfs node.
+		Note: Systems that support auto mode will not have this sysfs file
+		available.
+
+```

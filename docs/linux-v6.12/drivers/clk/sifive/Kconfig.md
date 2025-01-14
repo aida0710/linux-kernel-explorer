@@ -1,0 +1,37 @@
+---
+sidebar_position: 3
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/clk/sifive/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+
+menuconfig CLK_SIFIVE
+	bool "SiFive SoC driver support"
+	depends on ARCH_SIFIVE || COMPILE_TEST
+	default ARCH_SIFIVE
+	help
+	  SoC drivers for SiFive Linux-capable SoCs.
+
+if CLK_SIFIVE
+
+config CLK_SIFIVE_PRCI
+	tristate "PRCI driver for SiFive SoCs"
+	default ARCH_SIFIVE
+	select RESET_CONTROLLER
+	select RESET_SIMPLE
+	select CLK_ANALOGBITS_WRPLL_CLN28HPC
+	help
+	  Supports the Power Reset Clock interface (PRCI) IP block found in
+	  FU540/FU740 SoCs. If this kernel is meant to run on a SiFive FU540/
+	  FU740 SoCs, enable this driver.
+
+endif
+
+```

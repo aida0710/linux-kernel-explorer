@@ -1,0 +1,32 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/infiniband/hw/mthca/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config INFINIBAND_MTHCA
+	tristate "Mellanox HCA support"
+	depends on PCI
+	help
+	  This is a low-level driver for Mellanox InfiniHost host
+	  channel adapters (HCAs), including the MT23108 PCI-X HCA
+	  ("Tavor") and the MT25208 PCI Express HCA ("Arbel").
+
+config INFINIBAND_MTHCA_DEBUG
+	bool "Verbose debugging output" if EXPERT
+	depends on INFINIBAND_MTHCA
+	default y
+	help
+	  This option causes debugging code to be compiled into the
+	  mthca driver.  The output can be turned on via the
+	  debug_level module parameter (which can also be set after
+	  the driver is loaded through sysfs).
+
+```

@@ -1,0 +1,21 @@
+---
+sidebar_position: 25
+---
+# TODO
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/arm64/fp/TODO`
+
+### コンテンツ
+
+```txt
+- Test unsupported values in the ABIs.
+- More coverage for ptrace:
+ - Get/set of FFR.
+ - Ensure ptraced processes actually see the register state visible through
+   the ptrace interface.
+ - Big endian.
+- Test PR_SVE_VL_INHERIT after a double fork.
+
+```

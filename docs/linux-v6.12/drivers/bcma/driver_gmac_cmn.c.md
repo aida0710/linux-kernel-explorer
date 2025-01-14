@@ -1,0 +1,28 @@
+---
+sidebar_position: 9
+---
+# driver_gmac_cmn.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/bcma/driver_gmac_cmn.c`
+
+### コンテンツ
+
+```c
+/*
+ * Broadcom specific AMBA
+ * GBIT MAC COMMON Core
+ *
+ * Licensed under the GNU/GPL. See COPYING for details.
+ */
+
+#include "bcma_private.h"
+#include <linux/bcma/bcma.h>
+
+void bcma_core_gmac_cmn_init(struct bcma_drv_gmac_cmn *gc)
+{
+	mutex_init(&gc->phy_mutex);
+}
+
+```

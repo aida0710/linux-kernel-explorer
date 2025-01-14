@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+---
+# mapfile.csv
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/pmu-events/arch/s390/mapfile.csv`
+
+### コンテンツ
+
+```csv
+Family-model,Version,Filename,EventType
+^IBM.209[78].*[13]\.[1-5].[[:xdigit:]]+$,1,cf_z10,core
+^IBM.281[78].*[13]\.[1-5].[[:xdigit:]]+$,1,cf_z196,core
+^IBM.282[78].*[13]\.[1-5].[[:xdigit:]]+$,1,cf_zec12,core
+^IBM.296[45].*[13]\.[1-5].[[:xdigit:]]+$,1,cf_z13,core
+^IBM.390[67].*[13]\.[1-5].[[:xdigit:]]+$,3,cf_z14,core
+^IBM.856[12].*3\.6.[[:xdigit:]]+$,3,cf_z15,core
+^IBM.393[12].*$,3,cf_z16,core
+
+```

@@ -1,0 +1,37 @@
+---
+sidebar_position: 255
+---
+# sysfs-class-fc_remote_ports
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-class-fc_remote_ports`
+
+### コンテンツ
+
+```txt
+What:		/sys/class/fc_remote_ports/rport-X:Y-Z/statistics/fpin_cn_yyy
+Date:		July 2020
+Contact:	Shyam Sundar <ssundar@marvell.com>
+Description:
+		These files contain the number of congestion notification
+		events recorded by the F_Port/Nx_Port, reported using fabric
+		performance impact notification (FPIN) event.
+
+What:		/sys/class/fc_remote_ports/rport-X:Y-Z/statistics/fpin_li_yyy
+Date:		July 2020
+Contact:	Shyam Sundar <ssundar@marvell.com>
+Description:
+		These files contain the number of link integrity error
+		events recorded by the F_Port/Nx_Port, reported using fabric
+		performance impact notification (FPIN) event.
+
+What:		/sys/class/fc_remote_ports/rport-X:Y-Z/statistics/fpin_dn_yyy
+Date:		July 2020
+Contact:	Shyam Sundar <ssundar@marvell.com>
+Description:
+		These files contain the number of delivery related errors
+		recorded by the F_Port/Nx_Port, reported using fabric
+		performance impact notification (FPIN) event.
+
+```

@@ -1,0 +1,42 @@
+---
+sidebar_position: 29
+---
+# S+poonceonces.litmus
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/memory-model/litmus-tests/S+poonceonces.litmus`
+
+### コンテンツ
+
+```litmus
+C S+poonceonces
+
+(*
+ * Result: Sometimes
+ *
+ * Starting with a two-process release-acquire chain ordering P0()'s
+ * first store against P1()'s final load, if the smp_store_release()
+ * is replaced by WRITE_ONCE() and the smp_load_acquire() replaced by
+ * READ_ONCE(), is ordering preserved?
+ *)
+
+{}
+
+P0(int *x, int *y)
+{
+	WRITE_ONCE(*x, 2);
+	WRITE_ONCE(*y, 1);
+}
+
+P1(int *x, int *y)
+{
+	int r0;
+
+	r0 = READ_ONCE(*y);
+	WRITE_ONCE(*x, 1);
+}
+
+exists (x=2 /\ 1:r0=1)
+
+```

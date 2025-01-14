@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/soc/bcm/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+menu "Broadcom SoC drivers"
+
+config SOC_BRCMSTB
+	bool "Broadcom STB SoC drivers"
+	depends on ARCH_BRCMSTB || BMIPS_GENERIC || COMPILE_TEST
+	select SOC_BUS
+	help
+	  Enables drivers for the Broadcom Set-Top Box (STB) series of chips.
+	  This option alone enables only some support code, while the drivers
+	  can be enabled individually within this menu.
+
+	  If unsure, say N.
+
+source "drivers/soc/bcm/brcmstb/Kconfig"
+
+endmenu
+
+```

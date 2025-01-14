@@ -1,0 +1,44 @@
+---
+sidebar_position: 1
+---
+# arch-support.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/features/locking/queued-spinlocks/arch-support.txt`
+
+### コンテンツ
+
+```txt
+#
+# Feature name:          queued-spinlocks
+#         Kconfig:       ARCH_USE_QUEUED_SPINLOCKS
+#         description:   arch supports queued spinlocks
+#
+    -----------------------
+    |         arch |status|
+    -----------------------
+    |       alpha: | TODO |
+    |         arc: | TODO |
+    |         arm: | TODO |
+    |       arm64: |  ok  |
+    |        csky: |  ok  |
+    |     hexagon: | TODO |
+    |   loongarch: |  ok  |
+    |        m68k: | TODO |
+    |  microblaze: | TODO |
+    |        mips: |  ok  |
+    |       nios2: | TODO |
+    |    openrisc: |  ok  |
+    |      parisc: | TODO |
+    |     powerpc: |  ok  |
+    |       riscv: | TODO |
+    |        s390: | TODO |
+    |          sh: | TODO |
+    |       sparc: |  ok  |
+    |          um: | TODO |
+    |         x86: |  ok  |
+    |      xtensa: |  ok  |
+    -----------------------
+
+```

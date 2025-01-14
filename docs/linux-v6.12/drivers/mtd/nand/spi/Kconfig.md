@@ -1,0 +1,23 @@
+---
+sidebar_position: 7
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/mtd/nand/spi/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+menuconfig MTD_SPI_NAND
+	tristate "SPI NAND device Support"
+	select MTD_NAND_CORE
+	select MTD_NAND_ECC
+	depends on SPI_MASTER
+	select SPI_MEM
+	help
+	  This is the framework for the SPI NAND device drivers.
+
+```

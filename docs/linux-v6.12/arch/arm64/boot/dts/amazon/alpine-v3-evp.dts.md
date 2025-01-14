@@ -1,0 +1,38 @@
+---
+sidebar_position: 3
+---
+# alpine-v3-evp.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/amazon/alpine-v3-evp.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright 2020 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+ */
+
+#include "alpine-v3.dtsi"
+
+/ {
+	model = "Amazon's Annapurna Labs Alpine v3 Evaluation Platform (EVP)";
+	compatible = "amazon,al-alpine-v3-evp", "amazon,al-alpine-v3";
+
+	aliases {
+		serial0 = &uart0;
+		serial1 = &uart1;
+		serial2 = &uart2;
+		serial3 = &uart3;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+};
+
+&uart0 { status = "okay"; };
+
+```

@@ -1,0 +1,26 @@
+---
+sidebar_position: 27
+---
+# config.vm
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/bpf/config.vm`
+
+### コンテンツ
+
+```vm
+CONFIG_9P_FS=y
+CONFIG_9P_FS_POSIX_ACL=y
+CONFIG_9P_FS_SECURITY=y
+CONFIG_CRYPTO_DEV_VIRTIO=y
+CONFIG_NET_9P=y
+CONFIG_NET_9P_VIRTIO=y
+CONFIG_VIRTIO_BALLOON=y
+CONFIG_VIRTIO_BLK=y
+CONFIG_VIRTIO_CONSOLE=y
+CONFIG_VIRTIO_NET=y
+CONFIG_VIRTIO_PCI=y
+CONFIG_VIRTIO_VSOCKETS_COMMON=y
+
+```

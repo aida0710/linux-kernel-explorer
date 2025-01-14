@@ -1,0 +1,32 @@
+---
+sidebar_position: 152
+---
+# imx6q-gw552x.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6q-gw552x.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later
+/*
+ * Copyright 2014 Gateworks Corporation
+ */
+
+/dts-v1/;
+
+#include "imx6q.dtsi"
+#include "imx6qdl-gw552x.dtsi"
+
+/ {
+	model = "Gateworks Ventana i.MX6 Dual/Quad GW552X";
+	compatible = "gw,imx6q-gw552x", "gw,ventana", "fsl,imx6q";
+};
+
+&sata {
+	status = "okay";
+};
+
+```

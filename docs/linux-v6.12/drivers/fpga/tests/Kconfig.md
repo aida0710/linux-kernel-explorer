@@ -1,0 +1,25 @@
+---
+sidebar_position: 5
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/fpga/tests/Kconfig`
+
+### コンテンツ
+
+```txt
+config FPGA_KUNIT_TESTS
+	tristate "KUnit test for the FPGA subsystem" if !KUNIT_ALL_TESTS
+	depends on FPGA && FPGA_REGION && FPGA_BRIDGE && KUNIT=y
+	default KUNIT_ALL_TESTS
+        help
+          This builds unit tests for the FPGA subsystem
+
+          For more information on KUnit and unit tests in general,
+          please refer to the KUnit documentation in Documentation/dev-tools/kunit/.
+
+          If unsure, say N.
+
+```

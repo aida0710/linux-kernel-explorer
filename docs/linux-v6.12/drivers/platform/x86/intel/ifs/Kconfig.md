@@ -1,0 +1,26 @@
+---
+sidebar_position: 3
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/platform/x86/intel/ifs/Kconfig`
+
+### コンテンツ
+
+```txt
+config INTEL_IFS
+	tristate "Intel In Field Scan"
+	depends on X86 && CPU_SUP_INTEL && 64BIT && SMP
+	help
+	  Enable support for the In Field Scan capability in select
+	  CPUs. The capability allows for running low level tests via
+	  a scan image distributed by Intel via Github to validate CPU
+	  operation beyond baseline RAS capabilities. To compile this
+	  support as a module, choose M here. The module will be called
+	  intel_ifs.
+
+	  If unsure, say N.
+
+```

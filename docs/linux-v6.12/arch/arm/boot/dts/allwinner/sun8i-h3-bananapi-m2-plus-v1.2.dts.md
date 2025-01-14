@@ -1,0 +1,27 @@
+---
+sidebar_position: 135
+---
+# sun8i-h3-bananapi-m2-plus-v1.2.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/allwinner/sun8i-h3-bananapi-m2-plus-v1.2.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (C) 2018 Chen-Yu Tsai <wens@csie.org>
+ */
+
+/dts-v1/;
+#include "sun8i-h3.dtsi"
+#include "sunxi-bananapi-m2-plus-v1.2.dtsi"
+
+/ {
+	model = "Banana Pi BPI-M2-Plus v1.2 H3";
+	compatible = "bananapi,bpi-m2-plus-v1.2", "allwinner,sun8i-h3";
+};
+
+```

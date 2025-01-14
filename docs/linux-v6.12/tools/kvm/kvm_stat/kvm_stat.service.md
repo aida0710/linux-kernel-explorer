@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+---
+# kvm_stat.service
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/kvm/kvm_stat/kvm_stat.service`
+
+### コンテンツ
+
+```service
+# SPDX-License-Identifier: GPL-2.0-only
+
+[Unit]
+Description=Service that logs KVM kernel module trace events
+Before=qemu-kvm.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/kvm_stat -dtcz -s 10 -L /var/log/kvm_stat.csv
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=60s
+SyslogIdentifier=kvm_stat
+SyslogLevel=debug
+
+[Install]
+WantedBy=multi-user.target
+
+```

@@ -1,0 +1,32 @@
+---
+sidebar_position: 5
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/i2c/algos/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# I2C algorithm drivers configuration
+#
+
+menu "I2C Algorithms"
+	visible if !I2C_HELPER_AUTO
+
+config I2C_ALGOBIT
+	tristate "I2C bit-banging interfaces"
+
+config I2C_ALGOPCF
+	tristate "I2C PCF 8584 interfaces"
+
+config I2C_ALGOPCA
+	tristate "I2C PCA 9564 interfaces"
+
+endmenu
+
+```

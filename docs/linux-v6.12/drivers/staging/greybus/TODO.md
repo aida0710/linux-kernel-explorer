@@ -1,0 +1,19 @@
+---
+sidebar_position: 45
+---
+# TODO
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/staging/greybus/TODO`
+
+### コンテンツ
+
+```txt
+* Convert all uses of the old GPIO API from <linux/gpio.h> to the
+  GPIO descriptor API in <linux/gpio/consumer.h> and look up GPIO
+  lines from device tree or ACPI.
+* Make pwm.c use the struct pwm_ops::apply instead of ::config, ::set_polarity,
+  ::enable and ::disable.
+
+```

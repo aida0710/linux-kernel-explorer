@@ -1,0 +1,42 @@
+---
+sidebar_position: 14
+---
+# qcom,rpm-common.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/interconnect/qcom,rpm-common.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/interconnect/qcom,rpm-common.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Qualcomm RPMh Network-On-Chip Interconnect
+
+maintainers:
+  - Konrad Dybcio <konradybcio@kernel.org>
+
+description:
+  RPM interconnect providers support for managing system bandwidth requirements
+  through manual requests based on either predefined values or as indicated by
+  the bus monitor hardware. Each provider node represents a NoC bus master,
+  driven by a dedicated clock source.
+
+properties:
+  '#interconnect-cells':
+    oneOf:
+      - const: 2
+      - const: 1
+        deprecated: true
+
+required:
+  - '#interconnect-cells'
+
+additionalProperties: true
+
+```

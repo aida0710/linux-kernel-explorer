@@ -1,0 +1,50 @@
+---
+sidebar_position: 2
+---
+# nuvoton,npcm.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/arm/nuvoton/nuvoton,npcm.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/arm/nuvoton/nuvoton,npcm.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: NPCM Platforms
+
+maintainers:
+  - Jonathan Neuschäfer <j.neuschaefer@gmx.net>
+  - Tomer Maimon <tmaimon77@gmail.com>
+
+properties:
+  $nodename:
+    const: '/'
+  compatible:
+    oneOf:
+      - description: WPCM450 based boards
+        items:
+          - enum:
+              - supermicro,x9sci-ln4f-bmc   # Supermicro X9SCI-LN4F server's BMC
+          - const: nuvoton,wpcm450
+
+      - description: NPCM750 based boards
+        items:
+          - enum:
+              - nuvoton,npcm750-evb         # NPCM750 evaluation board
+          - const: nuvoton,npcm750
+
+      - description: NPCM845 based boards
+        items:
+          - enum:
+              - nuvoton,npcm845-evb         # NPCM845 evaluation board
+          - const: nuvoton,npcm845
+
+additionalProperties: true
+
+```

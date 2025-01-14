@@ -1,0 +1,20 @@
+---
+sidebar_position: 2
+---
+# default_cpio_list
+
+### ファイル情報
+
+- パス: `linux-v6.12/usr/default_cpio_list`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+# This is a very simple, default initramfs
+
+dir /dev 0755 0 0
+nod /dev/console 0600 0 0 c 5 1
+dir /root 0700 0 0
+
+```

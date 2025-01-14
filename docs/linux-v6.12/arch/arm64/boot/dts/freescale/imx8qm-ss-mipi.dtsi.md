@@ -1,0 +1,32 @@
+---
+sidebar_position: 311
+---
+# imx8qm-ss-mipi.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/freescale/imx8qm-ss-mipi.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0+
+
+/*
+ * Copyright 2024 NXP
+ */
+
+&mipi0_lis_lpcg {
+	clocks = <&dsi_ipg_clk>;
+	clock-indices = <IMX_LPCG_CLK_0>;
+	clock-output-names = "mipi0_lis_lpcg_ipg_clk";
+};
+
+&mipi0_pwm_lpcg {
+	clocks = <&clk IMX_SC_R_MIPI_0_PWM_0 IMX_SC_PM_CLK_PER>,
+		 <&dsi_ipg_clk>;
+	clock-indices = <IMX_LPCG_CLK_0>, <IMX_LPCG_CLK_4>;
+	clock-output-names = "mipi0_pwm_lpcg_clk",
+			     "mipi0_pwm_lpcg_ipg_clk";
+};
+```

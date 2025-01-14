@@ -1,0 +1,32 @@
+---
+sidebar_position: 6
+---
+# pinmux-r7785rp.c
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/sh/boards/mach-highlander/pinmux-r7785rp.c`
+
+### コンテンツ
+
+```c
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (C) 2008 Paul Mundt
+ */
+#include <linux/init.h>
+#include <linux/gpio.h>
+#include <cpu/sh7785.h>
+#include <mach/highlander.h>
+
+void __init highlander_plat_pinmux_setup(void)
+{
+	/* SCIF0 */
+	gpio_request(GPIO_FN_SCIF0_CTS, NULL);
+	gpio_request(GPIO_FN_SCIF0_RTS, NULL);
+	gpio_request(GPIO_FN_SCIF0_SCK, NULL);
+	gpio_request(GPIO_FN_SCIF0_RXD, NULL);
+	gpio_request(GPIO_FN_SCIF0_TXD, NULL);
+}
+
+```

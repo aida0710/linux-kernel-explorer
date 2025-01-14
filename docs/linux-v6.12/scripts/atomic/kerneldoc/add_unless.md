@@ -1,0 +1,33 @@
+---
+sidebar_position: 3
+---
+# add_unless
+
+### ファイル情報
+
+- パス: `linux-v6.12/scripts/atomic/kerneldoc/add_unless`
+
+### コンテンツ
+
+```txt
+if [ -z "${pfx}" ]; then
+	desc_return="Return: @true if @v was updated, @false otherwise."
+fi
+
+cat <<EOF
+/**
+ * ${class}${atomicname}() - atomic add unless value with ${desc_order} ordering
+ * @v: pointer to ${atomic}_t
+ * @a: ${int} value to add
+ * @u: ${int} value to compare with
+ *
+ * If (@v != @u), atomically updates @v to (@v + @a) with ${desc_order} ordering.
+ * Otherwise, @v is not modified and relaxed ordering is provided.
+ *
+ * ${desc_noinstr}
+ *
+ * ${desc_return}
+ */
+EOF
+
+```

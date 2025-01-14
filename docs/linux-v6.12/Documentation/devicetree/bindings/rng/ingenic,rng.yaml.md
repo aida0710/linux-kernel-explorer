@@ -1,0 +1,50 @@
+---
+sidebar_position: 9
+---
+# ingenic,rng.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/rng/ingenic,rng.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/rng/ingenic,rng.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: RNG in Ingenic SoCs
+
+maintainers:
+  - 周琰杰 (Zhou Yanjie) <zhouyanjie@wanyeetech.com>
+
+description:
+  The Random Number Generator in Ingenic SoCs.
+
+properties:
+  compatible:
+    enum:
+      - ingenic,jz4780-rng
+      - ingenic,x1000-rng
+
+  reg:
+    maxItems: 1
+
+required:
+  - compatible
+  - reg
+
+additionalProperties: false
+
+examples:
+  - |
+    rng: rng@d8 {
+        compatible = "ingenic,jz4780-rng";
+        reg = <0xd8 0x8>;
+    };
+...
+
+```

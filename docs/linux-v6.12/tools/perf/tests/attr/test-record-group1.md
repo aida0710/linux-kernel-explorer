@@ -1,0 +1,37 @@
+---
+sidebar_position: 26
+---
+# test-record-group1
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/tests/attr/test-record-group1`
+
+### コンテンツ
+
+```txt
+[config]
+command = record
+args    = --no-bpf-event -e '{cycles,instructions}' kill >/dev/null 2>&1
+ret     = 1
+
+[event-1:base-record]
+fd=1
+group_fd=-1
+sample_type=327
+read_format=4|20
+
+[event-2:base-record]
+fd=2
+group_fd=1
+type=0
+config=1
+sample_type=327
+read_format=4|20
+mmap=0
+comm=0
+task=0
+enable_on_exec=0
+disabled=0
+
+```

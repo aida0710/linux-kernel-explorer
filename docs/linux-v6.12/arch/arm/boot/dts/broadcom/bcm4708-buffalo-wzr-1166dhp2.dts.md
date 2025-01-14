@@ -1,0 +1,40 @@
+---
+sidebar_position: 51
+---
+# bcm4708-buffalo-wzr-1166dhp2.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/broadcom/bcm4708-buffalo-wzr-1166dhp2.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Device Tree Bindigs for Buffalo WZR-1166DHP2
+ *
+ * Copyright (C) 2022 SHIMAMOTO Takayoshi <takayoshi.shimamoto.360@gmail.com>
+ */
+
+/dts-v1/;
+
+#include "bcm4708-buffalo-wzr-1166dhp-common.dtsi"
+
+/ {
+	compatible = "buffalo,wzr-1166dhp2", "brcm,bcm4708";
+	model = "Buffalo WZR-1166DHP2";
+
+	chosen {
+		bootargs = "console=ttyS0,115200";
+	};
+
+	memory@0 {
+		device_type = "memory";
+		reg = <0x00000000 0x08000000>,
+		      <0x88000000 0x08000000>;
+	};
+
+};
+
+```

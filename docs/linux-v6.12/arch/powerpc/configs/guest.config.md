@@ -1,0 +1,28 @@
+---
+sidebar_position: 27
+---
+# guest.config
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/powerpc/configs/guest.config`
+
+### コンテンツ
+
+```config
+CONFIG_VIRTIO_BLK=y
+CONFIG_SCSI_VIRTIO=y
+CONFIG_VIRTIO_NET=y
+CONFIG_NET_FAILOVER=y
+CONFIG_VIRTIO_CONSOLE=y
+CONFIG_VIRTIO=y
+CONFIG_VIRTIO_PCI=y
+CONFIG_KVM_GUEST=y
+CONFIG_EPAPR_PARAVIRT=y
+CONFIG_VIRTIO_BALLOON=y
+CONFIG_VHOST_NET=y
+CONFIG_VHOST=y
+CONFIG_IBMVETH=y
+CONFIG_IBMVNIC=y
+
+```

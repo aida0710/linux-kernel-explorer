@@ -1,0 +1,35 @@
+---
+sidebar_position: 1
+---
+# brg.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/soc/fsl/cpm_qe/cpm/brg.txt`
+
+### コンテンツ
+
+```txt
+* Baud Rate Generators
+
+Currently defined compatibles:
+fsl,cpm-brg
+fsl,cpm1-brg
+fsl,cpm2-brg
+
+Properties:
+- reg : There may be an arbitrary number of reg resources; BRG
+  numbers are assigned to these in order.
+- clock-frequency : Specifies the base frequency driving
+  the BRG.
+
+Example:
+	brg@119f0 {
+		compatible = "fsl,mpc8272-brg",
+			     "fsl,cpm2-brg",
+			     "fsl,cpm-brg";
+		reg = <119f0 10 115f0 10>;
+		clock-frequency = <d#25000000>;
+	};
+
+```

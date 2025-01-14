@@ -1,0 +1,27 @@
+---
+sidebar_position: 21
+---
+# poll.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/sparc/include/uapi/asm/poll.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note */
+#ifndef __SPARC_POLL_H
+#define __SPARC_POLL_H
+
+#define POLLWRNORM	POLLOUT
+#define POLLWRBAND	256
+#define POLLMSG		512
+#define POLLREMOVE	1024
+#define POLLRDHUP       2048
+
+#include <asm-generic/poll.h>
+
+#endif
+
+```

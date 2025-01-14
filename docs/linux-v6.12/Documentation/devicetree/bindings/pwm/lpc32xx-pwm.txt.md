@@ -1,0 +1,31 @@
+---
+sidebar_position: 21
+---
+# lpc32xx-pwm.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/pwm/lpc32xx-pwm.txt`
+
+### コンテンツ
+
+```txt
+LPC32XX PWM controller
+
+Required properties:
+- compatible: should be "nxp,lpc3220-pwm"
+- reg: physical base address and length of the controller's registers
+
+Examples:
+
+pwm@4005c000 {
+	compatible = "nxp,lpc3220-pwm";
+	reg = <0x4005c000 0x4>;
+};
+
+pwm@4005c004 {
+	compatible = "nxp,lpc3220-pwm";
+	reg = <0x4005c004 0x4>;
+};
+
+```

@@ -1,0 +1,30 @@
+---
+sidebar_position: 100
+---
+# r8a77965-ulcb-kf.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/renesas/r8a77965-ulcb-kf.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Device Tree Source for the M3NULCB Kingfisher board with R-Car M3-N
+ *
+ * Copyright (C) 2018 Renesas Electronics Corp.
+ * Copyright (C) 2018 Cogent Embedded, Inc.
+ */
+
+#include "r8a77965-ulcb.dts"
+#include "ulcb-kf.dtsi"
+
+/ {
+	model = "Renesas M3NULCB Kingfisher board based on r8a77965";
+	compatible = "shimafuji,kingfisher", "renesas,m3nulcb",
+		     "renesas,r8a77965";
+};
+
+```

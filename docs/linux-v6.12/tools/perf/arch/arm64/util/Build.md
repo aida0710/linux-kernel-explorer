@@ -1,0 +1,28 @@
+---
+sidebar_position: 3
+---
+# Build
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/arch/arm64/util/Build`
+
+### コンテンツ
+
+```txt
+perf-util-y += header.o
+perf-util-y += machine.o
+perf-util-y += perf_regs.o
+perf-util-y += tsc.o
+perf-util-y += pmu.o
+perf-util-$(CONFIG_LIBTRACEEVENT) += kvm-stat.o
+perf-util-$(CONFIG_DWARF)     += dwarf-regs.o
+perf-util-$(CONFIG_LOCAL_LIBUNWIND) += unwind-libunwind.o
+perf-util-$(CONFIG_LIBDW_DWARF_UNWIND) += unwind-libdw.o
+
+perf-util-$(CONFIG_AUXTRACE) += ../../arm/util/pmu.o \
+			      ../../arm/util/auxtrace.o \
+			      ../../arm/util/cs-etm.o \
+			      arm-spe.o mem-events.o hisi-ptt.o
+
+```

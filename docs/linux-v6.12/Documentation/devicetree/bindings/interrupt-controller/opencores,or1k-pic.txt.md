@@ -1,0 +1,37 @@
+---
+sidebar_position: 82
+---
+# opencores,or1k-pic.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/interrupt-controller/opencores,or1k-pic.txt`
+
+### コンテンツ
+
+```txt
+OpenRISC 1000 Programmable Interrupt Controller
+
+Required properties:
+
+- compatible : should be "opencores,or1k-pic-level" for variants with
+  level triggered interrupt lines, "opencores,or1k-pic-edge" for variants with
+  edge triggered interrupt lines or "opencores,or1200-pic" for machines
+  with the non-spec compliant or1200 type implementation.
+
+  "opencores,or1k-pic" is also provided as an alias to "opencores,or1200-pic",
+  but this is only for backwards compatibility.
+
+- interrupt-controller : Identifies the node as an interrupt controller
+- #interrupt-cells : Specifies the number of cells needed to encode an
+  interrupt source. The value shall be 1.
+
+Example:
+
+intc: interrupt-controller {
+	compatible = "opencores,or1k-pic-level";
+	interrupt-controller;
+	#interrupt-cells = <1>;
+};
+
+```

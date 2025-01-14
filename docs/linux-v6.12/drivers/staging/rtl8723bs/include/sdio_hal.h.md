@@ -1,0 +1,30 @@
+---
+sidebar_position: 57
+---
+# sdio_hal.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/staging/rtl8723bs/include/sdio_hal.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+/******************************************************************************
+ *
+ * Copyright(c) 2007 - 2011 Realtek Corporation. All rights reserved.
+ *
+ ******************************************************************************/
+#ifndef __SDIO_HAL_H__
+#define __SDIO_HAL_H__
+
+u8 sd_int_isr(struct adapter *padapter);
+void sd_int_dpc(struct adapter *padapter);
+void rtw_set_hal_ops(struct adapter *padapter);
+
+void rtl8723bs_set_hal_ops(struct adapter *padapter);
+
+#endif /* __SDIO_HAL_H__ */
+
+```

@@ -1,0 +1,8 @@
+{
+    "label": "Irq",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Irq"
+    }
+}

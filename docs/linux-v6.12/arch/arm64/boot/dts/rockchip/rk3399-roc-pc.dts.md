@@ -1,0 +1,26 @@
+---
+sidebar_position: 89
+---
+# rk3399-roc-pc.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/rockchip/rk3399-roc-pc.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2017 T-Chip Intelligent Technology Co., Ltd
+ */
+
+/dts-v1/;
+#include "rk3399-roc-pc.dtsi"
+
+/ {
+	model = "Firefly ROC-RK3399-PC Board";
+	compatible = "firefly,roc-rk3399-pc", "rockchip,rk3399";
+};
+
+```

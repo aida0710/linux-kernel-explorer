@@ -1,0 +1,26 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/misc/mei/pxp/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+# Copyright (c) 2020, Intel Corporation. All rights reserved.
+#
+config INTEL_MEI_PXP
+	tristate "Intel PXP services of ME Interface"
+	depends on INTEL_MEI_ME
+	depends on DRM_I915 || DRM_XE
+	help
+	  MEI Support for PXP Services on Intel platforms.
+
+	  Enables the ME FW services required for PXP support through
+	  I915 display driver of Intel.
+
+```

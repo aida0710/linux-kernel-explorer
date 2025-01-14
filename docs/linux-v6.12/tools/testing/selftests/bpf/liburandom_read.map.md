@@ -1,0 +1,29 @@
+---
+sidebar_position: 46
+---
+# liburandom_read.map
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/bpf/liburandom_read.map`
+
+### コンテンツ
+
+```map
+LIBURANDOM_READ_1.0.0 {
+	global:
+		urandlib_api;
+		urandlib_api_sameoffset;
+		urandlib_read_without_sema;
+		urandlib_read_with_sema;
+		urandlib_read_with_sema_semaphore;
+	local:
+		*;
+};
+
+LIBURANDOM_READ_2.0.0 {
+	global:
+		urandlib_api;
+} LIBURANDOM_READ_1.0.0;
+
+```

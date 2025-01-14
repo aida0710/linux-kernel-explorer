@@ -1,0 +1,33 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/loongson/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+
+config DRM_LOONGSON
+	tristate "DRM support for Loongson Graphics"
+	depends on DRM && PCI && MMU
+	depends on LOONGARCH || MIPS || COMPILE_TEST
+	select DRM_KMS_HELPER
+	select DRM_TTM
+	select DRM_TTM_HELPER
+	select I2C
+	select I2C_ALGOBIT
+	help
+	  This is a DRM driver for Loongson Graphics, it may including
+	  LS7A2000, LS7A1000, LS2K2000 and LS2K1000 etc. Loongson LS7A
+	  series are bridge chipset, while Loongson LS2K series are SoC.
+
+	  If "M" is selected, the module will be called loongson.
+
+	  If in doubt, say "N".
+
+```

@@ -1,0 +1,54 @@
+---
+sidebar_position: 41
+---
+# mstar,msc313e-wdt.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/watchdog/mstar,msc313e-wdt.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/watchdog/mstar,msc313e-wdt.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: MStar Watchdog
+
+maintainers:
+  - Daniel Palmer <daniel@0x0f.com>
+  - Romain Perier <romain.perier@gmail.com>
+
+allOf:
+  - $ref: watchdog.yaml#
+
+properties:
+  compatible:
+    enum:
+      - mstar,msc313e-wdt
+
+  reg:
+    maxItems: 1
+
+  clocks:
+    maxItems: 1
+
+required:
+  - compatible
+  - clocks
+  - reg
+
+unevaluatedProperties: false
+
+examples:
+  - |
+    watchdog@6000 {
+        compatible = "mstar,msc313e-wdt";
+        reg = <0x6000 0x1f>;
+        clocks = <&xtal_div2>;
+    };
+
+```

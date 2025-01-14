@@ -1,0 +1,8 @@
+{
+    "label": "Cgroup V1",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Cgroup V1"
+    }
+}

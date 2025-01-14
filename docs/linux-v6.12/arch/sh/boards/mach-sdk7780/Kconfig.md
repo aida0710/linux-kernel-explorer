@@ -1,0 +1,31 @@
+---
+sidebar_position: 2
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/sh/boards/mach-sdk7780/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+if SH_SDK7780
+
+choice
+	prompt "SDK7780 options"
+	default SH_SDK7780_BASE
+
+config SH_SDK7780_BASE
+	bool "SDK7780 with base-board support"
+	depends on CPU_SUBTYPE_SH7780
+	help
+	  Selecting this option will enable support for the expansion
+	  baseboard devices. If in doubt, say Y.
+
+endchoice
+
+endif
+
+```

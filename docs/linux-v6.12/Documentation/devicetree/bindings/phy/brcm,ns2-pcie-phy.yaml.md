@@ -1,0 +1,55 @@
+---
+sidebar_position: 35
+---
+# brcm,ns2-pcie-phy.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/phy/brcm,ns2-pcie-phy.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/phy/brcm,ns2-pcie-phy.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: Broadcom NS2 PCIe PHY
+
+maintainers:
+  - Ray Jui <ray.jui@broadcom.com>
+  - Scott Branden <scott.branden@broadcom.com>
+
+properties:
+  compatible:
+    const: brcm,ns2-pcie-phy
+
+  reg:
+    maxItems: 1
+
+  "#phy-cells":
+    const: 0
+
+required:
+  - compatible
+  - reg
+  - "#phy-cells"
+
+additionalProperties: false
+
+examples:
+  - |
+    mdio {
+       #address-cells = <1>;
+       #size-cells = <0>;
+
+       pci-phy@0 {
+          compatible = "brcm,ns2-pcie-phy";
+          reg = <0x0>;
+          #phy-cells = <0>;
+       };
+    };
+
+```

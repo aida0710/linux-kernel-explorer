@@ -1,0 +1,23 @@
+---
+sidebar_position: 368
+---
+# sysfs-devices-supplier
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-devices-supplier`
+
+### コンテンツ
+
+```txt
+What:		/sys/devices/.../supplier:<supplier>
+Date:		May 2020
+Contact:	Saravana Kannan <saravanak@google.com>
+Description:
+		The /sys/devices/.../supplier:<supplier> are symlinks to device
+		links where this device is the consumer. <supplier> denotes the
+		name of the supplier in that device link and is of the form
+		bus:device name. There can be zero or more of these symlinks
+		for a given device.
+
+```

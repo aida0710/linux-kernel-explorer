@@ -1,0 +1,27 @@
+---
+sidebar_position: 131
+---
+# sama5d33.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/microchip/sama5d33.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0-or-later
+/*
+ * sama5d33.dtsi - Device Tree Include file for SAMA5D33 SoC
+ *
+ *  Copyright (C) 2013 Boris BREZILLON <b.brezillon@overkiz.com>
+ */
+#include "sama5d3.dtsi"
+#include "sama5d3_lcd.dtsi"
+#include "sama5d3_gmac.dtsi"
+
+/ {
+	compatible = "atmel,sama5d33", "atmel,sama5d3", "atmel,sama5";
+};
+
+```

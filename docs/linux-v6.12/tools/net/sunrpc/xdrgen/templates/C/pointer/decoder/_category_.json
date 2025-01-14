@@ -1,0 +1,8 @@
+{
+    "label": "Decoder",
+    "position": 900,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Decoder"
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "label": "Doc Guide",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Doc Guide"
+    }
+}

@@ -1,0 +1,20 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/sdw_utils/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config SND_SOC_SDW_UTILS
+	tristate
+	help
+	  This option enables to use SoundWire common helper functions and
+	  SoundWire codec helper functions in machine driver.
+
+```

@@ -1,0 +1,28 @@
+---
+sidebar_position: 51
+---
+# debugfs-msi-wmi-platform
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/debugfs-msi-wmi-platform`
+
+### コンテンツ
+
+```txt
+What:		/sys/kernel/debug/msi-wmi-platform-<wmi_device_name>/*
+Date:		April 2024
+KernelVersion:	6.10
+Contact:	Armin Wolf <W_Armin@gmx.de>
+Description:
+		This file allows to execute the associated WMI method with the same name.
+
+		To start the execution, write a  buffer containing the method arguments
+		at file offset 0. Partial writes or writes at a different offset are not
+		supported.
+
+		The buffer returned by the WMI method can then be read from the file.
+
+		See Documentation/wmi/devices/msi-wmi-platform.rst for details.
+
+```

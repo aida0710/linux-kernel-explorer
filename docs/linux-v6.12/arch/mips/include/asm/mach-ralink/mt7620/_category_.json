@@ -1,0 +1,8 @@
+{
+    "label": "Mt7620",
+    "position": 700,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Mt7620"
+    }
+}

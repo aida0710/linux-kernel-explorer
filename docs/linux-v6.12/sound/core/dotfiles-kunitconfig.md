@@ -1,0 +1,19 @@
+---
+sidebar_position: 1
+---
+# .kunitconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/core/.kunitconfig`
+
+### コンテンツ
+
+```kunitconfig
+CONFIG_KUNIT=y
+CONFIG_SOUND=y
+CONFIG_SND=y
+CONFIG_SND_PCM=y
+CONFIG_SND_CORE_TEST=y
+
+```

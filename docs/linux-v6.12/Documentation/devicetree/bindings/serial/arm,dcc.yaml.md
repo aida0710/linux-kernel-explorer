@@ -1,0 +1,44 @@
+---
+sidebar_position: 8
+---
+# arm,dcc.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/serial/arm,dcc.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/serial/arm,dcc.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: ARM DCC (Data communication channel) serial emulation
+
+maintainers:
+  - Michal Simek <michal.simek@amd.com>
+
+description: |
+  ARM DCC (Data communication channel) serial emulation interface available
+  via JTAG can be also used as one of serial line tightly coupled with every
+  ARM CPU available in the system.
+
+properties:
+  compatible:
+    const: arm,dcc
+
+required:
+  - compatible
+
+additionalProperties: false
+
+examples:
+  - |
+    serial {
+      compatible = "arm,dcc";
+    };
+
+```

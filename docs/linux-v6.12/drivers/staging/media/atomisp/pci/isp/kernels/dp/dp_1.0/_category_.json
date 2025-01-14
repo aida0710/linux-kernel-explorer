@@ -1,0 +1,8 @@
+{
+    "label": "Dp 1.0",
+    "position": 1000,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Dp 1.0"
+    }
+}

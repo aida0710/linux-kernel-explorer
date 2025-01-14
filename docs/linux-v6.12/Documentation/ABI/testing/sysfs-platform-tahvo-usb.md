@@ -1,0 +1,30 @@
+---
+sidebar_position: 522
+---
+# sysfs-platform-tahvo-usb
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-platform-tahvo-usb`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/platform/devices/tahvo-usb/otg_mode
+Date:		December 2013
+Contact:	Aaro Koskinen <aaro.koskinen@iki.fi>
+Description:
+		Set or read the current OTG mode. Valid values are "host" and
+		"peripheral".
+
+		Reading: returns the current mode.
+
+What:		/sys/bus/platform/devices/tahvo-usb/vbus
+Date:		December 2013
+Contact:	Aaro Koskinen <aaro.koskinen@iki.fi>
+Description:
+		Read the current VBUS state.
+
+		Reading: returns "on" or "off".
+
+```

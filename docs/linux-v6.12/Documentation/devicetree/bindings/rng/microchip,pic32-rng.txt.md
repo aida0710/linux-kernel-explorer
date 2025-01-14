@@ -1,0 +1,31 @@
+---
+sidebar_position: 12
+---
+# microchip,pic32-rng.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/rng/microchip,pic32-rng.txt`
+
+### コンテンツ
+
+```txt
+* Microchip PIC32 Random Number Generator
+
+The PIC32 RNG provides a pseudo random number generator which can be seeded by
+another true random number generator.
+
+Required properties:
+- compatible : should be "microchip,pic32mzda-rng"
+- reg : Specifies base physical address and size of the registers.
+- clocks: clock phandle.
+
+Example:
+
+	rng: rng@1f8e6000 {
+		compatible = "microchip,pic32mzda-rng";
+		reg = <0x1f8e6000 0x1000>;
+		clocks = <&PBCLK5>;
+	};
+
+```

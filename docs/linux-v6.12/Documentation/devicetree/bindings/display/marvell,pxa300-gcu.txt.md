@@ -1,0 +1,31 @@
+---
+sidebar_position: 52
+---
+# marvell,pxa300-gcu.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/display/marvell,pxa300-gcu.txt`
+
+### コンテンツ
+
+```txt
+PXA3xx GCU Controller
+---------------------
+
+Required properties:
+ - compatible : "marvell,pxa300-gcu"
+ - reg : should contain the register range (address and length).
+ - interrupts : Controller interrupt.
+ - clocks: phandle to the PXA specific input clock.
+
+Example for PXA300:
+
+	display-controller@54000000 {
+		compatible = "marvell,pxa300-gcu";
+		reg = <0x54000000 0x1000>;
+		interrupts = <39>;
+		clocks = <&clks CLK_PXA300_GCU>;
+	};
+
+```

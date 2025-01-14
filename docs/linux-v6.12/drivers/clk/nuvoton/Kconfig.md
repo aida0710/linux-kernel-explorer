@@ -1,0 +1,33 @@
+---
+sidebar_position: 5
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/clk/nuvoton/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+# common clock support for Nuvoton SoC family.
+
+config COMMON_CLK_NUVOTON
+	bool "Nuvoton clock controller common support"
+	depends on ARCH_MA35 || COMPILE_TEST
+	default y
+	help
+	  Say y here to enable common clock controller for Nuvoton platforms.
+
+if COMMON_CLK_NUVOTON
+
+config CLK_MA35D1
+	bool "Nuvoton MA35D1 clock controller support"
+	default y
+	help
+	  Build the clock controller driver for MA35D1 SoC.
+
+endif
+
+```

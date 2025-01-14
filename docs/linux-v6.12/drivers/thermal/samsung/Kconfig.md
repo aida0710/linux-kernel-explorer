@@ -1,0 +1,25 @@
+---
+sidebar_position: 2
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/thermal/samsung/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config EXYNOS_THERMAL
+	tristate "Exynos thermal management unit driver"
+	depends on THERMAL_OF
+	depends on HAS_IOMEM
+	help
+	  If you say yes here you get support for the TMU (Thermal Management
+	  Unit) driver for Samsung Exynos series of SoCs. This driver initialises
+	  the TMU, reports temperature and handles cooling action if defined.
+	  This driver uses the Exynos core thermal APIs and TMU configuration
+	  data from the supported SoCs.
+
+```

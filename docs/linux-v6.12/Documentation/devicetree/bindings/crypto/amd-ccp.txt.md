@@ -1,0 +1,31 @@
+---
+sidebar_position: 4
+---
+# amd-ccp.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/crypto/amd-ccp.txt`
+
+### コンテンツ
+
+```txt
+* AMD Cryptographic Coprocessor driver (ccp)
+
+Required properties:
+- compatible: Should be "amd,ccp-seattle-v1a"
+- reg: Address and length of the register set for the device
+- interrupts: Should contain the CCP interrupt
+
+Optional properties:
+- dma-coherent: Present if dma operations are coherent
+
+Example:
+	ccp@e0100000 {
+		compatible = "amd,ccp-seattle-v1a";
+		reg = <0 0xe0100000 0 0x10000>;
+		interrupt-parent = <&gic>;
+		interrupts = <0 3 4>;
+	};
+
+```

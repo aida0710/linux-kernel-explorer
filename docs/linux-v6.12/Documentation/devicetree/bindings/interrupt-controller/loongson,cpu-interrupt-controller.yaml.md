@@ -1,0 +1,48 @@
+---
+sidebar_position: 50
+---
+# loongson,cpu-interrupt-controller.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/interrupt-controller/loongson,cpu-interrupt-controller.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: GPL-2.0-only OR BSD-2-Clause
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/interrupt-controller/loongson,cpu-interrupt-controller.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: LoongArch CPU Interrupt Controller
+
+maintainers:
+  - Liu Peibao <liupeibao@loongson.cn>
+
+properties:
+  compatible:
+    const: loongson,cpu-interrupt-controller
+
+  '#interrupt-cells':
+    const: 1
+
+  interrupt-controller: true
+
+additionalProperties: false
+
+required:
+  - compatible
+  - '#interrupt-cells'
+  - interrupt-controller
+
+examples:
+  - |
+    interrupt-controller {
+      compatible = "loongson,cpu-interrupt-controller";
+      #interrupt-cells = <1>;
+      interrupt-controller;
+    };
+
+```

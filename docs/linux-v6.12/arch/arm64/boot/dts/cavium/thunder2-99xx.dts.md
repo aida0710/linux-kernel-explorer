@@ -1,0 +1,44 @@
+---
+sidebar_position: 4
+---
+# thunder2-99xx.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/cavium/thunder2-99xx.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-or-later
+/*
+ * dts file for Cavium ThunderX2 CN99XX Evaluation Platform
+ *
+ * Copyright (c) 2017 Cavium Inc.
+ * Copyright (c) 2013-2016 Broadcom
+ */
+
+/dts-v1/;
+
+#include "thunder2-99xx.dtsi"
+
+/ {
+	model = "Cavium ThunderX2 CN99XX";
+	compatible = "cavium,thunderx2-cn9900", "brcm,vulcan-soc";
+
+	memory@80000000 {
+		device_type = "memory";
+		reg = <0x00000000 0x80000000 0x0 0x80000000>,  /* 2G @ 2G  */
+		      <0x00000008 0x80000000 0x0 0x80000000>;  /* 2G @ 34G */
+	};
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	chosen {
+		stdout-path = "serial0:115200n8";
+	};
+};
+
+```

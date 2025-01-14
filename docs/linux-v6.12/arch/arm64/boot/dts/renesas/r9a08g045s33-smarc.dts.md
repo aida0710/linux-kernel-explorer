@@ -1,0 +1,32 @@
+---
+sidebar_position: 137
+---
+# r9a08g045s33-smarc.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/renesas/r9a08g045s33-smarc.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+/*
+ * Device Tree Source for the RZ/G3S SMARC EVK board
+ *
+ * Copyright (C) 2023 Renesas Electronics Corp.
+ */
+
+/dts-v1/;
+
+#include "r9a08g045s33.dtsi"
+#include "rzg3s-smarc-som.dtsi"
+#include "rzg3s-smarc.dtsi"
+
+/ {
+	model = "Renesas SMARC EVK version 2 based on r9a08g045s33";
+	compatible = "renesas,smarc2-evk", "renesas,rzg3s-smarcm",
+		     "renesas,r9a08g045s33", "renesas,r9a08g045";
+};
+
+```

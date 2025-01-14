@@ -1,0 +1,31 @@
+---
+sidebar_position: 7
+---
+# overlay_4.dtso
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/of/unittest-data/overlay_4.dtso`
+
+### コンテンツ
+
+```dtso
+// SPDX-License-Identifier: GPL-2.0
+/dts-v1/;
+/plugin/;
+
+/* overlay_4 - test insertion of a full node */
+
+&unittest_test_bus {
+	/* suppress DTC warning */
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	test-unittest4 {
+		compatible = "unittest";
+		status = "okay";
+		reg = <4>;
+	};
+};
+
+```

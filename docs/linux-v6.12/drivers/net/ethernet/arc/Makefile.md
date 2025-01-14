@@ -1,0 +1,22 @@
+---
+sidebar_position: 6
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/net/ethernet/arc/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+#
+# Makefile for the ARC network device drivers.
+#
+
+arc_emac-objs := emac_main.o emac_mdio.o
+obj-$(CONFIG_ARC_EMAC_CORE) += arc_emac.o
+obj-$(CONFIG_EMAC_ROCKCHIP) += emac_rockchip.o
+
+```

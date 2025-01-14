@@ -1,0 +1,8 @@
+{
+    "label": "Gcc Plugins",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Gcc Plugins"
+    }
+}

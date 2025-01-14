@@ -1,0 +1,46 @@
+---
+sidebar_position: 12
+---
+# mt6779-evb.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/mediatek/mt6779-evb.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * Copyright (c) 2019 MediaTek Inc.
+ * Author: Mars.C <mars.cheng@mediatek.com>
+ *
+ */
+
+/dts-v1/;
+#include "mt6779.dtsi"
+
+/ {
+	model = "MediaTek MT6779 EVB";
+	chassis-type = "embedded";
+	compatible = "mediatek,mt6779-evb", "mediatek,mt6779";
+
+	aliases {
+		serial0 = &uart0;
+	};
+
+	memory@40000000 {
+		device_type = "memory";
+		reg = <0 0x40000000 0 0x1e800000>;
+	};
+
+	chosen {
+		stdout-path = "serial0:921600n8";
+	};
+};
+
+&uart0 {
+	status = "okay";
+};
+
+```

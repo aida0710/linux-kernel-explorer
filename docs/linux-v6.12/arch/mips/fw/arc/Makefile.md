@@ -1,0 +1,29 @@
+---
+sidebar_position: 7
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/fw/arc/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+#
+# Makefile for the ARC prom monitor library routines under Linux.
+#
+
+ifdef CONFIG_ARC_CMDLINE_ONLY
+lib-y				+= cmdline.o
+else
+lib-y				+= cmdline.o env.o file.o identify.o init.o \
+				   misc.o
+endif
+
+lib-$(CONFIG_ARC_MEMORY)	+= memory.o
+lib-$(CONFIG_ARC_CONSOLE)	+= arc_con.o
+lib-$(CONFIG_ARC_PROMLIB)	+= promlib.o
+
+```

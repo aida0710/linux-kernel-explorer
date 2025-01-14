@@ -1,0 +1,28 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/media/platform/via/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+
+comment "VIA media platform drivers"
+
+config VIDEO_VIA_CAMERA
+	tristate "VIAFB camera controller support"
+	depends on V4L_PLATFORM_DRIVERS
+	depends on FB_VIA && VIDEO_DEV
+	select VIDEOBUF2_DMA_SG
+	select VIDEO_OV7670 if VIDEO_CAMERA_SENSOR
+	help
+	   Driver support for the integrated camera controller in VIA
+	   Chrome9 chipsets.  Currently only tested on OLPC xo-1.5 systems
+	   with ov7670 sensors.
+
+```

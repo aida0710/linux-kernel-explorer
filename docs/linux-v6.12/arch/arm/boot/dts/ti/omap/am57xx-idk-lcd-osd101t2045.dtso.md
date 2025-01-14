@@ -1,0 +1,77 @@
+---
+sidebar_position: 16
+---
+# am57xx-idk-lcd-osd101t2045.dtso
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/ti/omap/am57xx-idk-lcd-osd101t2045.dtso`
+
+### コンテンツ
+
+```dtso
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright (C) 2019-2022 Texas Instruments Incorporated - https://www.ti.com/
+ */
+
+/dts-v1/;
+/plugin/;
+
+&{/} {
+	aliases {
+		display0 = "/display";
+		display1 = "/connector";
+	};
+
+	lcd_bl: backlight {
+		compatible = "pwm-backlight";
+		pwms = <&ecap0 0 50000 1>;
+		brightness-levels = <0 51 53 56 62 75 101 152 255>;
+		default-brightness-level = <8>;
+	};
+};
+
+&dsi_bridge {
+	status = "okay";
+
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	lcd: display {
+		compatible = "osddisplays,osd101t2045-53ts";
+		reg = <0>;
+
+		label = "lcd";
+
+		backlight = <&lcd_bl>;
+
+		port {
+			lcd_in: endpoint {
+				remote-endpoint = <&dsi_out>;
+			};
+		};
+	};
+};
+
+&dsi_bridge_ports {
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	port@1 {
+		reg = <1>;
+		dsi_out: endpoint {
+			remote-endpoint = <&lcd_in>;
+		};
+	};
+};
+
+&epwmss0 {
+	status = "okay";
+};
+
+&ecap0 {
+	status = "okay";
+};
+
+```

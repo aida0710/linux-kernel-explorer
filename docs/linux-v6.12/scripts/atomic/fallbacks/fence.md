@@ -1,0 +1,21 @@
+---
+sidebar_position: 10
+---
+# fence
+
+### ファイル情報
+
+- パス: `linux-v6.12/scripts/atomic/fallbacks/fence`
+
+### コンテンツ
+
+```txt
+cat <<EOF
+	${ret} ret;
+	__atomic_pre_full_fence();
+	ret = arch_${atomic}_${pfx}${name}${sfx}_relaxed(${args});
+	__atomic_post_full_fence();
+	return ret;
+EOF
+
+```

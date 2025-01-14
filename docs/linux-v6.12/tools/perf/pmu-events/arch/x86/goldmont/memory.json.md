@@ -1,0 +1,45 @@
+---
+sidebar_position: 5
+---
+# memory.json
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/pmu-events/arch/x86/goldmont/memory.json`
+
+### コンテンツ
+
+```json
+[
+    {
+        "BriefDescription": "Machine clears due to memory ordering issue",
+        "Counter": "0,1,2,3",
+        "EventCode": "0xC3",
+        "EventName": "MACHINE_CLEARS.MEMORY_ORDERING",
+        "PublicDescription": "Counts machine clears due to memory ordering issues.  This occurs when a snoop request happens and the machine is uncertain if memory ordering will be preserved as another core is in the process of modifying the data.",
+        "SampleAfterValue": "200003",
+        "UMask": "0x2"
+    },
+    {
+        "BriefDescription": "Load uops that split a page (Precise event capable)",
+        "Counter": "0,1,2,3",
+        "EventCode": "0x13",
+        "EventName": "MISALIGN_MEM_REF.LOAD_PAGE_SPLIT",
+        "PEBS": "2",
+        "PublicDescription": "Counts when a memory load of a uop spans a page boundary (a split) is retired.",
+        "SampleAfterValue": "200003",
+        "UMask": "0x2"
+    },
+    {
+        "BriefDescription": "Store uops that split a page (Precise event capable)",
+        "Counter": "0,1,2,3",
+        "EventCode": "0x13",
+        "EventName": "MISALIGN_MEM_REF.STORE_PAGE_SPLIT",
+        "PEBS": "2",
+        "PublicDescription": "Counts when a memory store of a uop spans a page boundary (a split) is retired.",
+        "SampleAfterValue": "200003",
+        "UMask": "0x4"
+    }
+]
+
+```

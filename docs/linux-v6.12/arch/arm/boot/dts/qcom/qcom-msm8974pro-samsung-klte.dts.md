@@ -1,0 +1,30 @@
+---
+sidebar_position: 92
+---
+# qcom-msm8974pro-samsung-klte.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/qcom/qcom-msm8974pro-samsung-klte.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+#include "qcom-msm8974pro-samsung-klte-common.dtsi"
+
+/ {
+	model = "Samsung Galaxy S5";
+	compatible = "samsung,klte", "qcom,msm8974pro", "qcom,msm8974";
+};
+
+&i2c_led_gpio {
+	scl-gpios = <&tlmm 121 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN)>;
+	sda-gpios = <&tlmm 120 (GPIO_ACTIVE_HIGH | GPIO_OPEN_DRAIN)>;
+};
+
+&i2c_led_gpioex_pins {
+	pins = "gpio120", "gpio121";
+};
+
+```

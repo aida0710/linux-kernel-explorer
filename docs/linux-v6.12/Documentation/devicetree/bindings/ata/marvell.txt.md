@@ -1,0 +1,36 @@
+---
+sidebar_position: 21
+---
+# marvell.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/ata/marvell.txt`
+
+### コンテンツ
+
+```txt
+* Marvell Orion SATA
+
+Required Properties:
+- compatibility : "marvell,orion-sata" or "marvell,armada-370-sata"
+- reg           : Address range of controller
+- interrupts    : Interrupt controller is using
+- nr-ports      : Number of SATA ports in use.
+
+Optional Properties:
+- phys		: List of phandles to sata phys
+- phy-names	: Should be "0", "1", etc, one number per phandle
+
+Example:
+
+	sata@80000 {
+		compatible = "marvell,orion-sata";
+		reg = <0x80000 0x5000>;
+		interrupts = <21>;
+		phys = <&sata_phy0>, <&sata_phy1>;
+		phy-names = "0", "1";
+		nr-ports = <2>;
+	}
+
+```

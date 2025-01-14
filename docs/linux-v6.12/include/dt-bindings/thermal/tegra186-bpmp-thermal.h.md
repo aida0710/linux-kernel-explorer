@@ -1,0 +1,28 @@
+---
+sidebar_position: 4
+---
+# tegra186-bpmp-thermal.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/include/dt-bindings/thermal/tegra186-bpmp-thermal.h`
+
+### コンテンツ
+
+```h
+/*
+ * This header provides constants for binding nvidia,tegra186-bpmp-thermal.
+ */
+
+#ifndef _DT_BINDINGS_THERMAL_TEGRA186_BPMP_THERMAL_H
+#define _DT_BINDINGS_THERMAL_TEGRA186_BPMP_THERMAL_H
+
+#define TEGRA186_BPMP_THERMAL_ZONE_CPU 2
+#define TEGRA186_BPMP_THERMAL_ZONE_GPU 3
+#define TEGRA186_BPMP_THERMAL_ZONE_AUX 4
+#define TEGRA186_BPMP_THERMAL_ZONE_PLLX 5
+#define TEGRA186_BPMP_THERMAL_ZONE_AO 6
+
+#endif
+
+```

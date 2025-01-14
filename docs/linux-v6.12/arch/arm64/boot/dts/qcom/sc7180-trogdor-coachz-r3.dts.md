@@ -1,0 +1,29 @@
+---
+sidebar_position: 235
+---
+# sc7180-trogdor-coachz-r3.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/qcom/sc7180-trogdor-coachz-r3.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Google CoachZ board device tree source
+ *
+ * Copyright 2021 Google LLC.
+ */
+
+/dts-v1/;
+
+#include "sc7180-trogdor-coachz.dtsi"
+
+/ {
+	model = "Google CoachZ (rev3+)";
+	compatible = "google,coachz", "qcom,sc7180";
+};
+
+```

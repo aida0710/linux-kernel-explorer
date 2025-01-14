@@ -1,0 +1,31 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/staging/media/sunxi/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+config VIDEO_SUNXI
+	bool "Allwinner sunXi family Video Devices"
+	depends on ARCH_SUNXI || COMPILE_TEST
+	help
+	  If you have an Allwinner SoC based on the sunXi family, say Y.
+
+	  Note that this option doesn't include new drivers in the
+	  kernel: saying N will just cause Kconfig to skip all the
+	  questions about Allwinner media devices.
+
+if VIDEO_SUNXI
+
+source "drivers/staging/media/sunxi/cedrus/Kconfig"
+source "drivers/staging/media/sunxi/sun6i-isp/Kconfig"
+
+endif
+
+```

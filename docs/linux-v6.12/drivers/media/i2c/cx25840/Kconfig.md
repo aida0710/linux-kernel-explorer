@@ -1,0 +1,23 @@
+---
+sidebar_position: 7
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/media/i2c/cx25840/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config VIDEO_CX25840
+	tristate "Conexant CX2584x audio/video decoders"
+	depends on VIDEO_DEV && I2C
+	help
+	  Support for the Conexant CX2584x audio/video decoders.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cx25840
+
+```

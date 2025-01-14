@@ -1,0 +1,37 @@
+---
+sidebar_position: 231
+---
+# imx6q-wandboard.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6q-wandboard.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Copyright 2013 Freescale Semiconductor, Inc.
+ *
+ * Author: Fabio Estevam <fabio.estevam@freescale.com>
+ */
+/dts-v1/;
+#include "imx6q.dtsi"
+#include "imx6qdl-wandboard-revc1.dtsi"
+
+/ {
+	model = "Wandboard i.MX6 Quad Board";
+	compatible = "wand,imx6q-wandboard", "fsl,imx6q";
+
+	memory@10000000 {
+		device_type = "memory";
+		reg = <0x10000000 0x80000000>;
+	};
+};
+
+&sata {
+	status = "okay";
+};
+
+```

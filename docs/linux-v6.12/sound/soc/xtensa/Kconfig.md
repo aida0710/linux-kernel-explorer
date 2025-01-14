@@ -1,0 +1,22 @@
+---
+sidebar_position: 1
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/sound/soc/xtensa/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config SND_SOC_XTFPGA_I2S
+	tristate "XTFPGA I2S master"
+	select REGMAP_MMIO
+	help
+	  Say Y or M if you want to add support for codecs attached to the
+	  I2S interface on XTFPGA daughter board. You will also need to select
+	  the drivers for the rest of XTFPGA audio subsystem.
+
+```

@@ -1,0 +1,23 @@
+---
+sidebar_position: 38
+---
+# qcom-ipq4019-ap.dk04.1-c3.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/qcom/qcom-ipq4019-ap.dk04.1-c3.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+// Copyright (c) 2018, The Linux Foundation. All rights reserved.
+
+#include "qcom-ipq4019-ap.dk04.1.dtsi"
+
+/ {
+	model = "Qualcomm Technologies, Inc. IPQ4019/AP-DK04.1-C3";
+	compatible = "qcom,ipq4019-ap-dk04.1-c3", "qcom,ipq4019";
+};
+
+```

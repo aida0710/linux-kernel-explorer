@@ -1,0 +1,51 @@
+---
+sidebar_position: 1
+---
+# ddrc.json
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/pmu-events/arch/arm64/freescale/imx8mn/sys/ddrc.json`
+
+### コンテンツ
+
+```json
+[
+   {
+           "BriefDescription": "ddr cycles event",
+           "EventCode": "0x00",
+           "EventName": "imx8mn_ddr.cycles",
+           "Unit": "imx8_ddr",
+           "Compat": "i.MX8MN"
+   },
+   {
+           "BriefDescription": "ddr read-cycles event",
+           "EventCode": "0x2a",
+           "EventName": "imx8mn_ddr.read_cycles",
+           "Unit": "imx8_ddr",
+           "Compat": "i.MX8MN"
+   },
+   {
+           "BriefDescription": "ddr write-cycles event",
+           "EventCode": "0x2b",
+           "EventName": "imx8mn_ddr.write_cycles",
+           "Unit": "imx8_ddr",
+           "Compat": "i.MX8MN"
+   },
+   {
+           "BriefDescription": "ddr read event",
+           "EventCode": "0x35",
+           "EventName": "imx8mn_ddr.read",
+           "Unit": "imx8_ddr",
+           "Compat": "i.MX8MN"
+   },
+   {
+           "BriefDescription": "ddr write event",
+           "EventCode": "0x38",
+           "EventName": "imx8mn_ddr.write",
+           "Unit": "imx8_ddr",
+           "Compat": "i.MX8MN"
+   }
+]
+
+```

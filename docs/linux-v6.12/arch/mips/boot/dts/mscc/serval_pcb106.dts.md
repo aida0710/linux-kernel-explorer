@@ -1,0 +1,31 @@
+---
+sidebar_position: 15
+---
+# serval_pcb106.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/mips/boot/dts/mscc/serval_pcb106.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+/*
+ * Copyright (c) 2018 Microsemi Corporation
+ */
+
+/dts-v1/;
+#include "serval_common.dtsi"
+
+/ {
+	model = "Serval PCB106 Reference Board";
+	compatible = "mscc,serval-pcb106", "mscc,serval";
+
+	aliases {
+	};
+
+};
+
+
+```

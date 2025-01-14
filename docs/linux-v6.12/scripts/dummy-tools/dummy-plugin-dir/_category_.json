@@ -1,0 +1,8 @@
+{
+    "label": "Dummy Plugin Dir",
+    "position": 400,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Dummy Plugin Dir"
+    }
+}

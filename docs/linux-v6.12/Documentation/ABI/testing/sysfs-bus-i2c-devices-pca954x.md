@@ -1,0 +1,37 @@
+---
+sidebar_position: 129
+---
+# sysfs-bus-i2c-devices-pca954x
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/ABI/testing/sysfs-bus-i2c-devices-pca954x`
+
+### コンテンツ
+
+```txt
+What:		/sys/bus/i2c/.../idle_state
+Date:		January 2019
+KernelVersion:	5.2
+Contact:	Robert Shearman <robert.shearman@att.com>
+Description:
+		Value that exists only for mux devices that can be
+		written to control the behaviour of the multiplexer on
+		idle. Possible values:
+
+		===========  ===============================================
+		-2	     disconnect on idle, i.e. deselect the last used
+			     channel, which is useful when there is a device
+			     with an address that conflicts with another
+			     device on another mux on the same parent bus.
+		-1	     leave the mux as-is, which is the most optimal
+			     setting in terms of I2C operations and is the
+			     default mode.
+		0..<nchans>  set the mux to a predetermined channel,
+			     which is useful if there is one channel that is
+			     used almost always, and you want to reduce the
+			     latency for normal operations after rare
+			     transactions on other channels
+		===========  ===============================================
+
+```

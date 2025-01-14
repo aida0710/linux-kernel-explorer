@@ -1,0 +1,27 @@
+---
+sidebar_position: 41
+---
+# msm-sc7180-trogdor-lazor-limozeen-flakes.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/gpu/drm/ci/xfails/msm-sc7180-trogdor-lazor-limozeen-flakes.txt`
+
+### コンテンツ
+
+```txt
+# Board Name: sc7180-trogdor-lazor-limozeen-nots-r5
+# Bug Report: https://lore.kernel.org/linux-arm-msm/661483c8-ad82-400d-bcd8-e94986d20d7d@collabora.com/T/#u
+# Failure Rate: 50
+# IGT Version: 1.28-g0df7b9b97
+# Linux Version: 6.9.0-rc7
+msm/msm_mapping@shadow
+
+# Board Name: sc7180-trogdor-lazor-limozeen-nots-r5
+# Bug Report: https://lore.kernel.org/linux-arm-msm/661483c8-ad82-400d-bcd8-e94986d20d7d@collabora.com/T/#u
+# Failure Rate: 100
+# IGT Version: 1.28-gf13702b8e
+# Linux Version: 6.10.0-rc5
+kms_lease@page-flip-implicit-plane
+
+```

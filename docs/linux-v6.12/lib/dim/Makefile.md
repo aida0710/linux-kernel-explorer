@@ -1,0 +1,21 @@
+---
+sidebar_position: 2
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `linux-v6.12/lib/dim/Makefile`
+
+### コンテンツ
+
+```txt
+#
+# DIM Dynamic Interrupt Moderation library
+#
+
+obj-$(CONFIG_DIMLIB) += dimlib.o
+
+dimlib-y := dim.o net_dim.o rdma_dim.o
+
+```

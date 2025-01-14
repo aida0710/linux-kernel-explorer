@@ -1,0 +1,35 @@
+---
+sidebar_position: 72
+---
+# bcm5301x-nand-cs0.dtsi
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/broadcom/bcm5301x-nand-cs0.dtsi`
+
+### コンテンツ
+
+```dtsi
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Broadcom Northstar NAND.
+ *
+ * Copyright (C) 2015 Hauke Mehrtens <hauke@hauke-m.de>
+ */
+
+/ {
+	nand-controller@18028000 {
+		nandcs: nand@0 {
+			compatible = "brcm,nandcs";
+			reg = <0>;
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partitions {
+				compatible = "brcm,bcm947xx-cfe-partitions";
+			};
+		};
+	};
+};
+
+```

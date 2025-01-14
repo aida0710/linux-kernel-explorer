@@ -1,0 +1,53 @@
+---
+sidebar_position: 165
+---
+# kirkwood-openrd-base.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/marvell/kirkwood-openrd-base.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Marvell OpenRD Base Board Description
+ *
+ * Andrew Lunn <andrew@lunn.ch>
+ *
+ * This file contains the definitions that are specific to OpenRD
+ * base variant of the Marvell Kirkwood Development Board.
+ */
+
+/dts-v1/;
+
+#include "kirkwood-openrd.dtsi"
+
+/ {
+	model = "OpenRD Base";
+	compatible = "marvell,openrd-base", "marvell,openrd", "marvell,kirkwood-88f6281", "marvell,kirkwood";
+
+	ocp@f1000000 {
+		serial@12100 {
+			status = "okay";
+		};
+	};
+};
+
+&mdio {
+	status = "okay";
+
+	ethphy0: ethernet-phy@8 {
+		reg = <8>;
+	};
+};
+
+&eth0 {
+	status = "okay";
+	ethernet0-port@0 {
+		phy-handle = <&ethphy0>;
+	};
+};
+
+```

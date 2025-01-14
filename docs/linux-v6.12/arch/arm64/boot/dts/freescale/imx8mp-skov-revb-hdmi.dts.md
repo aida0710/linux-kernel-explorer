@@ -1,0 +1,34 @@
+---
+sidebar_position: 233
+---
+# imx8mp-skov-revb-hdmi.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm64/boot/dts/freescale/imx8mp-skov-revb-hdmi.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: (GPL-2.0 OR MIT)
+
+/dts-v1/;
+
+#include "imx8mp-skov-reva.dtsi"
+
+/ {
+	model = "SKOV IMX8MP CPU revB - HDMI";
+	compatible = "skov,imx8mp-skov-revb-hdmi", "fsl,imx8mp";
+};
+
+&iomuxc {
+	pinctrl_hdmi: hdmigrp {
+		fsl,pins = <
+			MX8MP_IOMUXC_HDMI_DDC_SCL__HDMIMIX_HDMI_SCL		0x1c3
+			MX8MP_IOMUXC_HDMI_DDC_SDA__HDMIMIX_HDMI_SDA		0x1c3
+			MX8MP_IOMUXC_HDMI_HPD__HDMIMIX_HDMI_HPD			0x19
+		>;
+	};
+};
+
+```

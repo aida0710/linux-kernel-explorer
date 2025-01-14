@@ -1,0 +1,24 @@
+---
+sidebar_position: 14
+---
+# stall.json
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/perf/pmu-events/arch/arm64/arm/neoverse-n1/stall.json`
+
+### コンテンツ
+
+```json
+[
+    {
+        "ArchStdEvent": "STALL_FRONTEND",
+        "PublicDescription": "Counts cycles when frontend could not send any micro-operations to the rename stage because of frontend resource stalls caused by fetch memory latency or branch prediction flow stalls. All the frontend slots were empty during the cycle when this event counts."
+    },
+    {
+        "ArchStdEvent": "STALL_BACKEND",
+        "PublicDescription": "Counts cycles whenever the rename unit is unable to send any micro-operations to the backend of the pipeline because of backend resource constraints. Backend resource constraints can include issue stage fullness, execution stage fullness, or other internal pipeline resource fullness. All the backend slots were empty during the cycle when this event counts."
+    }
+]
+
+```

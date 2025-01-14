@@ -1,0 +1,8 @@
+{
+    "label": "Norm 1.0",
+    "position": 1000,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Norm 1.0"
+    }
+}

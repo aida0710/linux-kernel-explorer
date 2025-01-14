@@ -1,0 +1,30 @@
+---
+sidebar_position: 1
+---
+# initrd.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/selftests/rcutorture/doc/initrd.txt`
+
+### コンテンツ
+
+```txt
+The rcutorture scripting tools automatically create an initrd containing
+a single statically linked binary named "init" that loops over a
+very long sleep() call.  In both cases, this creation is done by
+tools/testing/selftests/rcutorture/bin/mkinitrd.sh.
+
+However, if you don't like the notion of statically linked bare-bones
+userspace environments, you might wish to press an existing initrd
+into service:
+
+------------------------------------------------------------------------
+cd tools/testing/selftests/rcutorture
+zcat /initrd.img > /tmp/initrd.img.zcat
+mkdir initrd
+cd initrd
+cpio -id < /tmp/initrd.img.zcat
+# Manually verify that initrd contains needed binaries and libraries.
+
+```

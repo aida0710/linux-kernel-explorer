@@ -1,0 +1,42 @@
+---
+sidebar_position: 80
+---
+# dove-divider-clock.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/clock/dove-divider-clock.txt`
+
+### コンテンツ
+
+```txt
+PLL divider based Dove clocks
+
+Marvell Dove has a 2GHz PLL, which feeds into a set of dividers to provide
+high speed clocks for a number of peripherals.  These dividers are part of
+the PMU, and thus this node should be a child of the PMU node.
+
+The following clocks are provided:
+
+ID	Clock
+-------------
+0	AXI bus clock
+1	GPU clock
+2	VMeta clock
+3	LCD clock
+
+Required properties:
+- compatible : shall be "marvell,dove-divider-clock"
+- reg : shall be the register address of the Core PLL and Clock Divider
+   Control 0 register.  This will cover that register, as well as the
+   Core PLL and Clock Divider Control 1 register.  Thus, it will have
+   a size of 8.
+- #clock-cells : from common clock binding; shall be set to 1
+
+divider_clk: core-clock@64 {
+	compatible = "marvell,dove-divider-clock";
+	reg = <0x0064 0x8>;
+	#clock-cells = <1>;
+};
+
+```

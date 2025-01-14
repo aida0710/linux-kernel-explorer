@@ -1,0 +1,68 @@
+---
+sidebar_position: 114
+---
+# imx6dl-yapp4-orion.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/nxp/imx/imx6dl-yapp4-orion.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0
+//
+// Copyright (C) 2020 Y Soft Corporation, a.s.
+
+/dts-v1/;
+
+#include "imx6dl.dtsi"
+#include "imx6dl-yapp4-common.dtsi"
+
+/ {
+	model = "Y Soft IOTA Orion i.MX6DualLite board";
+	compatible = "ysoft,imx6dl-yapp4-orion", "fsl,imx6dl";
+
+	memory@10000000 {
+		device_type = "memory";
+		reg = <0x10000000 0xf0000000>;
+	};
+};
+
+&gpio_oled {
+	status = "okay";
+};
+
+&leds {
+	status = "okay";
+};
+
+&oled_1305 {
+	status = "okay";
+};
+
+&oled_1309 {
+	status = "okay";
+};
+
+&reg_usb_h1_vbus {
+	status = "okay";
+};
+
+&touchkeys {
+	status = "okay";
+};
+
+&uart2 {
+	status = "disabled";
+};
+
+&usbh1 {
+	status = "okay";
+};
+
+&usbphy2 {
+	status = "okay";
+};
+
+```

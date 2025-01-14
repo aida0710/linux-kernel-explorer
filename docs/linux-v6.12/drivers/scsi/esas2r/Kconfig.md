@@ -1,0 +1,20 @@
+---
+sidebar_position: 15
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/drivers/scsi/esas2r/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0-only
+config SCSI_ESAS2R
+	tristate "ATTO Technology's ExpressSAS RAID adapter driver"
+	depends on PCI && SCSI
+	help
+	  This driver supports the ATTO ExpressSAS R6xx SAS/SATA RAID controllers.
+
+```

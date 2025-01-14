@@ -1,0 +1,37 @@
+---
+sidebar_position: 72
+---
+# am335x-wega-rdk.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/ti/omap/am335x-wega-rdk.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * Copyright (C) 2015 Phytec Messtechnik GmbH
+ * Author: Teresa Remmet <t.remmet@phytec.de>
+ */
+
+/dts-v1/;
+
+#include "am335x-phycore-som.dtsi"
+#include "am335x-wega.dtsi"
+
+/* SoM */
+&gpmc {
+	status = "okay";
+};
+
+&i2c_eeprom {
+	status = "okay";
+};
+
+&i2c_rtc {
+	status = "okay";
+};
+
+```

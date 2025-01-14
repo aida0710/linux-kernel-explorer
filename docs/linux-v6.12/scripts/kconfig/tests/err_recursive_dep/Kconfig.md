@@ -1,0 +1,77 @@
+---
+sidebar_position: 2
+---
+# Kconfig
+
+### ファイル情報
+
+- パス: `linux-v6.12/scripts/kconfig/tests/err_recursive_dep/Kconfig`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+
+# depends on itself
+
+config A
+	bool "A"
+	depends on A
+
+# select itself
+
+config B
+	bool
+	select B
+
+# depends on each other
+
+config C1
+	bool "C1"
+	depends on C2
+
+config C2
+	bool "C2"
+	depends on C1
+
+# depends on and select
+
+config D1
+	bool "D1"
+	depends on D2
+	select D2
+
+config D2
+	bool
+
+# depends on and imply
+
+config E1
+	bool "E1"
+	depends on E2
+	imply E2
+
+config E2
+	bool "E2"
+
+# property
+
+config F1
+	bool "F1"
+	default F2
+
+config F2
+	bool "F2"
+	depends on F1
+
+# menu
+
+menu "menu depending on its content"
+	depends on G
+
+config G
+	bool "G"
+
+endmenu
+
+```

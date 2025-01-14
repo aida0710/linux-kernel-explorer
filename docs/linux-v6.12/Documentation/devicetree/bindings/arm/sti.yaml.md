@@ -1,0 +1,47 @@
+---
+sidebar_position: 71
+---
+# sti.yaml
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/arm/sti.yaml`
+
+### コンテンツ
+
+```yaml
+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
+%YAML 1.2
+---
+$id: http://devicetree.org/schemas/arm/sti.yaml#
+$schema: http://devicetree.org/meta-schemas/core.yaml#
+
+title: ST STi Platforms
+
+maintainers:
+  - Patrice Chotard <patrice.chotard@foss.st.com>
+
+properties:
+  $nodename:
+    const: '/'
+  compatible:
+    oneOf:
+      - items:
+          - const: st,stih407-b2120
+          - const: st,stih407
+      - items:
+          - enum:
+              - st,stih410-b2120
+              - st,stih410-b2260
+          - const: st,stih410
+      - items:
+          - enum:
+              - st,stih418-b2199
+              - st,stih418-b2264
+          - const: st,stih418
+
+additionalProperties: true
+
+...
+
+```

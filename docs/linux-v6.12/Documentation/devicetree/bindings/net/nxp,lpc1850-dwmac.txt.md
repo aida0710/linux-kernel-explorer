@@ -1,0 +1,34 @@
+---
+sidebar_position: 136
+---
+# nxp,lpc1850-dwmac.txt
+
+### ファイル情報
+
+- パス: `linux-v6.12/Documentation/devicetree/bindings/net/nxp,lpc1850-dwmac.txt`
+
+### コンテンツ
+
+```txt
+* NXP LPC1850 GMAC ethernet controller
+
+This device is a platform glue layer for stmmac.
+Please see stmmac.txt for the other unchanged properties.
+
+Required properties:
+ - compatible:  Should contain "nxp,lpc1850-dwmac"
+
+Examples:
+
+mac: ethernet@40010000 {
+	compatible = "nxp,lpc1850-dwmac", "snps,dwmac-3.611", "snps,dwmac";
+	reg = <0x40010000 0x2000>;
+	interrupts = <5>;
+	interrupt-names = "macirq";
+	clocks = <&ccu1 CLK_CPU_ETHERNET>;
+	clock-names = "stmmaceth";
+	resets = <&rgu 22>;
+	reset-names = "stmmaceth";
+}
+
+```

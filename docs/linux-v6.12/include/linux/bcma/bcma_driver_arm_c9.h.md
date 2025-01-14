@@ -1,0 +1,30 @@
+---
+sidebar_position: 2
+---
+# bcma_driver_arm_c9.h
+
+### ファイル情報
+
+- パス: `linux-v6.12/include/linux/bcma/bcma_driver_arm_c9.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+#ifndef LINUX_BCMA_DRIVER_ARM_C9_H_
+#define LINUX_BCMA_DRIVER_ARM_C9_H_
+
+/* DMU (Device Management Unit) */
+#define BCMA_DMU_CRU_USB2_CONTROL			0x0164
+#define  BCMA_DMU_CRU_USB2_CONTROL_USB_PLL_NDIV_MASK	0x00000FFC
+#define  BCMA_DMU_CRU_USB2_CONTROL_USB_PLL_NDIV_SHIFT	2
+#define  BCMA_DMU_CRU_USB2_CONTROL_USB_PLL_PDIV_MASK	0x00007000
+#define  BCMA_DMU_CRU_USB2_CONTROL_USB_PLL_PDIV_SHIFT	12
+#define BCMA_DMU_CRU_CLKSET_KEY				0x0180
+#define BCMA_DMU_CRU_STRAPS_CTRL			0x02A0
+#define  BCMA_DMU_CRU_STRAPS_CTRL_USB3			0x00000010
+#define  BCMA_DMU_CRU_STRAPS_CTRL_4BYTE			0x00008000
+
+#endif /* LINUX_BCMA_DRIVER_ARM_C9_H_ */
+
+```

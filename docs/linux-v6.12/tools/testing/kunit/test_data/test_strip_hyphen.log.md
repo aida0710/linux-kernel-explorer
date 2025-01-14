@@ -1,0 +1,30 @@
+---
+sidebar_position: 24
+---
+# test_strip_hyphen.log
+
+### ファイル情報
+
+- パス: `linux-v6.12/tools/testing/kunit/test_data/test_strip_hyphen.log`
+
+### コンテンツ
+
+```log
+KTAP version 1
+1..2
+	# Subtest: sysctl_test
+	1..1
+	# sysctl_test_dointvec_null_tbl_data: sysctl_test_dointvec_null_tbl_data passed
+	ok 1 - sysctl_test_dointvec_null_tbl_data
+kunit sysctl_test: all tests passed
+ok 1 - sysctl_test
+	# Subtest: example
+	1..1
+init_suite
+	# example_simple_test: initializing
+	# example_simple_test: example_simple_test passed
+	ok 1 example_simple_test
+kunit example: all tests passed
+ok 2 example
+
+```

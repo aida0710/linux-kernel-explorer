@@ -1,0 +1,28 @@
+---
+sidebar_position: 142
+---
+# tny_a9g20.dts
+
+### ファイル情報
+
+- パス: `linux-v6.12/arch/arm/boot/dts/microchip/tny_a9g20.dts`
+
+### コンテンツ
+
+```dts
+// SPDX-License-Identifier: GPL-2.0-only
+/*
+ * tny_a9g20.dts - Device Tree file for Caloa TNY A9G20 board
+ *
+ * Copyright (C) 2012 Jean-Christophe PLAGNIOL-VILLARD <plagnioj@jcrosoft.com>
+ */
+/dts-v1/;
+#include "at91sam9g20.dtsi"
+#include "tny_a9260_common.dtsi"
+
+/ {
+	model = "Calao TNY A9G20";
+	compatible = "calao,tny-a9g20", "atmel,at91sam9g20", "atmel,at91sam9";
+};
+
+```
