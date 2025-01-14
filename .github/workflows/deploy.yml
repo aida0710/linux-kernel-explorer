@@ -1,4 +1,4 @@
-name: public-docs
+name: linux-kernel-explorer
 
 on:
   workflow_dispatch:
@@ -60,12 +60,12 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            # すべての dev-public-docs セッションを終了
-            for session in $(screen -ls | grep public-docs | awk '{print $1}'); do
+            # すべての dev-linux-kernel-explorer セッションを終了
+            for session in $(screen -ls | grep linux-kernel-explorer | awk '{print $1}'); do
               screen -X -S $session quit || true
             done
             # 既存のプロジェクトを削除
-            rm -rf /home/web/public-docs/*
+            rm -rf /home/web/linux-kernel-explorer/*
 
       # デプロイ
       - name: Deploy to Home Server
@@ -76,7 +76,7 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "build/"
-          target: "/home/web/public-docs/"
+          target: "/home/web/linux-kernel-explorer/"
 
       # 新しいscreen sessionでサービス起動
       - name: Start Service
@@ -87,8 +87,8 @@ jobs:
           port: ${{ secrets.SERVER_SSH_PORT }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            cd /home/web/public-docs/build
+            cd /home/web/linux-kernel-explorer/build
             # ローカルにserveをインストール
             npm install serve
             # screenセッションで静的ファイルサーバーを起動
-            screen -dmS public-docs npx serve -s . -l 28100
+            screen -dmS linux-kernel-explorer npx serve -s . -l 28100
