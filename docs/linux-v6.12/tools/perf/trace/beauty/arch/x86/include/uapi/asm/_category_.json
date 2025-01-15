@@ -1,8 +1,0 @@
-{
-    "label": "Asm",
-    "position": 1000,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for Asm"
-    }
-}

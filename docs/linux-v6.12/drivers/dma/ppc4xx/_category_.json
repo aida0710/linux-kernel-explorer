@@ -1,8 +1,0 @@
-{
-    "label": "Ppc4xx",
-    "position": 400,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for Ppc4xx"
-    }
-}

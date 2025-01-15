@@ -7,22 +7,18 @@ const config: Config = {
     tagline: 'Exploring Linux Kernel v6.12 Implementation',
     favicon: 'img/favicon.ico',
 
-    // プロジェクトのURL設定
     url: 'https://your-domain.com',
     baseUrl: '/',
     trailingSlash: false,
 
-    // GitHubページの設定
-    organizationName: 'your-org',
+    organizationName: 'linux-kernel-explorer',
     projectName: 'linux-kernel-explorer',
 
-    // オンビルド設定
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
     onBrokenAnchors: 'warn',
     onDuplicateRoutes: 'warn',
 
-    // 多言語設定
     i18n: {
         defaultLocale: 'ja',
         locales: ['ja'],
@@ -35,7 +31,6 @@ const config: Config = {
         },
     },
 
-    // クラシックプリセットの設定
     presets: [
         [
             'classic',
@@ -43,7 +38,6 @@ const config: Config = {
                 docs: {
                     sidebarPath: './sidebars.ts',
                     editUrl: 'https://github.com/your-org/linux-kernel-explorer/tree/main/',
-                    showLastUpdateAuthor: true,
                     showLastUpdateTime: true,
                     breadcrumbs: true,
                     sidebarCollapsed: true,
@@ -77,7 +71,6 @@ const config: Config = {
         ],
     ],
 
-    // プラグインの設定
     plugins: [
         // Tailwind CSS
         async function tailwindcss() {
@@ -90,7 +83,7 @@ const config: Config = {
                 },
             };
         },
-        // ローカル検索機能
+
         [
             require.resolve('@easyops-cn/docusaurus-search-local'),
             {
@@ -109,16 +102,13 @@ const config: Config = {
         ],
     ],
 
-    // テーマ設定
     themeConfig: {
-        // metadata
         metadata: [
             {name: 'keywords', content: 'linux, kernel, documentation, implementation'},
             {name: 'og:type', content: 'website'},
             {name: 'twitter:card', content: 'summary_large_image'},
         ],
 
-        // ナビゲーションバー
         navbar: {
             title: 'Linux Kernel Explorer',
             logo: {
@@ -134,18 +124,6 @@ const config: Config = {
                     label: 'カーネルコード',
                 },
                 {
-                    type: 'docSidebar',
-                    sidebarId: 'architectureSidebar',
-                    position: 'left',
-                    label: 'アーキテクチャ',
-                },
-                {
-                    type: 'docSidebar',
-                    sidebarId: 'subsystemSidebar',
-                    position: 'left',
-                    label: 'サブシステム',
-                },
-                {
                     to: '/blog',
                     label: '解説記事',
                     position: 'left',
@@ -159,7 +137,6 @@ const config: Config = {
             ],
         },
 
-        // フッター
         footer: {
             style: 'dark',
             links: [
@@ -169,14 +146,6 @@ const config: Config = {
                         {
                             label: 'はじめに',
                             to: '/docs/intro',
-                        },
-                        {
-                            label: 'ファイル構造',
-                            to: '/docs/structure',
-                        },
-                        {
-                            label: 'ビルドシステム',
-                            to: '/docs/build-system',
                         },
                     ],
                 },
@@ -210,12 +179,10 @@ const config: Config = {
             copyright: `Copyright © ${new Date().getFullYear()} Linux Kernel Explorer Project. Built with Docusaurus.`,
         },
 
-        // シンタックスハイライト
         prism: {
             theme: prismThemes.github,
             darkTheme: prismThemes.dracula,
             defaultLanguage: 'c',
-            // 実際にサポートされている言語のみを指定
             additionalLanguages: [
                 'bash',
                 'c',

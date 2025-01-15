@@ -1,8 +1,0 @@
-{
-    "label": "6lowpan",
-    "position": 400,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for 6lowpan"
-    }
-}

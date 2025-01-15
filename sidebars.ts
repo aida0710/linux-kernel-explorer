@@ -8,24 +8,6 @@ const sidebars: SidebarsConfig = {
       dirName: '.'
     }
   ],
-
-  // アーキテクチャのサイドバー
-  architectureSidebar: [
-    {
-      type: 'doc',
-      id: 'arch/intro',
-      label: 'アーキテクチャ概要'
-    }
-  ],
-
-  // サブシステムのサイドバー
-  subsystemSidebar: [
-    {
-      type: 'doc',
-      id: 'subsystems/intro',
-      label: 'サブシステム概要'
-    }
-  ]
 };
 
 export default sidebars;

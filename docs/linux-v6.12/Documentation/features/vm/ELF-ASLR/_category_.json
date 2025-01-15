@@ -1,8 +1,0 @@
-{
-    "label": "ELF ASLR",
-    "position": 500,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for ELF ASLR"
-    }
-}

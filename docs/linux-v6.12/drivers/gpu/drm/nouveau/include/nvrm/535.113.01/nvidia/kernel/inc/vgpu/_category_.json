@@ -1,8 +1,0 @@
-{
-    "label": "Vgpu",
-    "position": 1200,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for Vgpu"
-    }
-}

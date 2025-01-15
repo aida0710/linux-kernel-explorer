@@ -1,8 +1,0 @@
-{
-    "label": "Cable",
-    "position": 500,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for Cable"
-    }
-}

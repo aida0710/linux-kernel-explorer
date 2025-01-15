@@ -1,8 +1,0 @@
-{
-    "label": "Clang Tools",
-    "position": 300,
-    "link": {
-        "type": "generated-index",
-        "description": "Documentation for Clang Tools"
-    }
-}
