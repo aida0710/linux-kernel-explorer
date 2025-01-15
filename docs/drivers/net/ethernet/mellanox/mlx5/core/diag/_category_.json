@@ -1,0 +1,8 @@
+{
+    "label": "Diag",
+    "position": 700,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Diag"
+    }
+}

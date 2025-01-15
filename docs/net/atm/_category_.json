@@ -1,0 +1,8 @@
+{
+    "label": "Atm",
+    "position": 200,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Atm"
+    }
+}

@@ -1,0 +1,26 @@
+---
+sidebar_position: 23
+---
+# igc_tsn.h
+
+### ファイル情報
+
+- パス: `drivers/net/ethernet/intel/igc/igc_tsn.h`
+
+### コンテンツ
+
+```h
+/* SPDX-License-Identifier: GPL-2.0 */
+/* Copyright (c)  2020 Intel Corporation */
+
+#ifndef _IGC_TSN_H_
+#define _IGC_TSN_H_
+
+int igc_tsn_offload_apply(struct igc_adapter *adapter);
+int igc_tsn_reset(struct igc_adapter *adapter);
+void igc_tsn_adjust_txtime_offset(struct igc_adapter *adapter);
+bool igc_tsn_is_taprio_activated_by_user(struct igc_adapter *adapter);
+
+#endif /* _IGC_BASE_H */
+
+```

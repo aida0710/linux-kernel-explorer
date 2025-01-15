@@ -1,0 +1,8 @@
+{
+    "label": "Page Pool",
+    "position": 300,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Page Pool"
+    }
+}

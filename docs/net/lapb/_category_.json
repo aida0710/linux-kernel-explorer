@@ -1,0 +1,8 @@
+{
+    "label": "Lapb",
+    "position": 200,
+    "link": {
+        "type": "generated-index",
+        "description": "Documentation for Lapb"
+    }
+}

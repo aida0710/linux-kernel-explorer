@@ -1,0 +1,16 @@
+---
+sidebar_position: 2
+---
+# Makefile
+
+### ファイル情報
+
+- パス: `drivers/net/wireless/microchip/Makefile`
+
+### コンテンツ
+
+```txt
+# SPDX-License-Identifier: GPL-2.0
+obj-$(CONFIG_WILC1000)		+= wilc1000/
+
+```
